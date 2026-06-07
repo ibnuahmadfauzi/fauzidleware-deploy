@@ -128,3 +128,71 @@ footer p {
   font-size: 1.25rem;
   font-weight: 300;
 }
+
+/* Profil Mahasiswa Page */
+#profil {
+  padding: 100px 0;
+  background-image: url("../images/bg-profil.png");
+  background-size: cover;
+  background-position: center;
+}
+#profil h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-variant: small-caps;
+}
+#profil table span {
+  background-color: #af3e3e;
+  color: #ffffff;
+  padding: 10px 13px;
+  font-size: 0.9rem;
+}
+#profil table p {
+  margin: 0;
+  padding: 0;
+}
+
+#tentang-saya {
+  padding: 100px 0;
+  background-image: url("../images/bg-2.png");
+  background-size: cover;
+  background-position: center;
+}
+#tentang-saya h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  text-align: center;
+}
+#tentang-saya p {
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: justify;
+  margin-top: 20px;
+}
+
+#keunikan-daerah {
+  padding: 100px 0;
+  background-image: url("../images/bg-2.png");
+  background-size: cover;
+  background-position: center;
+}
+#keunikan-daerah h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  text-align: center;
+}
+
+#pendidikan {
+  padding: 100px 0;
+  background-image: url("../images/bg.png");
+  background-size: cover;
+  background-position: center;
+}
+#pendidikan h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  text-align: center;
+}
