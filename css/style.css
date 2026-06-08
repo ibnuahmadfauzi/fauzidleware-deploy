@@ -1,13 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* ================================================================== */
+/* General Styles */
+/* ================================================================== */
 * {
   font-family: "Poppins", sans-serif;
 }
 body {
   color: #373737;
 }
+.after-hero {
+  background-color: #af3e3e;
+  padding: 5px 0;
+}
+.after-hero a {
+  text-align: center;
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.after-hero a:hover {
+  color: #af3e3e;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+/* ================================================================== */
 
+/* ================================================================== */
 /* Bootstrap Reset */
+/* ================================================================== */
 .bg-primary {
   background-color: #af3e3e !important;
 }
@@ -25,8 +48,16 @@ body {
   color: #ffffff;
   box-shadow: none;
 }
+nav .active {
+  background-color: #ffffff;
+  color: #af3e3e !important;
+  border-radius: 10px;
+}
+/* ================================================================== */
 
+/* ================================================================== */
 /* Footer Section */
+/* ================================================================== */
 footer {
   background-color: #af3e3e;
   color: #ffffff;
@@ -37,8 +68,11 @@ footer p {
   margin: 0;
   font-size: 1rem;
 }
+/* ================================================================== */
 
+/* ================================================================== */
 /* Home Page */
+/* ================================================================== */
 #hero {
   background-image: url("../images/hero.png");
   background-size: cover;
@@ -65,25 +99,6 @@ footer p {
   font-style: italic;
   margin-top: 20px;
 }
-
-.after-hero {
-  background-color: #af3e3e;
-  padding: 5px 0;
-}
-.after-hero a {
-  text-align: center;
-  display: block;
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
-}
-.after-hero a:hover {
-  color: #af3e3e;
-  background-color: #ffffff;
-  border-radius: 10px;
-}
-
 #welcome .welcome-description {
   padding: 100px 0;
 }
@@ -98,7 +113,6 @@ footer p {
   text-align: justify;
   margin-top: 20px;
 }
-
 #quotes {
   margin-bottom: 100px;
 }
@@ -111,7 +125,6 @@ footer p {
   font-style: italic;
   font-weight: 300;
 }
-
 #location {
   padding: 100px 0;
   background-image: url("../images/bg.png");
@@ -128,8 +141,11 @@ footer p {
   font-size: 1.25rem;
   font-weight: 300;
 }
+/* ================================================================== */
 
+/* ================================================================== */
 /* Profil Mahasiswa Page */
+/* ================================================================== */
 #profil {
   padding: 100px 0;
   background-image: url("../images/bg-profil.png");
@@ -151,7 +167,6 @@ footer p {
   margin: 0;
   padding: 0;
 }
-
 #tentang-saya {
   padding: 100px 0;
   background-image: url("../images/bg-2.png");
@@ -170,7 +185,6 @@ footer p {
   text-align: justify;
   margin-top: 20px;
 }
-
 #keunikan-daerah {
   padding: 100px 0;
   background-image: url("../images/bg-2.png");
@@ -183,7 +197,6 @@ footer p {
   font-variant: small-caps;
   text-align: center;
 }
-
 #pendidikan {
   padding: 100px 0;
   background-image: url("../images/bg.png");
@@ -196,3 +209,35 @@ footer p {
   font-variant: small-caps;
   text-align: center;
 }
+/* ================================================================== */
+
+/* ================================================================== */
+/* Analisis Artefak Page */
+/* ================================================================== */
+#analisis-artefak {
+  padding: 100px 0;
+  background-image: url("../images/bg-2.png");
+  background-size: cover;
+  background-position: center;
+}
+#analisis-artefak h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  text-align: center;
+}
+#analisis-artefak .card p {
+  font-size: 1rem;
+  font-weight: 300;
+  text-align: justify;
+}
+#analisis-artefak .card h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+#analisis-artefak .card h6 {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #af3e3e;
+}
+/* ================================================================== */
