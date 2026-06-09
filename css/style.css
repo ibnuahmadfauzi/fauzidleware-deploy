@@ -241,3 +241,25 @@ footer p {
   color: #af3e3e;
 }
 /* ================================================================== */
+
+/* ================================================================== */
+/* Penilaian Siklus Page */
+/* ================================================================== */
+#penilaian-guru-pamong {
+  padding: 100px 0;
+  background-image: url("../images/bg-2.png");
+  background-size: cover;
+  background-position: center;
+}
+#penilaian-guru-pamong h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  text-align: center;
+}
+#penilaian-guru-pamong h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-align: center;
+}
+/* ================================================================== */
