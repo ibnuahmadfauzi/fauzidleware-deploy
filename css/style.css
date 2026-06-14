@@ -263,3 +263,20 @@ footer p {
   text-align: center;
 }
 /* ================================================================== */
+
+/* ================================================================== */
+/* Dokumentasi Page */
+/* ================================================================== */
+#dokumentasi {
+  padding: 100px 0;
+  background-image: url("../images/bg-2.png");
+  background-size: cover;
+  background-position: center;
+}
+#dokumentasi h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  font-variant: small-caps;
+  text-align: center;
+}
+/* ================================================================== */
