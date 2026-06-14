@@ -113,6 +113,9 @@ footer p {
   text-align: justify;
   margin-top: 20px;
 }
+#welcome img {
+  border-radius: 10px 50px 10px 50px;
+}
 #quotes {
   margin-bottom: 100px;
 }
