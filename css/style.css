@@ -512,5 +512,30 @@ footer p {
     margin-top: 10px;
   }
   /* ================================================================== */
+
+  /* ================================================================== */
+  /* Stye for Mobile Responsive Penilaian Siklus Page */
+  /* ================================================================== */
+  #penilaian-guru-pamong {
+    padding: 50px 0;
+    background-image: url("../images/bg-2.png");
+    background-size: cover;
+    background-position: center;
+  }
+  #penilaian-guru-pamong h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  #penilaian-guru-pamong h3 {
+    text-align: left;
+  }
+  #penilaian-guru-pamong .card {
+    margin-bottom: 20px;
+  }
+  #penilaian-guru-pamong .card h1 {
+    text-align: center;
+  }
+  /* ================================================================== */
 }
 /* ================================================================== */
