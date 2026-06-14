@@ -479,5 +479,38 @@ footer p {
     display: block;
   }
   /* ================================================================== */
+
+  /* ================================================================== */
+  /* Stye for Mobile Responsive Artefak Page */
+  /* ================================================================== */
+  #analisis-artefak {
+    padding: 50px 0;
+  }
+  #analisis-artefak h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  #analisis-artefak span {
+    display: block;
+  }
+  #analisis-artefak .card p {
+    font-size: 0.9rem;
+    font-weight: 300;
+    text-align: justify;
+  }
+  #analisis-artefak .card h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  #analisis-artefak .card h6 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #af3e3e;
+  }
+  #analisis-artefak btn {
+    margin-top: 10px;
+  }
+  /* ================================================================== */
 }
 /* ================================================================== */
