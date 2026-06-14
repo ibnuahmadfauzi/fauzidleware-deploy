@@ -288,6 +288,9 @@ footer p {
 /* Stye for Mobile Responsive */
 /* ================================================================== */
 @media (max-width: 991px) {
+  /* ================================================================== */
+  /* Stye for Mobile Responsive NavBar */
+  /* ================================================================== */
   .navbar-collapse {
     background: #b63d3d;
     padding: 20px;
@@ -316,6 +319,8 @@ footer p {
     border: none;
     position: static !important;
   }
+  /* ================================================================== */
+
   /* ================================================================== */
   /* Stye for Mobile Responsive HomePage */
   /* ================================================================== */
@@ -390,6 +395,88 @@ footer p {
   #location iframe {
     margin-bottom: 40px;
     height: 300px;
+  }
+  /* ================================================================== */
+
+  /* ================================================================== */
+  /* Stye for Mobile Responsive Profil Page */
+  /* ================================================================== */
+  #profil {
+    padding: 50px 0;
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
+      url("../images/bg-profil.png");
+    background-position-x: -200px;
+  }
+  #profil h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-variant: small-caps;
+  }
+  #profil table td,
+  #profil table th {
+    padding: 7px;
+  }
+  #profil table {
+    border-collapse: separate;
+    border-spacing: 7px;
+  }
+  #profil table span {
+    background-color: #af3e3e;
+    color: #ffffff;
+    padding: 5px 7px;
+    font-size: 0.9rem;
+  }
+  #profil table p {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+  #tentang-saya {
+    padding: 50px 0;
+  }
+  #tentang-saya h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    font-variant: small-caps;
+    text-align: left;
+  }
+  #tentang-saya span {
+    display: block;
+  }
+  #tentang-saya p {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: justify;
+    margin-top: 10px;
+  }
+  #keunikan-daerah {
+    padding: 50px 0;
+  }
+  #keunikan-daerah h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  #keunikan-daerah span {
+    display: block;
+  }
+  #keunikan-daerah p {
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: justify;
+    margin-top: 10px;
+  }
+  #pendidikan {
+    padding: 50px 0;
+  }
+  #pendidikan h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: left;
+  }
+  #pendidikan span {
+    display: block;
   }
   /* ================================================================== */
 }
