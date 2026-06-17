@@ -25,13 +25,117 @@
   <body>
     <nav></nav>
 
-    <div class="d-flex justify-content-center">
-      <img
-        src="https://cdn.dribbble.com/userupload/22068510/file/original-4ed5b4b51085194be25fd26108edb7e2.gif"
-        class="img-fluid"
-        alt=""
-      />
-    </div>
+    <section id="blog-list">
+      <div class="container my-4">
+        <div class="row">
+          <div class="col-lg-8">
+            <h1 class="page-title-blog-list">
+              <span>Semua Postingan</span>
+            </h1>
+            <div class="row blog-list-container"></div>
+
+            <div class="blog-pagination-wrapper mt-4"></div>
+
+            <div class="blog-detail">
+              <div>
+                <a href="/" class="text-decoration-none">Home</a> >
+                <a href="/blog.html" class="text-decoration-none">Blog</a>
+              </div>
+              <h2 id="blog-detail-title" class="my-3"></h2>
+              <div><small id="blog-detail-date"></small></div>
+              <img
+                src=""
+                id="blog-detail-thumbnail"
+                alt=""
+                class="w-100 my-3"
+              />
+              <div id="blog-detail-body"></div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="sidebar">
+              <!-- Pencarian -->
+              <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Cari Artikel</h5>
+                  <form>
+                    <div class="input-group">
+                      <input
+                        type="text"
+                        class="form-control me-2 input-search"
+                        placeholder="Cari postingan..."
+                      />
+                      <button class="btn btn-secondary btn-search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+              <!-- Postingan Populer -->
+              <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Postingan Terbaru</h5>
+
+                  <div class="box-postingan-populer"></div>
+                </div>
+              </div>
+
+              <!-- Tag -->
+              <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">Kategori</h5>
+                  <div class="box-tag-sidebar"></div>
+                </div>
+              </div>
+
+              <!-- Tentang Penulis -->
+              <div class="card shadow-sm mb-4">
+                <div class="card-body text-center">
+                  <img
+                    src="/images/ibnu.jpg"
+                    class="rounded-2 mb-3"
+                    width="120"
+                  />
+
+                  <h5>Ibnu Ahmad Fauzi</h5>
+
+                  <p class="small text-muted">
+                    Guru Informatika, Mahasiswa PPG Prajabatan, dan Full Stack
+                    Web Developer.
+                  </p>
+
+                  <a href="profil.html" class="btn btn-outline-primary btn-sm">
+                    Lihat Profil
+                  </a>
+                </div>
+              </div>
+
+              <!-- Newsletter -->
+              <div class="card shadow-sm">
+                <div class="card-body">
+                  <h5 class="card-title">Dapatkan Update</h5>
+
+                  <p class="small">
+                    Ikuti blog ini untuk mendapatkan artikel terbaru seputar
+                    pendidikan dan teknologi.
+                  </p>
+
+                  <input
+                    type="email"
+                    class="form-control mb-2"
+                    placeholder="Email Anda"
+                  />
+
+                  <button class="btn btn-primary w-100">Berlangganan</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer></footer>
 
@@ -54,6 +158,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+
+    <!-- import utils -->
+    <script src="/utils/data-blog.js"></script>
+    <!-- end import utils -->
 
     <script src="js/script.js"></script>
     <script src="js/blog.js"></script>

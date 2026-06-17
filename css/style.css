@@ -268,19 +268,60 @@ footer p {
 /* ================================================================== */
 
 /* ================================================================== */
-/* Dokumentasi Page */
+/* Blog Page */
 /* ================================================================== */
-#dokumentasi {
+#blog-list {
   padding: 100px 0;
-  background-image: url("../images/bg-2.png");
-  background-size: cover;
-  background-position: center;
 }
-#dokumentasi h1 {
+#blog-list h1 {
   font-size: 3.5rem;
   font-weight: 700;
   font-variant: small-caps;
   text-align: center;
+  margin-bottom: 50px;
+}
+#blog-list h5 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+#blog-list p {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+.sidebar {
+  position: sticky;
+  top: 100px;
+}
+.blog-pagination-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+.blog-detail #blog-detail-title {
+  font-weight: 500;
+}
+.blog-detail #blog-detail-body,
+.blog-detail #blog-detail-body * {
+  font-size: 18px;
+  font-weight: 300;
+}
+.blog-page-btn {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #f1f1f1;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.blog-page-btn:hover {
+  background: #ddd;
+}
+
+.blog-page-btn.active {
+  background: #0d6efd;
+  color: white;
 }
 /* ================================================================== */
 
