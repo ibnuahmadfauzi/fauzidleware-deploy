@@ -325,6 +325,29 @@ footer p {
 /* ================================================================== */
 
 /* ================================================================== */
+/* Mata Kuliah Page */
+/* ================================================================== */
+#matakuliah h2 {
+  font-weight: 700;
+  font-size: 3rem;
+  margin-top: 50px;
+  font-variant: small-caps;
+  text-align: center;
+}
+#matakuliah .card p {
+  font-weight: 300;
+  text-align: justify;
+}
+#matakuliah .card h5 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+#matakuliah .card .card-body {
+  padding: 50px 30px;
+}
+/* ================================================================== */
+
+/* ================================================================== */
 /* Stye for Mobile Responsive */
 /* ================================================================== */
 @media (max-width: 991px) {
@@ -575,6 +598,21 @@ footer p {
   }
   #penilaian-guru-pamong .card h1 {
     text-align: center;
+  }
+  /* ================================================================== */
+
+  /* ================================================================== */
+  /* Stye for Mobile Responsive Mata Kuliah Page */
+  /* ================================================================== */
+  #matakuliah h2 {
+    font-size: 2rem;
+  }
+  #matakuliah .card p {
+    font-size: 0.9rem;
+  }
+  #matakuliah .card h5 {
+    font-size: 1rem;
+    font-weight: 600;
   }
   /* ================================================================== */
 }
