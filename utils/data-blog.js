@@ -14,15 +14,15 @@ let dataBlog = [
   },
   {
     id: 2,
-    title: "Peran Guru dalam Era Digital",
-    slug: "peran-guru-dalam-era-digital",
-    tag: ["Pendidikan", "Teknologi"],
+    title: "Sejarah Masuknya Suzuki di Indonesia",
+    slug: "sejarah-masuknya-suzuki-di-indonesia",
+    tag: ["Otomotif"],
     created_at: "14 Juni 2026",
-    updated_at: "14 Juni 2026",
-    thumbnail: "2.png",
-    body: "<p style='text-align: justify;'>Artikel ini merupakan artikel contoh yang digunakan untuk kebutuhan demonstrasitampilan dan pengembangan fitur pada halaman blog. Seluruh isi tulisan,gambar, maupun informasi yang ditampilkan di dalam artikel ini dibuat sebagaidata dummy dan tidak dimaksudkan sebagai sumber informasi yang sebenarnya.</p><p style='text-align: justify;'>Tujuan dari artikel contoh ini adalah untuk membantu proses pengujian desain,tata letak, navigasi, pencarian, pagination, serta berbagai fitur lain yangberkaitan dengan sistem blog. Dengan adanya konten contoh, pengembang dapatmelihat bagaimana artikel akan ditampilkan kepada pengunjung ketika websitesudah digunakan secara penuh.</p><p style='text-align: justify;'>Apabila website ini nantinya dipublikasikan, artikel contoh seperti ini dapatdigantikan dengan konten asli yang sesuai dengan tema blog, seperti pendidikan,teknologi, pengalaman mengajar, pengembangan web, maupun topik lainnya.Terima kasih telah mengunjungi halaman ini dan semoga contoh artikel ini dapatmembantu dalam proses pengembangan website.</p>",
+    updated_at: "20 Juni 2026",
+    thumbnail: "suzuki.webp",
+    body: "<p style='text-align: justify;'>Suzuki merupakan salah satu merek otomotif asal Jepang yang telah lama hadir di Indonesia. Aktivitas bisnis Suzuki di Indonesia dimulai pada tahun 1970 melalui perusahaan importir bernama PT Indohero Steel &amp; Engineering Company yang bertugas memasukkan produk-produk Suzuki ke pasar Indonesia. Kehadiran Suzuki pada masa itu menjadi bagian dari gelombang masuknya industri otomotif Jepang yang mulai berkembang pesat di Indonesia.</p><h2 style='text-align: justify;'>Pembangunan Fasilitas Produksi</h2><p style='text-align: justify;'>Melihat potensi pasar yang besar, Suzuki tidak hanya mengandalkan impor kendaraan. Pada tahun 1976, Suzuki mulai membangun fasilitas produksi di Jakarta. Langkah ini menjadi tonggak penting karena menunjukkan komitmen Suzuki untuk memproduksi kendaraan secara lokal dan mendukung perkembangan industri otomotif nasional. Pabrik tersebut kemudian menjadi salah satu fondasi terbentuknya bisnis Suzuki yang lebih besar di Indonesia.</p><h2 style='text-align: justify;'>Lahirnya Suzuki Carry dan Popularitasnya</h2><p style='text-align: justify;'>Pada tahun 1978, Suzuki memperkenalkan Suzuki Carry ST20 yang menjadi salah satu kendaraan paling berpengaruh dalam sejarah transportasi Indonesia. Mobil niaga ringan ini banyak digunakan sebagai kendaraan angkutan umum (angkot), kendaraan usaha, hingga kendaraan distribusi barang. Masyarakat mengenalnya dengan julukan 'Trungtung' atau 'Turungtung' karena suara khas mesin dua langkah yang digunakannya. Kesuksesan Carry menjadi fondasi kuat bagi perkembangan merek Suzuki di Indonesia.</p><h2 style='text-align: justify;'>Bergabung dengan Grup Indomobil</h2><p style='text-align: justify;'>Dalam perkembangannya, bisnis Suzuki di Indonesia semakin terintegrasi dengan Grup Indomobil. Kerja sama antara Suzuki Motor Corporation dan Indomobil melahirkan perusahaan yang kemudian dikenal sebagai PT Indomobil Suzuki International. Perusahaan ini menangani produksi, distribusi, dan pemasaran kendaraan Suzuki di Indonesia. Pada tahun 2008, nama perusahaan resmi berubah menjadi PT Suzuki Indomobil Motor (SIM).</p><h2 style='text-align: justify;'>Ekspansi dan Pertumbuhan Industri</h2><p style='text-align: justify;'>Memasuki era 1990-an hingga 2000-an, Suzuki terus memperluas lini produknya melalui berbagai model populer seperti Carry Futura, Katana, Escudo, Karimun, APV, Ertiga, hingga XL7. Suzuki juga membangun fasilitas produksi baru di Tambun dan kemudian di Cikarang untuk meningkatkan kapasitas produksi sekaligus menjadikan Indonesia sebagai basis ekspor kendaraan Suzuki ke berbagai negara.</p><p style='text-align: justify;'>Pada tahun 2015, Suzuki meresmikan pabrik modern di Cikarang dengan investasi besar yang mendukung produksi kendaraan dan mesin untuk pasar domestik maupun ekspor. Langkah ini semakin memperkuat posisi Indonesia sebagai salah satu pusat produksi Suzuki di kawasan Asia Tenggara.</p><h2 style='text-align: justify;'>Suzuki di Indonesia Saat Ini</h2><p style='text-align: justify;'>Saat ini, PT Suzuki Indomobil Motor merupakan perusahaan patungan antara Suzuki Motor Corporation dan Indomobil Group. Suzuki memproduksi berbagai kendaraan roda dua dan roda empat di Indonesia, serta mengekspor produknya ke puluhan negara. Pada tahun 2022, Suzuki Indonesia berhasil mencapai produksi kumulatif 3 juta unit kendaraan, sebuah pencapaian yang menunjukkan kontribusi besar perusahaan terhadap industri otomotif nasional.</p><h2 style='text-align: justify;'>Kesimpulan</h2><p style='text-align: justify;'>Sejarah Suzuki di Indonesia dimulai dari kegiatan impor pada tahun 1970, kemudian berkembang menjadi produsen otomotif besar dengan fasilitas manufaktur modern. Kesuksesan Suzuki tidak lepas dari produk-produk ikonik seperti Carry yang telah menjadi bagian dari kehidupan masyarakat Indonesia selama puluhan tahun. Hingga saat ini, Suzuki tetap menjadi salah satu pemain penting dalam industri otomotif Indonesia dan terus berkontribusi melalui produksi, ekspor, serta pengembangan teknologi kendaraan.</p>",
     excerpt:
-      "Guru kini berperan sebagai fasilitator pembelajaran yang membantu siswa memanfaatkan teknologi secara bijak dan produktif.",
+      "Suzuki merupakan salah satu merek otomotif asal Jepang yang telah lama hadir di Indonesia. Aktivitas bisnis Suzuki di Indonesia dimulai pada tahun 1970 melalui perusahaan importir bernama PT Indohero Steel & Engineering Company yang bertugas memasukkan produk-produk Suzuki ke pasar Indonesia.",
   },
   {
     id: 3,
@@ -132,9 +132,6 @@ let dataTagBlog = [
   "Pengalaman",
   "Kurikulum",
   "Pemrograman",
-  "JavaScript",
+  "Otomotif",
   "Web Development",
-  "HTML",
-  "Motivasi",
-  "AI",
 ];
