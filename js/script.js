@@ -25,7 +25,7 @@ $(document).ready(function () {
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle text-light ppg-prajabatan-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                PPG Prajabatan 2026
+                PPG PRAJABATAN 2026
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="artefak.html">Analisis Artefak</a></li>
@@ -34,6 +34,14 @@ $(document).ready(function () {
                 <li><a class="dropdown-item" href="model-guru.html">Model Guru</a></li>
                 <li><a class="dropdown-item" href="refleksi-ppl.html">Refleksi PPL</a></li>
                 <li><a class="dropdown-item" href="filosofi-mengajar.html">Filosofi Mengajar</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-light tutorial-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                TUTORIAL
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="tutorial-web-pemrograman.html">Web Programming</a></li>
               </ul>
             </li>
             <li class="nav-item me-2 ms-2">
