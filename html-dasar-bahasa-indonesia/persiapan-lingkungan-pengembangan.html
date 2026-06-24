@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#2. Persiapan Lingkungan Pengembangan</h2>
+            <hr />
+            <div class="my-5">
+              <h5>
+                <b
+                  >2.1. Mengapa Perlu Mempersiapkan Lingkungan Pengembangan ?</b
+                >
+              </h5>
+              <p>
+                Sebelum mulai menulis kode HTML, seorang web developer perlu
+                menyiapkan lingkungan kerja yang nyaman dan terorganisir.
+                Lingkungan pengembangan yang baik akan memudahkan proses
+                pembuatan, pengujian, dan pemeliharaan website.
+              </p>
+              <p>
+                Berbeda dengan bahasa pemrograman lain yang membutuhkan proses
+                kompilasi atau instalasi perangkat lunak tambahan, HTML cukup
+                dibuat menggunakan editor teks dan dijalankan melalui browser.
+              </p>
+              <p>
+                Hal ini menjadikan HTML sebagai salah satu teknologi web yang
+                paling mudah dipelajari oleh pemula.
+              </p>
+              <br /><br />
+              <h5>
+                <b>2.2. Memilih Text Editor</b>
+              </h5>
+              <p>
+                <b>Text editor</b> adalah aplikasi yang digunakan untuk menulis
+                dan mengedit kode program.
+              </p>
+              <p>
+                Meskipun HTML dapat ditulis menggunakan Notepad bawaan Windows,
+                penggunaan text editor khusus akan memberikan banyak kemudahan
+                seperti:
+              </p>
+              <ul>
+                <li>Pewarnaan sintaks (Syntax Highlighting)</li>
+                <li>Auto Complete</li>
+                <li>Auto Closing Tag</li>
+                <li>Pencarian dan Penggantian Teks</li>
+                <li>Manajemen File yang Lebih Baik</li>
+              </ul>
+              <br />
+              <p><b>Beberapa Text Editor Populer:</b></p>
+              <p>
+                <b>1. Visual Studio Code</b>
+              </p>
+              <p>
+                Visual Studio Code atau VS Code merupakan text editor yang
+                paling populer saat ini.
+              </p>
+              <p>Kelebihan:</p>
+              <ul>
+                <li>Gratis</li>
+                <li>Ringan</li>
+                <li>Banyak ekstensi</li>
+                <li>Mendukung berbagai bahasa pemrograman</li>
+              </ul>
+              <p>Cocok untuk:</p>
+              <ul>
+                <li>Pemula</li>
+                <li>Mahasiswa</li>
+                <li>Profesional</li>
+              </ul>
+              <p>
+                <b>2. Sublime Text</b>
+              </p>
+              <p>
+                Sublime Text dikenal karena performanya yang cepat dan ringan.
+              </p>
+              <p>Kelebihan:</p>
+              <ul>
+                <li>Ringan</li>
+                <li>Cepat</li>
+                <li>Antarmuka sederhana</li>
+              </ul>
+              <p>
+                <b>3. Notepad++</b>
+              </p>
+              <p>
+                Notepad++ merupakan editor ringan yang banyak digunakan di
+                Windows
+              </p>
+              <p>Kelebihan:</p>
+              <ul>
+                <li>Gratis</li>
+                <li>Mudah digunakan</li>
+                <li>Cocok untuk pemula</li>
+              </ul>
+              <p>
+                <b>4. Notepad</b>
+              </p>
+              <p>Notepad adalah editor bawaan Windows.</p>
+              <p>Kelebihan:</p>
+              <ul>
+                <li>Tidak perlu instalasi</li>
+                <li>Sangat sederhana</li>
+              </ul>
+              <p>Kekurangan:</p>
+              <ul>
+                <li>Tidak memiliki fitur khusus untuk pemrograman</li>
+              </ul>
+              <br />
+              <p><b>Rekomendasi untuk pemula</b></p>
+              <p>
+                Untuk mengikuti tutorial di sini, disarankan menggunakan
+                <b>Visual Studio Code (VS Code)</b> karena memiliki banyak fitur
+                yang mempermudah proses belajar HTML.
+              </p>
+              <br /><br />
+              <h5>
+                <b>2.3. Struktur File Website Sederhana</b>
+              </h5>
+              <p>
+                Pada materi sebelumnya di
+                <b
+                  ><a
+                    class="text-decoration-none"
+                    href="/html-dasar-bahasa-indonesia/pengenalan-html.html"
+                    >Pengenalan HTML</a
+                  ></b
+                >
+                kita sudah belajar cara membuat dokumen HTML, dan kita sudah
+                punya satu folder dengan nama
+                <span class="tag">belajar-html</span> dan file
+                <span class="tag">index.html</span> di dalamnya.
+              </p>
+              <p>
+                Sekarang buat 2 file lagi dengan nama
+                <span class="tag">profil.html</span> dan
+                <span class="tag">kontak.html</span>. Dengan begitu struktur
+                dari file website kita jadi seperti ini:
+              </p>
+              <div class="box-folder">
+                <div>belajar-html/</div>
+                <div>├── index.html</div>
+                <div>├── profil.html</div>
+                <div>└── kontak.html</div>
+              </div>
+              <br />
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>File</th>
+                    <th>Fungsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>index.html</td>
+                    <td>Halaman utama</td>
+                  </tr>
+                  <tr>
+                    <td>profil.html</td>
+                    <td>Halaman profil</td>
+                  </tr>
+                  <tr>
+                    <td>kontak.html</td>
+                    <td>Halaman kontak</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br /><br />
+              <h5>
+                <b>2.4. Struktur dengan Folder Gambar</b>
+              </h5>
+              <p>
+                Ketika website mulai berkembang, sebaiknya file dikelompokkan
+                berdasarkan jenisnya.
+              </p>
+              <p>Contoh:</p>
+              <div class="box-folder">
+                <div>belajar-html/</div>
+                <div>│</div>
+                <div>├── index.html</div>
+                <div>│</div>
+                <div>├── pages/</div>
+                <div>│ &nbsp; ├── profil.html</div>
+                <div>│ &nbsp; └── kontak.html</div>
+                <div>│</div>
+                <div>└── images/</div>
+                <div>&nbsp; &nbsp; ├── logo.png</div>
+                <div>&nbsp; &nbsp; └── banner.jpg</div>
+              </div>
+              <br />
+              <p>Keuntungan:</p>
+              <ul>
+                <li>Lebih rapi</li>
+                <li>Mudah dikelola</li>
+                <li>Memudahkan pengembangan website</li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b>2.5. Mengenal Developer Tools Browser</b>
+              </h5>
+              <p>
+                <b>Developer Tools</b> atau <b>DevTools</b> adalah fitur bawaan
+                browser yang digunakan untuk membantu pengembangan website.
+              </p>
+              <p>Melalui DevTools, developer dapat:</p>
+              <ul>
+                <li>Melihat struktur HTML</li>
+                <li>Melihat kesalahan website</li>
+                <li>Menguji perubahan kode</li>
+                <li>Menganalisis performa halaman</li>
+              </ul>
+              <br />
+              <p><b>Cara Membuka Developer Tools</b></p>
+              <p>
+                Untuk membuka DevTools kadang setiap browser punya cara yang
+                berbeda. Untuk <b>Google Chrome</b> caranya adalah dengan
+                menekan tombol <span class="tag">F12</span> atau kombinasi
+                tombol <span class="tag">CTRL + SHIFT + I</span>
+              </p>
+              <p>
+                Untuk mencoba DevTools, terlebih dahulu sesuaikan dulu struktur
+                file website seperti pada <b>Materi 2.4</b>, lalu isi file
+                <span class="tag">index.html</span> dengan kode berikut:
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;title&gt;Website Pertama Saya&lt;/title&gt;
+                </div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;h1&gt;Selamat Datang&lt;/h1&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;Ini adalah website pertama saya
+                  menggunakan HTML.&lt;/p&gt;
+                </div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>
+                Setelah itu buka di browser dan akses DevTools seperti cara yang
+                sudah dijelaskan.
+              </p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/tampilan-devtools.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 2.1 : </span> tampilan
+                    DevTools
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>Bagian penting DevTools adalah:</p>
+              <ul>
+                <b>Elements : </b
+                >menampilkan struktur HTML dalam satu halaman.
+              </ul>
+              <ul>
+                <b>Console : </b>
+                menampilkan informasi, pesan, dan error dari website. Meskipun
+                kita belum menggunakan JavaScript, namun console tetap berguna
+                untuk melihat peringatan atau kesalahan.
+              </ul>
+              <ul>
+                <b>Network : </b
+                >melihat file yang dimuat oleh browser. Misalnya: HTML, Gambar,
+                maupun Video.
+              </ul>
+              <ul>
+                <b>Application : </b>
+                menampilkan informasi penyimpanan browser seperti: Cookies,
+                Local Storage, dan Session Storage.
+              </ul>
+              <br />
+              <p>
+                Hampir semua web developer menggunakan DevTools setiap hari
+                untuk memeriksa struktur HTML, menemukan kesalahan, menguji
+                tampilan website. Karena itu kita biasakan membuka DevTools saat
+                belajar membuat website.
+              </p>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/html-dasar-bahasa-indonesia/pengenalan-html.html"
+                  class="btn btn-secondary"
+                  >Sebelumnya</a
+                >
+                <a href="#" class="btn btn-secondary">Selanjutnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".persiapan-lingkungan-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>
