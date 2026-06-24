@@ -1,0 +1,633 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#1. Pengenalan HTML</h2>
+            <hr />
+            <div class="my-5">
+              <h5><b>1.1. Apa Itu HTML ?</b></h5>
+              <p>
+                HTML merupakan singkatan dari <b>HyperText Markup Language</b>,
+                yaitu bahasa markup yang digunakan untuk membuat dan menyusun
+                struktur halaman web. HTML bukan bahasa pemrograman, melainkan
+                bahasa yang digunakan untuk memberi tanda (markup) pada berbagai
+                bagian dokumen sehingga browser dapat menampilkan informasi
+                dengan benar.
+              </p>
+              <p>
+                Ketika Anda membuka sebuah website, browser seperti Google
+                Chrome, Mozilla Firefox, atau Microsoft Edge akan membaca kode
+                HTML dan menerjemahkannya menjadi tampilan yang dapat dilihat
+                pengguna.
+              </p>
+              <p>
+                Sebagai contoh, sebuah judul artikel dapat ditandai menggunakan
+                tag heading, sedangkan isi artikel dapat ditandai menggunakan
+                tag paragraf.
+              </p>
+              <p>
+                <b>Contoh sederhana HTML:</b>
+              </p>
+              <div class="box-code">
+                <div>&lt;h1&gt;Belajar HTML&lt;/h1&gt;</div>
+                <div>
+                  &lt;p&gt;HTML adalah bahasa markup untuk membuat
+                  website.&lt;/p&gt;
+                </div>
+              </div>
+              <br />
+              <p>
+                <b> Hasilnya di browser: </b>
+              </p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/hasil-html-sederhana.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 1.1 : </span> hasil HTML
+                    sederhana
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p><b>Mengapa HTML Penting ?</b></p>
+              <p>
+                Tanpa HTML, sebuah website tidak akan memiliki struktur yang
+                jelas. HTML berfungsi sebagai kerangka dasar yang nantinya dapat
+                dipercantik menggunakan CSS dan ditambahkan interaktivitas
+                menggunakan JavaScript.
+              </p>
+              <p>Hubungan ketiganya dapat diibaratkan sebagai berikut:</p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Teknologi</th>
+                    <th>Fungsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>HTML</td>
+                    <td>Struktur bangunan</td>
+                  </tr>
+                  <tr>
+                    <td>CSS</td>
+                    <td>Desain dan dekorasi</td>
+                  </tr>
+                  <tr>
+                    <td>JavaScript</td>
+                    <td>Interaksi dan fungsi</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br /><br />
+              <h5><b>1.2. Sejarah Perkembangan HTML</b></h5>
+              <p>
+                HTML pertama kali dikembangkan oleh seorang ilmuwan komputer
+                bernama <b> Tim Berners-Lee </b> pada tahun 1991.
+              </p>
+              <p>
+                Tujuan awal HTML adalah memudahkan para peneliti untuk berbagi
+                dokumen melalui jaringan internet yang kemudian berkembang
+                menjadi World Wide Web (WWW).
+              </p>
+              <p>Perkembangan HTML dari waktu ke waktu:</p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Tahun</th>
+                    <th>Versi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1991</td>
+                    <td>HTML pertama</td>
+                  </tr>
+                  <tr>
+                    <td>1995</td>
+                    <td>HTML 2.0</td>
+                  </tr>
+                  <tr>
+                    <td>1997</td>
+                    <td>HTML 3.2</td>
+                  </tr>
+                  <tr>
+                    <td>1999</td>
+                    <td>HTML 4.01</td>
+                  </tr>
+                  <tr>
+                    <td>2014</td>
+                    <td>HTML5</td>
+                  </tr>
+                  <tr>
+                    <td>Sekarang</td>
+                    <td>HTML Living Standard</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <p>
+                <b>HTML5</b> merupakan versi HTML yang paling banyak digunakan
+                saat ini karena menyediakan berbagai fitur modern, seperti:
+              </p>
+              <ul>
+                <li>Audio</li>
+                <li>Video</li>
+                <li>Semantic HTML</li>
+                <li>Form yang lebih lengkap</li>
+                <li>Dukungan perangkat mobile yang lebih baik</li>
+              </ul>
+              <p>
+                Meskipun HTML terus berkembang, prinsip dasar penggunanya tetap
+                sama.
+              </p>
+              <br /><br />
+              <h5><b>1.3. Fungsi HTML dalam Pembuatan Website</b></h5>
+              <p>
+                HTML memiliki berbagai fungsi penting dalam pengembangan
+                website.
+              </p>
+              <p>
+                <b>1. Membuat Struktur Halaman</b>
+              </p>
+              <p>
+                HTML digunakan untuk menentukan bagian-bagian halaman, seperti:
+              </p>
+              <ul>
+                <li>Judul</li>
+                <li>Paragraf</li>
+                <li>Gambar</li>
+                <li>Tabel</li>
+                <li>Formulir</li>
+                <li>Navigasi</li>
+              </ul>
+              <p>Contoh:</p>
+              <div class="box-code">
+                <div>&lt;h1&gt;Website Sekolah&lt;/h1&gt;</div>
+                <div>
+                  &lt;p&gt;Selamat datang di website sekolah kami.&lt;/p&gt;
+                </div>
+              </div>
+              <br />
+              <p><b>2. Menampilkan Konten</b></p>
+              <p>
+                HTML membantu browser menampilkan berbagai jenis konten,
+                seperti:
+              </p>
+              <ul>
+                <li>Teks</li>
+                <li>Gambar</li>
+                <li>Audio</li>
+                <li>Video</li>
+                <li>Dokumen</li>
+              </ul>
+              <br />
+              <p><b>3. Menghubungkan Halaman</b></p>
+              <p>
+                HTML memungkinka pembuatan tautan antar halaman menggunakan tag
+                <span class="tag">&lt;a&gt;</span>.
+              </p>
+              <p>Contoh:</p>
+              <div class="box-code">
+                <div>&lt;a href="profil.html"&gt;Profil Sekolah&lt;/a&gt;</div>
+              </div>
+              <br />
+              <p><b>4. Membuat Formulir</b></p>
+              <p>
+                HTML dapat digunakan untuk membuat formulir pendaftaran, login,
+                kontak, dan sebagainya.
+              </p>
+              <p>Contoh:</p>
+              <div class="box-code">
+                <div>&lt;input type="text"&gt;</div>
+              </div>
+              <br />
+              <p><b>5. Membantu SEO dan Aksesibilitas</b></p>
+              <p>
+                Struktur HTML yang baik membantu Mesin pencari memahami isi
+                website
+              </p>
+              <br /><br />
+              <h5><b>1.4. Struktur Dasar Dokumen HTML</b></h5>
+              <p>
+                Setiap halaman HTML memiliki struktur dasar sebagai berikut:
+              </p>
+              <div class="box-code">
+                <div>&lt;!DOCTYPE html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&lt;head&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;title&gt;Website Pertama&lt;/title&gt;
+                </div>
+                <div>&lt;/head&gt;</div>
+                <div>&lt;body&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;h1&gt;Hello World&lt;/h1&gt;</div>
+                <br />
+                <div>&lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>Penjelasan:</p>
+              <ul>
+                <li>
+                  <span class="tag">&lt;!DOCTYPE html&gt;</span> menyatakan
+                  bahwa dokumen menggunakan standar HTML5.
+                </li>
+                <li>
+                  <span class="tag">&lt;html&gt;</span> elemen utama yang
+                  membungkus seluruh dokumen.
+                </li>
+                <li>
+                  <span class="tag">&lt;head&gt;</span> berisi informasi tentang
+                  halaman. Contohnya judul halaman, metadata, dan informasi SEO.
+                </li>
+                <li>
+                  <span class="tag">&lt;title&gt;</span> menentukan judul tab
+                  browser.
+                </li>
+                <li>
+                  <span class="tag">&lt;body&gt;</span> berisi seluruh konten
+                  yang ditampilkan kepada pengguna.
+                </li>
+              </ul>
+              <br /><br />
+              <h5><b>1.5. Mengenal Elemen, Tag, dan Atribut</b></h5>
+              <p>
+                Saat belajar HTML, anda akan sering mendengar istilah elemen,
+                tag, dan atribut.
+              </p>
+              <br />
+              <p>
+                <b>1. Tag</b>
+              </p>
+              <p>
+                Tag merupakan penanda yang digunakan HTML. Cotohnya
+                <span class="tag">&lt;h1&gt;</span> dan
+                <span class="tag">&lt;/h1&gt;</span>.
+              </p>
+              <p>
+                <span class="tag">&lt;tag pembuka&gt;</span> dan
+                <span class="tag">&lt;/tag penutup&gt;</span>
+              </p>
+              <br />
+              <p>
+                <b>2. Elemen</b>
+              </p>
+              <p>
+                Elemen adalah keseluruhan bagian yang terdiri dari tag pembuka,
+                isi atau konten, dan tag penutup.
+              </p>
+              <p>
+                <span class="tag">&lt;tag pembuka&gt;</span>
+                <i>... konten ...</i>
+                <span class="tag">&lt;/tag penutup&gt;</span>
+              </p>
+              <p>Contohnya:</p>
+              <div class="box-code">
+                &nbsp;&lt;h1&gt; Belajar HTML &lt;/h1&gt;
+              </div>
+              <br />
+              <p>Elemen tersebut terdiri dari:</p>
+              <table class="table table-bordered">
+                <tr>
+                  <td>Tag pembuka</td>
+                  <td><span class="tag">&lt;h1&gt;</span></td>
+                </tr>
+                <tr>
+                  <td>Isi / konten</td>
+                  <td>Belajar HTML</td>
+                </tr>
+                <tr>
+                  <td>Tag penutup</td>
+                  <td><span class="tag">&lt;/h1&gt;</span></td>
+                </tr>
+              </table>
+              <br />
+              <p>
+                <b>3. Atribut</b>
+              </p>
+              <p>
+                Atribut digunakan untuk memberi informasi tambahan pada elemen.
+              </p>
+              <p>Contoh:</p>
+              <div class="box-code">
+                <div>&lt;a href="profil.html"&gt;Halaman Profil&lt;/a&gt;</div>
+              </div>
+              <br />
+              <p>
+                Pada contoh tersebut
+                <span class="tag">href</span> adalah atribut dan
+                <span class="tag">profil.html</span> adalah nilai atribut. Dalam
+                1 elemen bisa berisi lebih dari satu atribut, seperti berikut
+                ini:
+              </p>
+              <div class="box-code">
+                <div>&lt;img src="gambar.jpg" alt="Pemandangan"&gt;</div>
+              </div>
+              <br /><br /><br />
+              <h5><b>1.6. Aturan Penulisan Kode HTML</b></h5>
+              <p>
+                Agar kode HTML mudah dibaca dan dipelihara, ikuti beberapa
+                aturan berikut.
+              </p>
+              <br />
+              <p>
+                <b>1. Gunakan huruf kecil</b>
+              </p>
+              <p>
+                Disarankan menggunakan <span class="tag">&lt;h1&gt;</span> ...
+                <span class="tag">&lt;/h1&gt;</span> daripada
+                <span class="tag">&lt;H1&gt;</span> ...
+                <span class="tag">&lt;/H1&gt;</span>
+              </p>
+              <br />
+              <p>
+                <b>2. Tutup tag yang memiliki pasangan</b>
+              </p>
+              <table class="table table-bordered">
+                <tr>
+                  <td>
+                    <span class="tag">&lt;h1&gt;</span> Judul
+                    <span class="tag">&lt;/h1&gt;</span>
+                  </td>
+                  <td>Benar</td>
+                </tr>
+                <tr>
+                  <td><span class="tag">&lt;h1&gt;</span> Judul</td>
+                  <td>Salah</td>
+                </tr>
+                <tr>
+                  <td><span class="tag">&lt;img src="logo.png"&gt;</span></td>
+                  <td>
+                    Benar <br />
+                    <i>memang tidak memiliki tag penutup atau single tag</i>
+                  </td>
+                </tr>
+                <tr>
+                  <td><span class="tag">&lt;img src="logo.png" /&gt;</span></td>
+                  <td>
+                    Benar <br />
+                    <i>versi lain single tag lebih rapi</i>
+                  </td>
+                </tr>
+              </table>
+              <br />
+              <p>
+                <b>3. Gunakan indentasi</b>
+              </p>
+              <p>
+                Indentasi membuat kode lebih rapi walaupun tanpa indentasi kode
+                HTML tetap bisa berjalan. Berikut contoh yang menggunakan
+                indentasi:
+              </p>
+              <div class="box-code">
+                <div>&lt;!DOCTYPE html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&lt;head&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;title&gt;Website Pertama&lt;/title&gt;
+                </div>
+                <div>&lt;/head&gt;</div>
+                <div>&lt;body&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;h1&gt;Belajar HTML&lt;/h1&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;Belajar html itu menyenangkan&lt;/p&gt;
+                </div>
+                <br />
+                <div>&lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>Berikut kode HTML tanpa indentasi:</p>
+              <div class="box-code">
+                <div>&lt;!DOCTYPE html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&lt;head&gt;</div>
+                <div>&lt;title&gt;Website Pertama&lt;/title&gt;</div>
+                <div>&lt;/head&gt;</div>
+                <div>&lt;body&gt;</div>
+                <div>&lt;h1&gt;Belajar HTML&lt;/h1&gt;</div>
+                <div>&lt;p&gt;Belajar html itu menyenangkan&lt;/p&gt;</div>
+                <div>&lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>
+                <b>4. Gunakan nama file yang baik</b>
+              </p>
+              <p>
+                Contohnya: <span class="tag">index.html</span>,
+                <span class="tag">profil.html</span>,
+                <span class="tag">kontak.html</span>
+              </p>
+              <p>
+                Hindari: <span class="tag">File Baru.html</span>,
+                <span class="tag">Profil Saya Final Banget.html</span>
+              </p>
+              <br />
+              <p>
+                <b>5. Berikan komentar pada kode jika diperlukan</b>
+              </p>
+              <p>Contoh:</p>
+              <div class="box-code">
+                <div>&nbsp;</div>
+                <div>
+                  <div>&lt;!DOCTYPE html&gt;</div>
+                  <div>&lt;html&gt;</div>
+                  <div>&lt;head&gt;</div>
+                  <div>
+                    &nbsp; &nbsp; &lt;title&gt;Website Pertama&lt;/title&gt;
+                  </div>
+                  <div>&lt;/head&gt;</div>
+                  <div>&lt;body&gt;</div>
+                  <br />
+                  <div>&nbsp; &nbsp; &lt;!-- judul heading 1 --&gt;</div>
+                  <div>&nbsp; &nbsp; &lt;h1&gt;Belajar HTML&lt;/h1&gt;</div>
+                  <br />
+                  <div>&nbsp; &nbsp; &lt;!-- paragraf pertama --&gt;</div>
+                  <div>
+                    &nbsp; &nbsp; &lt;p&gt;Belajar html itu
+                    menyenangkan&lt;/p&gt;
+                  </div>
+                  <br />
+                  <div>&lt;/body&gt;</div>
+                  <div>&lt;/html&gt;</div>
+                </div>
+              </div>
+              <br />
+              <p>
+                <span class="tag">&lt;!-- ini adalah komentar --&gt;</span>
+              </p>
+              <p>Elemen komentar tidak akan tampil di browser.</p>
+              <br /><br />
+              <h5><b>1.7. Membuat File HTML Pertama</b></h5>
+              <p>Sekarang saatnya kita membuat halaman HTML pertama.</p>
+              <br />
+              <p>
+                <b>Langkah 1. buat folder proyek</b>
+              </p>
+              <p>
+                Buat folder proyek baru, contohnya buat folder dengan nama
+                <span class="tag">belajar-html</span>
+              </p>
+              <br />
+              <p>
+                <b>Langkah 2. buat file HTML</b>
+              </p>
+              <p>
+                buat file di dalam folder tersebut dengan nama
+                <span class="tag">index.html</span>
+              </p>
+              <br />
+              <p>
+                <b>Langkah 3. tulis kode berikut</b>
+              </p>
+              <div class="box-code">
+                <div>
+                  <div>&lt;!DOCTYPE html&gt;</div>
+                  <div>&lt;html&gt;</div>
+                  <div>&lt;head&gt;</div>
+                  <div>
+                    &nbsp; &nbsp; &lt;title&gt;Website Pertama
+                    Saya&lt;/title&gt;
+                  </div>
+                  <div>&lt;/head&gt;</div>
+                  <div>&lt;body&gt;</div>
+                  <br />
+                  <div>&nbsp; &nbsp; &lt;h1&gt;Halo Dunia!&lt;/h1&gt;</div>
+                  <br />
+                  <div>&nbsp; &nbsp; &lt;p&gt;</div>
+                  <div>
+                    &nbsp; &nbsp; &nbsp; &nbsp; Ini adalah halaman HTML pertama
+                    saya.
+                  </div>
+                  <div>&nbsp; &nbsp; &lt;/p&gt;</div>
+                  <br />
+                  <div>&lt;/body&gt;</div>
+                  <div>&lt;/html&gt;</div>
+                </div>
+              </div>
+              <br /><br />
+              <p>
+                <b>Langkah 4. simpan file</b>
+              </p>
+              <p>
+                Simpan dengan nama <span class="tag">index.html</span> dan
+                pastikan ekstensi <span class="tag">.html</span> bukan
+                <span class="tag">.txt</span>
+              </p>
+              <br />
+              <p>
+                <b>Langkah 5. jalankan di browser</b>
+              </p>
+              <p>
+                Klik 2 kali pada file <span class="tag">index.html</span> atau
+                buka melalui browser. Jika berhasil tampilannya seperti berikut
+                ini:
+              </p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/html-pertama.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 1.2 : </span> tampilan
+                    dokumen HTML pertama
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <h5><b>Latihan Mandiri</b></h5>
+              <ol>
+                <li>Buat file bernama <span class="tag">profil.html</span></li>
+                <li>
+                  Tambahkan judul halaman "Profil Saya" di dalam file tersebut
+                </li>
+                <li>Tampilkan heading berisi nama lengkap</li>
+                <li>
+                  Tambahkan satu paragraf yang menjelaskan tentang diri sendiri
+                </li>
+                <li>Simpan dan jalankan di browser</li>
+              </ol>
+              <br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/tutorial-pemrograman-web.html"
+                  class="btn btn-secondary"
+                  >Keluar</a
+                >
+                <a href="#" class="btn btn-secondary">Selanjutnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".pengenalan-html-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>

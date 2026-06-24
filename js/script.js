@@ -19,7 +19,7 @@ $(document).ready(function () {
               <a class="nav-link text-light home-nav" href="/">HOME</a>
             </li>
             <li class="nav-item me-2 ms-2">
-              <a class="nav-link text-light profil-nav" href="profil.html"
+              <a class="nav-link text-light profil-nav" href="/profil.html"
                 >PROFIL MAHASISWA</a
               >
             </li>
@@ -28,12 +28,12 @@ $(document).ready(function () {
                 PPG PRAJABATAN 2026
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="artefak.html">Analisis Artefak</a></li>
-                <li><a class="dropdown-item" href="penilaian-siklus.html">Penilaian Siklus</a></li>
-                <li><a class="dropdown-item" href="matakuliah.html">Mata Kuliah</a></li>
-                <li><a class="dropdown-item" href="model-guru.html">Model Guru</a></li>
-                <li><a class="dropdown-item" href="refleksi-ppl.html">Refleksi PPL</a></li>
-                <li><a class="dropdown-item" href="filosofi-mengajar.html">Filosofi Mengajar</a></li>
+                <li><a class="dropdown-item" href="/artefak.html">Analisis Artefak</a></li>
+                <li><a class="dropdown-item" href="/penilaian-siklus.html">Penilaian Siklus</a></li>
+                <li><a class="dropdown-item" href="/matakuliah.html">Mata Kuliah</a></li>
+                <li><a class="dropdown-item" href="/model-guru.html">Model Guru</a></li>
+                <li><a class="dropdown-item" href="/refleksi-ppl.html">Refleksi PPL</a></li>
+                <li><a class="dropdown-item" href="/filosofi-mengajar.html">Filosofi Mengajar</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -41,16 +41,16 @@ $(document).ready(function () {
                 TUTORIAL
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="tutorial-web-pemrograman.html">Web Programming</a></li>
+                <li><a class="dropdown-item" href="/tutorial-pemrograman-web.html">Web Programming</a></li>
               </ul>
             </li>
             <li class="nav-item me-2 ms-2">
-              <a class="nav-link text-light dokumentasi-nav" href="dokumentasi.html"
+              <a class="nav-link text-light dokumentasi-nav" href="/dokumentasi.html"
                 >DOKUMENTASI</a
               >
             </li>
             <li class="nav-item me-2 ms-2">
-              <a class="nav-link text-light blog-nav" href="blog.html">BLOG</a>
+              <a class="nav-link text-light blog-nav" href="/blog.html">BLOG</a>
             </li>
           </ul>
         </div>

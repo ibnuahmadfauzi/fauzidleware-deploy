@@ -1,0 +1,132 @@
+$(document).ready(function () {
+  let daftarMateriHTML = `
+            <div class="list-group">
+              <a
+                href="pengenalan-html.html"
+                class="list-group-item list-group-item-action pengenalan-html-link"
+              >
+                Pengenalan HTML
+              </a>
+
+              <a
+                href="persiapan-lingkungan-pengembangan.html"
+                class="list-group-item list-group-item-action persiapan-lingkungan-link"
+              >
+                Persiapan Lingkungan Pengembangan
+              </a>
+
+              <a
+                href="struktur-dasar-dokumen-html.html"
+                class="list-group-item list-group-item-action struktur-dasar-link"
+              >
+                Struktur Dasar Dokumen HTML
+              </a>
+
+              <a
+                href="membuat-konten-teks.html"
+                class="list-group-item list-group-item-action"
+              >
+                Membuat Konten Teks
+              </a>
+
+              <a
+                href="membuat-daftar-list.html"
+                class="list-group-item list-group-item-action"
+              >
+                Membuat Daftar (List)
+              </a>
+
+              <a
+                href="membuat-hyperlink.html"
+                class="list-group-item list-group-item-action"
+              >
+                Membuat Hyperlink
+              </a>
+
+              <a
+                href="menampilkan-gambar.html"
+                class="list-group-item list-group-item-action"
+              >
+                Menampilkan Gambar
+              </a>
+
+              <a
+                href="mengelola-struktur-folder-website.html"
+                class="list-group-item list-group-item-action"
+              >
+                Mengelola Struktur Folder Website
+              </a>
+
+              <a
+                href="membuat-tabel.html"
+                class="list-group-item list-group-item-action"
+              >
+                Membuat Tabel
+              </a>
+
+              <a
+                href="formulir-html-dasar.html"
+                class="list-group-item list-group-item-action"
+              >
+                Formulir HTML Dasar
+              </a>
+
+              <a
+                href="formulir-html-lanjutan.html"
+                class="list-group-item list-group-item-action"
+              >
+                Formulir HTML Lanjutan
+              </a>
+
+              <a
+                href="elemen-multimedia.html"
+                class="list-group-item list-group-item-action"
+              >
+                Elemen Multimedia
+              </a>
+
+              <a
+                href="semantic-html.html"
+                class="list-group-item list-group-item-action"
+              >
+                Semantic HTML
+              </a>
+
+              <a
+                href="html-untuk-seo-dasar.html"
+                class="list-group-item list-group-item-action"
+              >
+                HTML untuk SEO Dasar
+              </a>
+
+              <a
+                href="html-untuk-aksesibilitas.html"
+                class="list-group-item list-group-item-action"
+              >
+                HTML untuk Aksesibilitas
+              </a>
+
+              <a
+                href="membangun-website-multi-halaman.html"
+                class="list-group-item list-group-item-action"
+              >
+                Membangun Website Multi-Halaman
+              </a>
+
+              <a
+                href="proyek-akhir-html.html"
+                class="list-group-item list-group-item-action"
+              >
+                Proyek Akhir HTML
+              </a>
+
+              <a
+                href="persiapan-belajar-css.html"
+                class="list-group-item list-group-item-action"
+              >
+                Persiapan Belajar CSS
+              </a>
+            </div>
+    `;
+  $(".daftar-materi").html(daftarMateriHTML);
+});

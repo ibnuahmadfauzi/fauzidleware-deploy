@@ -26,6 +26,17 @@ body {
   background-color: #ffffff;
   border-radius: 10px;
 }
+.box-code {
+  background-color: #373737;
+  color: #ffffff;
+  padding: 20px;
+  font-family: monospace;
+  font-weight: 200;
+  font-size: 0.8rem;
+  letter-spacing: 0.6px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
 /* ================================================================== */
 
 /* ================================================================== */
@@ -48,11 +59,30 @@ body {
   color: #ffffff;
   box-shadow: none;
 }
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+  box-shadow: 3px 3px #373737;
+  border-radius: 0px;
+}
+.btn-secondary:hover {
+  background-color: #373737;
+  color: #ffffff;
+  box-shadow: none;
+}
 nav .active {
   background-color: #ffffff;
   color: #af3e3e !important;
   border-radius: 10px;
 }
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
 /* ================================================================== */
 
 /* ================================================================== */
@@ -344,6 +374,41 @@ footer p {
 }
 #matakuliah .card .card-body {
   padding: 50px 30px;
+}
+/* ================================================================== */
+
+/* ================================================================== */
+/* Tutorial Page */
+/* ================================================================== */
+#tutorial .card-box-tutorial {
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+  cursor: pointer;
+}
+#tutorial .card-box-tutorial:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+.tutorial-detail-modal {
+  padding: 30px;
+}
+#bacaan-tutorial {
+  margin: 50px 0;
+}
+.box-image-tutorial {
+  display: flex;
+  justify-content: center;
+}
+.box-image-tutorial img {
+  max-width: 500px;
+}
+span.tag {
+  background-color: #f5f5f5;
+  color: #e1143c;
+  padding: 0 5px;
+  font-family: monospace;
+  border-radius: 5px;
 }
 /* ================================================================== */
 
