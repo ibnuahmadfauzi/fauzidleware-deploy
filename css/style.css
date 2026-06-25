@@ -695,7 +695,7 @@ span.tag {
   /* Stye for Mobile Responsive tutorial Page */
   /* ================================================================== */
   .box-image-tutorial img {
-    max-width: 200px;
+    max-width: 95%;
   }
   /* ================================================================== */
 }
