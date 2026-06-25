@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#5. Membuat Hyperlink</h2>
+            <hr />
+            <div class="my-5">
+              <p>
+                Salah satu fitur terpenting dalam website adalah kemampuan
+                berpindah dari satu halaman ke halaman lainnya. Kemampuan ini
+                diwujudkan melalui <b>hyperlink</b>. Tanpa hyperlink, sebuah
+                website hanya akan menjadi kumpulan halaman yang berdiri sendiri
+                dan tidak saling terhubung.
+              </p>
+              <br /><br />
+              <h5>
+                <b>5.1. Pengertian Hyperlink</b>
+              </h5>
+              <p>
+                Hyperlink adalah elemen yang digunakan untuk menghubungkan suatu
+                halaman atau sumber daya dengan halaman atau sumber daya
+                lainnya. Ketika pengguna mengklik hyperlink, browser akan
+                membuka tujuan yang telah ditentukan. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;a href="profil.html"&gt;Profil Saya&lt;/a&gt;</div>
+              </div>
+              <br />
+              <p>
+                Ketika teks "Profil Saya" diklik, browser akan membuka file
+                <span class="tag">profil.html</span>.
+              </p>
+              <br /><br />
+              <h5>
+                <b>5.2. Tag Anchor <span class="tag">&lt;a&gt;</span></b>
+              </h5>
+              <p>
+                Hyperlink dibuat menggunakan elemen
+                <b>Anchor <span class="tag">&lt;a&gt;</span></b
+                >. Struktur dasar dari penggunaan elemen ini adalah seperti
+                contoh berikut:
+              </p>
+              <div class="box-code">
+                <div>&lt;a href="profil.html"&gt;Profil Saya&lt;/a&gt;</div>
+              </div>
+              <br />
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Bagian</th>
+                    <th>Fungsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag">&lt;a&gt;</span></td>
+                    <td>Membuat hyperlink</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">href="profil.html"</span></td>
+                    <td>Atribut yang menentukan alamat tujuan</td>
+                  </tr>
+                  <tr>
+                    <td>Profil Saya</td>
+                    <td>Teks atau konten yang dapat diklik</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Dari contoh di atas, hasilnya seperti berikut:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-hyperlink.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 5.1 : </span> contoh
+                    hyperlink
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <br /><br />
+              <h5>
+                <b>5.3. Link ke Website Eksternal</b>
+              </h5>
+              <p>
+                Hyperlink juga dapat digunakan untuk membuka website lain.
+                Contohnya:
+              </p>
+              <div class="box-code">
+                <div>
+                  &lt;a href="https://www.google.com"&gt;Situs Google&lt;/a&gt;
+                </div>
+              </div>
+              <br />
+              <p>
+                Untuk hyperlink ke website eksternal sebaiknya gunakan alamat
+                lengkap dan menggunakan protokol <b>https</b> seperti contoh di
+                atas.
+              </p>
+              <br /><br />
+              <h5>
+                <b>5.4. Link ke Bagian Tertentu dalam Halaman</b>
+              </h5>
+              <p>
+                HTML memungkinkan pengguna berpindah ke bagian tertentu dalam
+                halaman yang sama. Teknik ini disebut <b>Anchor Link</b> atau
+                <b>Bookmark Link</b>.
+              </p>
+              <br />
+              <p>
+                <b>Langkah 1 : Beri ID pada Elemen</b>
+              </p>
+              <div class="box-code">
+                <div>&lt;h2 id="bab1"&gt;Bab 1&lt;/h2&gt;</div>
+              </div>
+              <br />
+              <p>
+                <b>Langkah 2 : Buat Link</b>
+              </p>
+              <div class="box-code">
+                <div>&lt;a href="#bab1"&gt;Pergi ke Bab 1&lt;/a&gt;</div>
+              </div>
+              <br />
+              <p>
+                Ketika diklik, browser akan menggulir halaman menuju elemen yang
+                memiliki ID <span class="tag">bab1</span>.
+              </p>
+              <br /><br />
+              <h5>
+                <b>5.5. Membuka Link pada Tab Baru</b>
+              </h5>
+              <p>
+                Secara default, hyperlink akan terbuka pada tab yang sama. Untuk
+                membuka link pada tab baru gunakan atribut
+                <span class="tag">target="_blank"</span>. Seperti contoh
+                berikut:
+              </p>
+              <div class="box-code">
+                <div>
+                  &lt;a href="profil.html" target="_blank"&gt;Profil
+                  Saya&lt;/a&gt;
+                </div>
+              </div>
+              <br />
+              <p>
+                Biasanya menggunakan tab baru untuk website eksternal, dokumen
+                PDF, maupun halaman referensi. Sehingga pengunjung tidak
+                meninggalkan halaman utama website.
+              </p>
+              <br /><br />
+              <h5>
+                <b>5.6. Praktik Membuat Navigasi</b>
+              </h5>
+              <p>
+                Masih ingat pada materi-materi sebelumnya kita sudah membuat
+                satu folder <span class="tag">belajar-html</span> dengan susunan
+                file dan folder seperti berikut:
+              </p>
+              <div class="box-folder">
+                <div>belajar-html/</div>
+                <div>│</div>
+                <div>├── index.html</div>
+                <div>│</div>
+                <div>├── pages/</div>
+                <div>│ &nbsp; ├── profil.html</div>
+                <div>│ &nbsp; └── kontak.html</div>
+                <div>│</div>
+                <div>└── images/</div>
+              </div>
+              <br />
+              <p>
+                Sekarang kita buat masing-masing halaman punya konten dan
+                hyperlink terhubung dengan halaman lain.
+              </p>
+              <p>
+                <b>Isi file <span class="tag">index.html</span></b>
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Beranda&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;h1&gt;Website Saya&lt;/h1&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;a href="index.html"&gt;Beranda&lt;/a&gt; |
+                  &lt;a href="pages/profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;a
+                  href="pages/kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;hr /&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;Selamat datang di website
+                  saya.&lt;/p&gt;
+                </div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>
+                <b>Isi file <span class="tag">profil.html</span></b>
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Profil&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;h1&gt;Profil Saya&lt;/h1&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;a href="../index.html"&gt;Beranda&lt;/a&gt;
+                  | &lt;a href="profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;a href="kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;hr /&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;Ini adalah halaman profil.&lt;/p&gt;
+                </div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>
+                <b>Isi file <span class="tag">kontak.html</span></b>
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Kontak&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;h1&gt;Kontak&lt;/h1&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;a href="../index.html"&gt;Beranda&lt;/a&gt;
+                  | &lt;a href="profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;a href="kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;hr /&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;Email: admin@example.com&lt;/p&gt;
+                </div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/pembuatan-hyperlink-website.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 5.2 : </span> pembuatan
+                    hyperlink pada website
+                  </sub>
+                </p>
+              </div>
+              <br /><br />
+              <p>
+                Dari contoh di atas, hyperlink digunakan untuk navigasi antar
+                halaman. Perhatikan karena file
+                <span class="tag">profil.html</span> dan
+                <span class="tag">kontak.html</span> berada di dalam folder
+                <span class="tag">pages/</span>, maka penulisan nilai atribut
+                <span class="tag">href=" "</span> di file
+                <span class="tag">index.html</span> harus menyertakan nama
+                folder karena file yang dituju tidak berada di lokasi yang sama.
+              </p>
+              <p>
+                Begitu juga sebaliknya ketika berada di halaman
+                <b>Profil</b> dan <b>Kontak</b> untuk akses ke halaman
+                <b>Beranda</b> yaitu file
+                <span class="tag">index.html</span> harus menyertakan penulisan
+                <span class="tag">../</span> sebelum nama file, yang fungsinya
+                untuk mundur satu folder keluar.
+              </p>
+              <p>
+                Kode praktik ini bisa diunduh pada link berikut ini:
+                <b
+                  ><a
+                    href="https://github.com/ibnuahmadfauzi/belajar-html/tree/main/5-1-hyperlink"
+                    class="text-decoration-none"
+                    target="_blank"
+                    >5-1-hyperlink</a
+                  ></b
+                >.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".membuat-hyperlink-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>

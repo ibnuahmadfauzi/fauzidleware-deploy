@@ -31,7 +31,7 @@ $(document).ready(function () {
 
               <a
                 href="membuat-hyperlink.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action membuat-hyperlink-link"
               >
                 Membuat Hyperlink
               </a>
