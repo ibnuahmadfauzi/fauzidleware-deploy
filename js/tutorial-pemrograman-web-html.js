@@ -16,15 +16,8 @@ $(document).ready(function () {
               </a>
 
               <a
-                href="struktur-dasar-dokumen-html.html"
-                class="list-group-item list-group-item-action struktur-dasar-link"
-              >
-                Struktur Dasar Dokumen HTML
-              </a>
-
-              <a
                 href="membuat-konten-teks.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action membuat-konten-teks-link"
               >
                 Membuat Konten Teks
               </a>

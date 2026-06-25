@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#3. Membuat Konten Teks</h2>
+            <hr />
+            <div class="my-5">
+              <p>
+                Sebagian besar halaman web berisi informasi dalam bentuk teks.
+                Oleh karena itu, HTML menyediakan berbagai elemen yang dapat
+                digunakan untuk menyusun dan memformat teks agar lebih mudah
+                dibaca oleh pengunjung.
+              </p>
+              <br />
+              <h5>
+                <b
+                  >3.1. Heading (<span class="tag">&lt;h1&gt;</span> sampai
+                  <span class="tag">&lt;h6&gt;</span>)</b
+                >
+              </h5>
+              <p>
+                Heading digunakan untuk membuat judul dan subjudul pada halaman
+                web. HTML menyediakan enam tingkat heading, yaitu:
+              </p>
+              <ul>
+                <li><span class="tag">&lt;h1&gt;</span></li>
+                <li><span class="tag">&lt;h2&gt;</span></li>
+                <li><span class="tag">&lt;h3&gt;</span></li>
+                <li><span class="tag">&lt;h4&gt;</span></li>
+                <li><span class="tag">&lt;h5&gt;</span></li>
+                <li><span class="tag">&lt;h6&gt;</span></li>
+              </ul>
+              <p>
+                Semakin kecil angka pada heading, semakin besar tingkat
+                kepentingannya. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;h1&gt;Belajar HTML&lt;/h1&gt;</div>
+                <div>&lt;h2&gt;Pengenalan HTML&lt;/h2&gt;</div>
+                <div>&lt;h3&gt;Struktur Dasar HTML&lt;/h3&gt;</div>
+                <div>&lt;h4&gt;Tag HTML&lt;/h4&gt;</div>
+                <div>&lt;h5&gt;Atribut HTML&lt;/h5&gt;</div>
+                <div>&lt;h6&gt;Latihan HTML&lt;/h6&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/hasil-heading.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 3.1 : </span> hasil heading
+                    tiap level
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Hindari langsung menggunakan
+                <span class="tag">&lt;h4&gt;</span> tanpa adanya
+                <span class="tag">&lt;h2&gt;</span> atau
+                <span class="tag">&lt;h3&gt;</span> sebelumnya.
+              </p>
+              <br /><br />
+              <h5>
+                <b>3.2. Paragraf (<span class="tag">&lt;p&gt;</span>)</b>
+              </h5>
+              <p>Paragraf digunaka untuk menampilkan blok teks. Contohnya:</p>
+              <div class="box-code">
+                <div>
+                  &lt;p&gt;HTML adalah bahasa markup yang digunakan untuk
+                  membuat halaman web.&lt;/p&gt;
+                </div>
+                <br />
+                <div>
+                  &lt;p&gt;HTML menjadi dasar dari hampir semua website yang ada
+                  di internet.&lt;/p&gt;
+                </div>
+              </div>
+              <br />
+              <p>Browser akan memberikan jarak otomatis antar paragraf.</p>
+              <p>
+                <b>Mengapa menggunakan <span class="tag">&lt;p&gt;</span> ?</b>
+              </p>
+              <p>Tanpa elemen paragraf:</p>
+              <div class="box-code">
+                HTML adalah bahasa markup.<br />HTML digunakan untuk membuat
+                website.
+              </div>
+              <br />
+              <p>
+                Browser akan menampilkan teks secara berurutan tanpa struktur
+                yang jelas. Jadi dengan paragraf tampilan menjadi lebih rapi dan
+                mudah dibaca.
+              </p>
+              <br /><br />
+              <h5>
+                <b>3.3. Baris Baru (<span class="tag">&lt;br&gt;</span>)</b>
+              </h5>
+              <p>
+                Tag <span class="tag">&lt;br&gt;</span> digunakan untuk membuat
+                baris baru tanpa membuat paragraf baru. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;p&gt;</div>
+                <div>&nbsp; Nama: Ahmad&lt;br /&gt;</div>
+                <div>&nbsp; Alamat: Blitar&lt;br /&gt;</div>
+                <div>&nbsp; Pekerjaan: Web Developer</div>
+                <div>&lt;/p&gt;</div>
+              </div>
+              <br />
+              <p>
+                <b>Kapan Menggunakan <span class="tag">&lt;br&gt;</span> ?</b>
+              </p>
+              <p>Biasanya digunakan untuk:</p>
+              <ul>
+                <li>Alamat</li>
+                <li>Puisi</li>
+                <li>Lirik lagu</li>
+                <li>Data idetitas</li>
+              </ul>
+              <p>
+                Hindari menggunakan <span class="tag">&lt;br&gt;</span> untuk
+                mengatur jarak antar paragraf. Dan tag ini adalah single tag
+                jadi tidak punya penutup, bisa ditulis
+                <span class="tag">&lt;br&gt;</span> atau
+                <span class="tag">&lt;br /&gt;</span>
+              </p>
+              <br /><br />
+              <h5>
+                <b
+                  >3.4. Garis Horizontal (<span class="tag">&lt;hr&gt;</span
+                  >)</b
+                >
+              </h5>
+              <p>
+                Tag <span class="tag">&lt;hr&gt;</span> digunakan untuk membuat
+                garis pemisah antar bagian konten. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;h1&gt;Tutorial HTML&lt;/h1&gt;</div>
+                <br />
+                <div>&lt;p&gt;Materi dasar HTML.&lt;/p&gt;</div>
+                <br />
+                <div>&lt;hr /&gt;</div>
+                <br />
+                <div>&lt;p&gt;Materi lanjutan HTML.&lt;/p&gt;</div>
+              </div>
+              <br />
+              <p>
+                Hasilnya akan menampilkan garis horizontal di area antara kedua
+                paragraf.
+              </p>
+              <p>
+                Secara umum tag <span class="tag">&lt;hr&gt;</span> berfungsi
+                untuk:
+              </p>
+              <ul>
+                <li>Memisahkan topik pembahasan</li>
+                <li>Menunjukkan pergantian bagian konten</li>
+                <li>Membantu pembaca memahami struktur artikel</li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b
+                  >3.5. Penekanan Teks (<span class="tag">&lt;strong&gt;</span>
+                  dan <span class="tag">&lt;em&gt;</span>)</b
+                >
+              </h5>
+              <p>
+                HTML menyediakan elemen khusus untuk memberikan penekanan pada
+                teks.
+              </p>
+              <p>
+                <b>1. Strong (<span class="tag">&lt;strong&gt;</span>)</b>
+              </p>
+              <p>
+                Digunakan untuk menunjukkan bahwa suatu teks memiliki tingkat
+                kepentingan yang tinggi. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;p&gt;</div>
+                <div>
+                  HTML adalah &lt;strong&gt;bahasa markup&lt;/strong&gt; untuk
+                  membuat website.
+                </div>
+                <div>&lt;/p&gt;</div>
+              </div>
+              <p>
+                Biasanya browser menampilkan teks menjadi tebal.
+                <br />
+              </p>
+              <p>
+                <b>2. Emphasis (<span class="tag">&lt;em&gt;</span>)</b>
+              </p>
+              <p>Digunakan untuk memberikan penekanan pada teks. Contohnya:</p>
+              <div class="box-code">
+                <div>&lt;p&gt;</div>
+                <div>
+                  Belajar HTML akan menjadi lebih mudah jika dilakukan secara
+                  &lt;em&gt;konsisten&lt;/em&gt;.
+                </div>
+                <div>&lt;/p&gt;</div>
+              </div>
+              <p>Biasanya browser menampilkan teks menjadi miring.</p>
+              <p>
+                <b>3. Perbedaan Strong dan Em</b>
+              </p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Elemen</th>
+                    <th>Fungsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag">&lt;strong&gt;</span></td>
+                    <td>Menunjukkan tingkat kepentingan</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">&lt;em&gt;</span></td>
+                    <td>Memberikan penekanan</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br /><br />
+              <h5>
+                <b>3.6. Teks Tebal dan Mirig</b>
+              </h5>
+              <p>
+                Selain <span class="tag">&lt;strong&gt;</span> dan
+                <span class="tag">&lt;em&gt;</span>, HTML juga menyediakan
+                elemen:
+              </p>
+              <ul>
+                <li><span class="tag">&lt;b&gt;</span> (bold)</li>
+                <li><span class="tag">&lt;i&gt;</span> (italic)</li>
+              </ul>
+              <p>Contohnya:</p>
+              <div class="box-code">
+                <div>
+                  &lt;p&gt;&lt;b&gt;HTML&lt;/b&gt; adalah bahasa
+                  markup.&lt;/p&gt;
+                </div>
+                <div>
+                  &lt;p&gt;&lt;i&gt;Website&lt;/i&gt; merupakan kumpulan halaman
+                  web.&lt;/p&gt;
+                </div>
+              </div>
+              <br />
+              <p>
+                <b>Perbedaan dengan elemen sebelumnya</b>
+              </p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Elemen</th>
+                    <th>Makna</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag">&lt;strong&gt;</span></td>
+                    <td>Penting</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">&lt;b&gt;</span></td>
+                    <td>hanya tampilan tebal</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">&lt;em&gt;</span></td>
+                    <td>Penekanan</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">&lt;i&gt;</span></td>
+                    <td>Hanya tampilan miring</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                Dalam HTML modern, penggunaan
+                <span class="tag">&lt;strong&gt;</span> dan
+                <span class="tag">&lt;em&gt;</span> lebih disarankan karena
+                memiliki makna semantik.
+              </p>
+              <br /><br />
+              <h5>
+                <b>3.7. Superscript dan Subscript</b>
+              </h5>
+              <p>
+                HTML menyediakan elemen untuk menampilkan teks di atas atau di
+                bawah garis normal.
+              </p>
+              <p>
+                <b>1. Superscript (<span class="tag">&lt;sup&gt;</span>)</b>
+              </p>
+              <p>Digunakan untuk pangkat atau catatan kaki. Contohnya:</p>
+              <div class="box-code">
+                <div>&lt;p&gt;</div>
+                <div>2&lt;sup&gt;3&lt;/sup&gt; = 8</div>
+                <div>&lt;/p&gt;</div>
+              </div>
+              <br />
+              <p>
+                <b>2. Subscript (<span class="tag">&lt;sub&gt;</span>)</b>
+              </p>
+              <p>
+                Digunakan untuk rumus kimia atau notasi tertentu. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;p&gt;</div>
+                <div>H&lt;sub&gt;2&lt;/sub&gt;O</div>
+                <div>&lt;/p&gt;</div>
+              </div>
+              <br /><br />
+              <h5>
+                <b>3.8. Menampilkan Kutipan</b>
+              </h5>
+              <p>
+                HTML menyediakan elemen untuk menampilkan kutipan. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;p&gt;</div>
+                <div>
+                  Menurut Tim Berners-Lee, &lt;q&gt;Web is for
+                  everyone.&lt;/q&gt;
+                </div>
+                <div>&lt;/p&gt;</div>
+                <div>&lt;blockquote&gt;</div>
+                <div>
+                  HTML adalah fondasi utama dalam pengembangan website modern.
+                </div>
+                <div>&lt;/blockquote&gt;</div>
+              </div>
+              <br />
+              <p>
+                <span class="tag">&lt;1&gt;</span> digunakan untuk kutipan
+                pendek dan <span class="tag">&lt;blockquote&gt;</span> digunakan
+                untuk kutipan yang lebih panjang. Biasanya browser akan
+                menambahkan tanda kutip atau indentasi khusus otomatis pada
+                kutipan.
+              </p>
+              <p>
+                <b>Kapan menggunakan kutipan ?</b>
+              </p>
+              <p>Kutipan sering digunakan pada:</p>
+              <ul>
+                <li>Artikel</li>
+                <li>Blog</li>
+                <li>Penelitian</li>
+                <li>Dokumentasi</li>
+                <li>Berita</li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b>3.9. Praktik Membuat Artikel Sederhana</b>
+              </h5>
+              <p>
+                Mari menggabungkan seluruh materi yang telah dipelajari. Buat
+                file baru dalam folder
+                <span class="tag">belajar-html/pages/</span> dengan nama
+                <span class="tag">artikel.html</span>. Lalu isi dengan kode
+                berikut:
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Artikel HTML&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;h1&gt;Belajar HTML untuk Pemula&lt;/h1&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; HTML merupakan bahasa markup yang
+                  digunakan untuk membuat halaman web.
+                </div>
+                <div>&nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;hr /&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;h2&gt;Mengapa Belajar HTML?&lt;/h2&gt;
+                </div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;HTML adalah fondasi utama dalam
+                  pengembangan website modern.&lt;/p&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; Dengan memahami
+                  &lt;strong&gt;HTML&lt;/strong&gt;, Anda dapat membuat berbagai
+                  jenis
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; halaman web dengan lebih mudah.</div>
+                <div>&nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; Konsistensi adalah kunci untuk menjadi
+                  seorang
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;em&gt;web developer&lt;/em&gt;.
+                </div>
+                <div>&nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;h2&gt;Contoh Rumus&lt;/h2&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;H&lt;sub&gt;2&lt;/sub&gt;O adalah rumus
+                  kimia air.&lt;/p&gt;
+                </div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;2&lt;sup&gt;4&lt;/sup&gt; =
+                  16&lt;/p&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;h2&gt;Kutipan&lt;/h2&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;blockquote&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; Belajar sedikit setiap hari lebih baik
+                  daripada belajar banyak tetapi
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; hanya sekali.</div>
+                <div>&nbsp; &nbsp; &lt;/blockquote&gt;</div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/hasil-artikel-sederhana.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 3.2 : </span> hasil artikel
+                    sederhana
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/html-dasar-bahasa-indonesia/persiapan-lingkungan-pengembangan.html"
+                  class="btn btn-secondary"
+                  >Sebelumnya</a
+                >
+                <a href="#" class="btn btn-secondary">Selanjutnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".membuat-konten-teks-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>
