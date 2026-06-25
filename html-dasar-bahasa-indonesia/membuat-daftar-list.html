@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#4. Membuat Daftar (List)</h2>
+            <hr />
+            <div class="my-5">
+              <p>
+                Dalam sebuah website, sering kali kita perlu menampilkan bentuk
+                daftar. Misalnya:
+              </p>
+              <ul>
+                <li>Menu navigasi website</li>
+                <li>Daftar materi pembelajaran</li>
+                <li>Daftar produk</li>
+                <li>Daftar fitur aplikasi</li>
+                <li>Langkah-langkah tutorial</li>
+              </ul>
+              <p>
+                HTML menyediakan beberapa jenis list yang dapat digunakan sesuai
+                kebutuhan. Secara umum terdapat tiga jenis list dalam HTML:
+              </p>
+              <ul>
+                <li>Ordered List (<span class="tag">&lt;ol&gt;</span>)</li>
+                <li>Unordered List (<span class="tag">&lt;ul&gt;</span>)</li>
+                <li>Description List (<span class="tag">&lt;dl&gt;</span>)</li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b>4.1. Ordered List (<span class="tag">&lt;ol&gt;</span>)</b>
+              </h5>
+              <p>
+                Ordered list digunakan untuk membuat daftar yang memiliki urutan
+                tertentu. Biasanya untuk:
+              </p>
+              <ul>
+                <li>Langkah-langkah tutorial</li>
+                <li>Prosedur kerja</li>
+                <li>Peringkat</li>
+                <li>Instruksi</li>
+              </ul>
+              <p>Contoh struktur dan penulisan ordered list:</p>
+              <div class="box-code">
+                <div>&lt;ol&gt;</div>
+                <div>&nbsp; &lt;li&gt;Menyalakan komputer&lt;/li&gt;</div>
+                <div>&nbsp; &lt;li&gt;Membuka browser&lt;/li&gt;</div>
+                <div>&nbsp; &lt;li&gt;Membuka website&lt;/li&gt;</div>
+                <div>&lt;/ol&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/hasil-ol.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 4.1 : </span> hasil ordered
+                    list
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Gunakan ordered list untuk konten yang memiliki urutan item
+                penting, artinya jika urutan berubah maka informasi juga dapat
+                berubah.
+              </p>
+              <br /><br />
+              <h5>
+                <b>4.2. Unordered List (<span class="tag">&lt;ul&gt;</span>)</b>
+              </h5>
+              <p>
+                Unordered list digunakan untuk membuat daftar yang tidak
+                memiliki urutan tertentu, biasanya ditampilkan dengan simbol
+                <b>bullet</b>. Contoh penulisan unordered list:
+              </p>
+              <div class="box-code">
+                <div>&lt;ul&gt;</div>
+                <div>&nbsp; &lt;li&gt;HTML&lt;/li&gt;</div>
+                <div>&nbsp; &lt;li&gt;CSS&lt;/li&gt;</div>
+                <div>&nbsp; &lt;li&gt;JavaScript&lt;/li&gt;</div>
+                <div>&lt;/ul&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/hasil-ul.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 4.2 : </span> hasil
+                    unordered list
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Gunakan unordered list ketika membuat urutan item tidak penting,
+                dan posisi item tidak mempengaruhi makna daftar.
+              </p>
+              <br /><br />
+              <h5>
+                <b>4.3. List Item (<span class="tag">&lt;li&gt;</span>)</b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;li&gt;</span> merupakan singkatan
+                dari <b>list item</b>, digunakan untuk membuat setiap item pada
+                daftar. Cara penggunaannya sudah kita coba pada materi ordered
+                list dan unordered list.
+              </p>
+              <div class="box-code">
+                <div>&lt;ol&gt;</div>
+                <div>&nbsp; &nbsp; &lt;li&gt;Bab 1&lt;/li&gt;</div>
+                <div>&nbsp; &nbsp; &lt;li&gt;Bab 2&lt;/li&gt;</div>
+                <div>&nbsp; &nbsp; &lt;li&gt;Bab 3&lt;/li&gt;</div>
+                <div>&lt;/ol&gt;</div>
+                <div>&lt;ul&gt;</div>
+                <div>&nbsp; &nbsp; &lt;li&gt;Apel&lt;/li&gt;</div>
+                <div>&nbsp; &nbsp; &lt;li&gt;Jeruk&lt;/li&gt;</div>
+                <div>&nbsp; &nbsp; &lt;li&gt;Mangga&lt;/li&gt;</div>
+                <div>&lt;/ul&gt;</div>
+              </div>
+              <br />
+              <p>
+                Elemen <span class="tag">&lt;li&gt;</span> harus berada di dalam
+                <span class="tag">&lt;ol&gt;</span> ataupun
+                <span class="tag">&lt;ul&gt;</span>.
+              </p>
+              <br /><br />
+              <h5>
+                <b>4.4. Nested List</b>
+              </h5>
+              <p>
+                Nested list adalah daftar yang berada di dalam daftar lainnya.
+                Teknik ini digunakan untuk membuat struktur bertingkat.
+              </p>
+              <div class="box-code">
+                <div>&lt;ul&gt;</div>
+                <div>&nbsp; &lt;li&gt;</div>
+                <div>&nbsp; &nbsp; Front-End</div>
+                <div>&nbsp; &nbsp; &lt;ul&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;li&gt;HTML&lt;/li&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;li&gt;CSS&lt;/li&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;li&gt;JavaScript&lt;/li&gt;</div>
+                <div>&nbsp; &nbsp; &lt;/ul&gt;</div>
+                <div>&nbsp; &lt;/li&gt;</div>
+                <br />
+                <div>&nbsp; &lt;li&gt;</div>
+                <div>&nbsp; &nbsp; Back-End</div>
+                <div>&nbsp; &nbsp; &lt;ul&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;li&gt;PHP&lt;/li&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;li&gt;Python&lt;/li&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;li&gt;Node.js&lt;/li&gt;</div>
+                <div>&nbsp; &nbsp; &lt;/ul&gt;</div>
+                <div>&nbsp; &lt;/li&gt;</div>
+                <div>&lt;/ul&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/nested-list.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 4.3 : </span> hasil nested
+                    list
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                <b>Kapan nested list digunakan ?</b>
+              </p>
+              <p>Nested list sering digunakan untuk:</p>
+              <ul>
+                <li>Struktur menu website</li>
+                <li>Daftar kategori</li>
+                <li>Materi pembelajaran</li>
+                <li>Struktur organisasi</li>
+                <li>Daftar produk dna subkategori</li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b
+                  >4.5. Description List (<span class="tag">&lt;dl&gt;</span>,
+                  <span class="tag">&lt;dt&gt;</span>,
+                  <span class="tag">&lt;dd&gt;</span>)</b
+                >
+              </h5>
+              <p>
+                Description list digunaka untuk membuat daftar istilah dan
+                penjelasannya. Jenis list ini berbeda dari ordered list maupun
+                unordered list.
+              </p>
+              <p>
+                <b>Elemen description list:</b>
+              </p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Elemen</th>
+                    <th>Fungsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag">&lt;dl&gt;</span></td>
+                    <td>Description List</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">&lt;dt&gt;</span></td>
+                    <td>Description Term</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">&lt;dd&gt;</span></td>
+                    <td>Description Definition</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <p>Berikut struktur dan penggunaan description list:</p>
+              <div class="box-code">
+                <div>&lt;dl&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;dt&gt;HTML&lt;/dt&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;dd&gt;Bahasa markup untuk membuat halaman
+                  web.&lt;/dd&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;dt&gt;CSS&lt;/dt&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;dd&gt;Bahasa yang digunakan untuk mengatur
+                  tampilan website.&lt;/dd&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;dt&gt;JavaScript&lt;/dt&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;dd&gt;Bahasa pemrograman yang membuat
+                  website menjadi interaktif.&lt;/dd&gt;
+                </div>
+                <br />
+                <div>&lt;/dl&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/hasil-description-list.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 4.4 : </span> hasil
+                    description list
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                <b>Kapan menggunakan description list ?</b>
+              </p>
+              <p>Description list cocok digunakan untuk:</p>
+              <ul>
+                <li>Glosarium istilah</li>
+                <li>Kamus</li>
+                <li>Profil pengguna</li>
+                <li>FAQ sederhana</li>
+                <li>Dokumentasi teknis</li>
+              </ul>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/html-dasar-bahasa-indonesia/membuat-konten-teks.html"
+                  class="btn btn-secondary"
+                  >Sebelumnya</a
+                >
+                <a href="#" class="btn btn-secondary">Selanjutnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".membuat-daftar-list-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>

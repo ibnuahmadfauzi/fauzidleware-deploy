@@ -24,7 +24,7 @@ $(document).ready(function () {
 
               <a
                 href="membuat-daftar-list.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action membuat-daftar-list-link"
               >
                 Membuat Daftar (List)
               </a>
