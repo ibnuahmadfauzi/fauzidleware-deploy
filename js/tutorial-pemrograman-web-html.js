@@ -38,7 +38,7 @@ $(document).ready(function () {
 
               <a
                 href="menampilkan-gambar.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action menampilkan-gambar-link"
               >
                 Menampilkan Gambar
               </a>

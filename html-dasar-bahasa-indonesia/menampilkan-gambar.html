@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#6. Menampilkan Gambar</h2>
+            <hr />
+            <div class="my-5">
+              <p>
+                Selain teks, gambar merupakan salah satu elemen penting dalam
+                sebuah website. Gambar dapat digunakan untuk memperjelas
+                informasi, mempercantik tampilan, memperkenalkan suatu produk,
+                hingga menjadi media penyampaian pesan kepada pengunjung.
+              </p>
+              <p>
+                Website modern hampir selalu menggunakan gambar, baik berupa
+                logo, foto, ilustrasi, ikon, maupun banner. HTML menyediakan
+                elemen khusus untuk menampilkan gambar, yaitu elemen
+                <span class="tag">&lt;img&gt;</span>
+              </p>
+              <br /><br />
+              <h5>
+                <b>6.1. Pengertian Gambar dalam Website</b>
+              </h5>
+              <p>
+                Gambar pada website adalah file visual yang ditampilkan pada
+                halaman web untuk mendukung penyampaian informasi kepada
+                pengguna.
+              </p>
+              <p>Beberapa contoh penggunaan gambar pada website antara lain:</p>
+              <ul>
+                <li>Logo perusahaan</li>
+                <li>Foto profil</li>
+                <li>Foto produk</li>
+                <li>Banner promoso</li>
+                <li>Ilustrasi artikel</li>
+                <li>Ikon menu</li>
+                <li>Galeri foto</li>
+              </ul>
+              <p>
+                Dengan adanya gambar, informasi menjadi lebih menarik dan mudah
+                dipahami oleh pengunjung.
+              </p>
+              <br /><br />
+              <h5>
+                <b>6.2. Format Gambar yang Umum Digunakan</b>
+              </h5>
+              <p>
+                Beberapa format gambar yang sering digunakan dalam website
+                adalah:
+              </p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Format</th>
+                    <th>Keterangan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>JPG/JPEG</td>
+                    <td>Cocok untuk foto</td>
+                  </tr>
+                  <tr>
+                    <td>PNG</td>
+                    <td>Mendukung latar belakang transparan</td>
+                  </tr>
+                  <tr>
+                    <td>GIF</td>
+                    <td>Mendukung animasi sederhana</td>
+                  </tr>
+                  <tr>
+                    <td>SVG</td>
+                    <td>Gambar berbasis vektor</td>
+                  </tr>
+                  <tr>
+                    <td>WebP</td>
+                    <td>Ukuran file lebih kecil dengan kualitas tinggi</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                Nantinya untuk contoh kita akan menggunakan gambar berformat
+                <b>JPG</b> dan <b>PNG</b>.
+              </p>
+              <br /><br />
+              <h5>
+                <b>6.3. Tag <span class="tag">&lt;img&gt;</span></b>
+              </h5>
+              <p>
+                Untuk menampilkan gambar digunakan elemen
+                <span class="tag">&lt;img&gt;</span>. Berbeda dengan sebagian
+                besar elemen HTML, elemen <span class="tag">&lt;img&gt;</span>
+                <b>tidak memiliki tag penutup</b>, sehingga cukup ditulis satu
+                kali. Berikut struktur dasar penggunaan tag
+                <span class="tag">&lt;img&gt;</span>.
+              </p>
+              <div class="box-code">
+                <div>&lt;img src="gambar.jpg" alt="Deskripsi gambar"&gt;</div>
+              </div>
+              <br />
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Bagian</th>
+                    <th>Fungsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag">&lt;img&gt;</span></td>
+                    <td>Menampilkan gambar</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">src=" "</span></td>
+                    <td>Lokasi gambar</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">alt=" "</span></td>
+                    <td>Deskripsi gambar</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>Contoh penggunaan:</p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Coba Gambar&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;img src="logo.png" alt="Gambar Logo" /&gt;
+                </div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/coba-gambar.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 6.1 : </span> contoh
+                    menampilkan gambar
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Browser akan menampilkan gambar yang terdapat pada file
+                <b>logo.png</b>, dan pada kasus ini file tersebut berada satu
+                lokasi dengan file HTML.
+              </p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/lokasi-gambar.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 6.2 : </span> lokasi
+                    penempatan gambar
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <b>6.4. Atribut <span class="tag">src=" "</span></b>
+              </h5>
+              <p>
+                Atribut <span class="tag">src=" "</span> merupakan singkatan
+                dari <b>Source</b>, yaitu lokasi atau alamat file gambar yang
+                akan ditampilkan. Tanpa atribut
+                <span class="tag">src=" "</span> browser tidak mengetahu gambar
+                mana yang harus ditampilkan.
+              </p>
+              <div class="box-code">
+                <div>&lt;img src="gambar.jpg" alt="Pemandangan"&gt;</div>
+              </div>
+              <br />
+              <p>
+                Pada contoh di atas,
+                <span class="tag">src="gambar.jpg"</span> menunjukkan lokasi
+                file gambar. Browser akan mencari file <b>gambar.jpg</b>.
+              </p>
+              <p>Contoh lain:</p>
+              <div class="box-code">
+                <div>&lt;img src="images/logo.png" alt="Logo"&gt;</div>
+              </div>
+              <br />
+              <p>
+                Dengan begitu browser akan mencari file <b>logo.png</b> yang ada
+                di dalam folder <b>images/</b>.
+              </p>
+              <br /><br />
+              <h5>
+                <b>6.5. Atribut <span class="tag">alt=" "</span></b>
+              </h5>
+              <p>
+                Atribut <span class="tag">alt=" "</span> merupakan singkatan
+                dari <b>Alternative Text</b>. Atribut ini berfungsi memberi
+                deskripsi mengenai gambar. Selain untuk membantu SEO website,
+                atribut ini juga membantu memberi informasi jika gambar gagal
+                dimuat.
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Coba Gambar&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;img src="logo2.png" alt="Gambar Logo" /&gt;
+                </div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>
+                Perhatikan pada contoh di atas, sebelumnya gambar yang kita muat
+                namanya <b>logo.png</b>, di sini kita salahkan menjadi
+                <b>logo2.png</b>, karena nama file gambar tidak valid, otomatis
+                gambar tidak bisa dimuat dan hasilnya akan digantikan dengan
+                teks dari nilai atribut <span class="tag">alt=" "</span>.
+              </p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/gambar-gagal.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 6.3 : </span> gambar gagal
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <b>6.6. Menampilkan Gambar dalam Folder yang Sama</b>
+              </h5>
+              <p>
+                Sebenarnya pada contoh di atas kita sudah melakukan itu,
+                sekarang kita implementasikan ke website yang sebelumnya sudah
+                kita buat. Ingat kita sudah pernah membuat website dengan
+                struktur folder:
+              </p>
+              <div class="box-folder">
+                <div>belajar-html/</div>
+                <div>│</div>
+                <div>├── index.html</div>
+                <div>│</div>
+                <div>├── pages/</div>
+                <div>│ &nbsp; ├── profil.html</div>
+                <div>│ &nbsp; └── kontak.html</div>
+                <div>│</div>
+                <div>└── images/</div>
+              </div>
+              <br />
+              <p>
+                Sekarang kita tambah 2 file gambar di dalam folder
+                <span class="tag">images/</span> menjadi seperti berikut ini:
+              </p>
+              <div class="box-folder">
+                <div>belajar-html/</div>
+                <div>│</div>
+                <div>├── index.html</div>
+                <div>│</div>
+                <div>├── pages/</div>
+                <div>│ &nbsp; ├── profil.html</div>
+                <div>│ &nbsp; └── kontak.html</div>
+                <div>│</div>
+                <div>├── images/</div>
+                <div>│ &nbsp; ├── welcome.jpg</div>
+                <div>│ &nbsp; └── profil.png</div>
+              </div>
+              <br />
+              <p>
+                Di sini gambarnya hanya sebagai contoh saja, jadi bebas mau
+                pakai gambar apa, dan nama file di dalam folder
+                <span class="tag">images/</span> menyesuaikan gambar yang
+                digunakan.
+              </p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-file-gambar.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 6.4 : </span> contoh file
+                    gambar untuk praktik
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Sekarang kita ubah kode HTML di halaman <b>Beranda</b> atau file
+                <span class="tag">index.html</span> seperti berikut ini:
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Beranda&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;h1&gt;Website Saya&lt;/h1&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;a href="index.html"&gt;Beranda&lt;/a&gt; |
+                  &lt;a href="pages/profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;a
+                  href="pages/kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;hr /&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;Selamat datang di website
+                  saya.&lt;/p&gt;
+                </div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;img src="images/welcome.jpg" alt="Welcome
+                  Image" /&gt;
+                </div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>
+                Dan tidak lupa ubah kode HTML di halaman <b>Profil</b> atau file
+                <span class="tag">pages/profil.html</span> seperti berikut ini:
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Profil&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;h1&gt;Profil Saya&lt;/h1&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;a href="../index.html"&gt;Beranda&lt;/a&gt;
+                  | &lt;a href="profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;a href="kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;hr /&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;Ini adalah halaman profil.&lt;/p&gt;
+                </div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;img src="../images/profil.png" alt="Foto
+                  Profil" /&gt;
+                </div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>Berikut hasil dari kedua perubahan tersebut:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/hasil-gambar.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 6.5 : </span> hasil praktik
+                    menampilkan gambar
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <b>6.7. Menampilkan Gambar dari URL</b>
+              </h5>
+              <p>
+                Selain menampilkan gambar yang ada di folder lokal, kita juga
+                bisa menampilkan gambar dari url atau link secara online.
+              </p>
+              <p>
+                Sebagai contoh kita modifikasi file
+                <span class="tag">pages/kontak.html</span> menjadi seperti
+                berikut ini:
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Kontak&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;h1&gt;Kontak&lt;/h1&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;a href="../index.html"&gt;Beranda&lt;/a&gt;
+                  | &lt;a href="profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;a href="kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;hr /&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;Email: admin@example.com&lt;/p&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;img</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp;
+                  src="https://static.vecteezy.com/system/resources/thumbnails/021/193/715/small/circular-business-contact-communication-icon-set-png.png"
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; alt="Gambar Kontak"</div>
+                <div>&nbsp; &nbsp; /&gt;</div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/hasil-gambar-url.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 6.6 : </span> hasil gambar
+                    dari url
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Dari contoh di atas, browser akan mengambil gambar langsung dari
+                server tujuan. Kelebihan model ini adalah tidak perlu menyimpan
+                gambar di komputer dan cocok jika gambar berada berada pada
+                server lain. Namun kekurangannya bergantung pada koneksi
+                internet dan jika url berubah gambar tidak dapat ditampilkan.
+              </p>
+              <br />
+              <p>
+                Untuk cara menampilkan gambar kita tidak sampai ke cara mengatur
+                style gambar seperti ukuran, karena itu akan kita pelajari di
+                materi tentang <b>CSS</b>. Jika ingin mendapatkan kode di atas
+                bisa unduh di link berikut :
+                <b
+                  ><a
+                    href="https://github.com/ibnuahmadfauzi/belajar-html/tree/main/6-1-gambar"
+                    target="_blank"
+                    class="text-decoration-none"
+                    >6-1-gambar</a
+                  ></b
+                >.
+              </p>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/html-dasar-bahasa-indonesia/membuat-hyperlink.html"
+                  class="btn btn-secondary"
+                  >Sebelumnya</a
+                >
+                <a href="#" class="btn btn-secondary">Selanjutnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".menampilkan-gambar-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>
