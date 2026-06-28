@@ -1,0 +1,437 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#8. Formulir HTML Dasar</h2>
+            <hr />
+            <div class="py-5">
+              <p>
+                Website modern tidak hanya digunakan untuk menampilkan
+                informasi, tetapi juga sebagai media interaksi antara pengguna
+                dan sistem. Salah satu bentuk interaksi tersebut adalah melalui
+                <b>formulir (form)</b>. Formulir digunakan untuk mengumpulkan
+                data dari pengguna, seperti:
+              </p>
+              <ul>
+                <li>Login akun</li>
+                <li>Registrasi pengguna</li>
+                <li>Formulir kontak</li>
+                <li>Pemesanan produk</li>
+                <li>Pengisian biodata</li>
+                <li>Pendaftaran kegiatan</li>
+              </ul>
+              <p>
+                Dalam HTML, formulir dibuat menggunakan elemen
+                <span class="tag">&lt;form&gt;</span> yang berisi berbagai
+                komponen input.
+              </p>
+              <br /><br />
+              <h5>
+                <b>8.1. Pengertian Formulir</b>
+              </h5>
+              <p>
+                Formulir adalah sekumpula elemen HTML yang digunakan untuk
+                menerima masukan (input) dari pengguna. Data yang dimasukkan
+                pengguna nantinya dapat diproses oleh aplikasi web menggunkan
+                bahasa pemrograman seperti PHP, Python, Java, atau Node.js. Pada
+                bab ini, kita hanya akan mempelajari cara membuat struktur
+                formulir menggunakan HTML tanpa membahas proses pengolahan
+                datanya.
+              </p>
+              <br /><br />
+              <h5>
+                <b>8.2. Tag <span class="tag">&lt;form&gt;</span></b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;form&gt;</span> merupakan wadah
+                utama untuk semua komponen formulir. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;form&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;input type="text"&gt;</div>
+                <br />
+                <div>&lt;/form&gt;</div>
+              </div>
+              <br />
+              <p>
+                Seluruh elemen input sebaiknya ditempatkan di dalam elemen
+                <span class="tag">&lt;form&gt;</span>.
+              </p>
+              <br /><br />
+              <h5>
+                <b
+                  >8.3. Atribut Penting pada
+                  <span class="tag">&lt;form&gt;</span></b
+                >
+              </h5>
+              <p>Dua atribut yang sering digunakan adalah:</p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Atribut</th>
+                    <th>Fungsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag">action=" "</span></td>
+                    <td>Menentukan tujuan pengiriman data</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">method=" "</span></td>
+                    <td>Menentukan metode pengiriman data</td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="box-code">
+                <div>&lt;form action="proses.php" method="post"&gt;</div>
+                <br />
+                <div>&lt;/form&gt;</div>
+              </div>
+              <p>
+                Pada tutorial HTML dasar ini, atribut tersebut cukup dikenalkan
+                terlebih dahulu. Pembahasan lebih lanjut akan dipelajari saat
+                mempelajari bahasa pemrograman web.
+              </p>
+              <br /><br />
+              <h5>
+                <b>8.4. Input Teks</b>
+              </h5>
+              <p>
+                Input teks digunakan untuk menerima data berupa tulisan pendek,
+                seperti nama atau nama kota. Berikut contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;label&gt;Nama Lengkap&lt;/label&gt;&lt;br&gt;</div>
+                <br />
+                <div>&lt;input type="text"&gt;</div>
+              </div>
+              <br /><br />
+              <h5>
+                <b>8.5. Menambahkan Placeholder</b>
+              </h5>
+              <p>
+                Placeholder merupakan teks penunjuk yang muncul sebelum pengguna
+                mengetik. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;label&gt;Nama Lengkap&lt;/label&gt;&lt;br&gt;</div>
+                <br />
+                <div>
+                  &lt;input type="text" placeholder="Masukkan nama lengkap"&gt;
+                </div>
+              </div>
+              <br /><br />
+              <h5>
+                <b>8.6. Input Password</b>
+              </h5>
+              <p>
+                Digunakan untuk memasukkan kata sandi. Karakter yang diketik
+                akan disamarkan. Contohnya
+              </p>
+              <div class="box-code">
+                <div>&lt;label&gt;Password&lt;/label&gt;&lt;br&gt;</div>
+                <br />
+                <div>
+                  &lt;input type="password" placeholder="Masukkan password"&gt;
+                </div>
+              </div>
+              <br /><br />
+              <h5>
+                <b>8.7. Input Email</b>
+              </h5>
+              <p>
+                Digunakan untuk menerima alamat email. Browser dapat membantu
+                memeriksa apakah format email sudah benar. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;label&gt;Email&lt;/label&gt;&lt;br&gt;</div>
+                <br />
+                <div>
+                  &lt;input type="email" placeholder="nama@email.com"&gt;
+                </div>
+              </div>
+              <br /><br />
+              <h5>
+                <b>8.8. Input Angka</b>
+              </h5>
+              <p>
+                Digunakan untuk menerima data berupa angka. Bisa ditambah
+                tambahan atribut <span class="tag">min=" "</span> dan
+                <span class="tag">max=" "</span> untuk membatasi nilai. Berikut
+                contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;label&gt;Umur&lt;/label&gt;&lt;br&gt;</div>
+                <br />
+                <div>&lt;input type="number" min="1" max="100"&gt;</div>
+              </div>
+              <br />
+              <p>
+                Pada contoh tersebut pengguna hanya dapat memasukkan antara
+                angka 1 hingga 100.
+              </p>
+              <br /><br />
+              <h5>
+                <b>8.9. Penerapan Formulir Sederhana</b>
+              </h5>
+              <p>
+                Setelah mempelajari beberapa elemen formulir di atas, sekarang
+                akan langsung kita implementasikan saja ke halaman web
+                <span class="tag">belajar-html</span> dan lakukan modifikasi
+                pada file <span class="tag">kontak.html</span> yaitu halaman
+                <b>Kontak</b>.
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Kontak&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;h1&gt;Kontak&lt;/h1&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;a href="../index.html"&gt;Beranda&lt;/a&gt;
+                  | &lt;a href="profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;a href="kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;hr /&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;Email: admin@example.com&lt;/p&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;h1&gt;Hubungi&lt;/h1&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;form action="#" method="post"&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;label
+                  for="nama"&gt;Nama&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;input</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type="text"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; id="nama"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name="nama"</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; placeholder="Masukkan nama
+                  Anda"
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; required</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; /&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;label for="telepon"&gt;Nomor
+                  HP&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;input</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type="tel"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; id="telepon"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name="telepon"</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; placeholder="08xxxxxxxxxx"
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; required</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; /&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;label
+                  for="email"&gt;Email&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;input</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type="email"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; id="email"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name="email"</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  placeholder="nama@email.com"
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; required</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; /&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;label
+                  for="subject"&gt;Subject&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;input</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; type="text"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; id="subject"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name="subject"</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; placeholder="Masukkan
+                  subject"
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; required</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; /&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;label
+                  for="pesan"&gt;Pesan&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;textarea</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; id="pesan"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; name="pesan"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; rows="5"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; cols="40"</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; placeholder="Tuliskan pesan
+                  Anda..."
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; required</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &gt;&lt;/textarea&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="submit"
+                  value="Kirim" /&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="reset"
+                  value="Reset" /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <div>&nbsp; &nbsp; &lt;/form&gt;</div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>Berikut hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/halaman-kontak.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 8.1 : </span> penggunaan
+                    tabel di halaman kontak
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Dari contoh di atas kita belajar beberapa elemen baru dan
+                atribut baru. Elemen
+                <span class="tag">&lt;textarea&gt;</span> digunakan untuk input
+                teks dalam ukuran yang besar, contohnya untuk input pesan dari
+                pengguna. Di dalam elemen
+                <span class="tag">&lt;textarea&gt;</span> ada atribut
+                <span class="tag">rows=" "</span> dan
+                <span class="tag">cols=" "</span> untuk mengatur besar dari
+                elemen tersebut. Lalu adalagi atribut
+                <span class="tag">require</span> yang digunakan agar input
+                tersebut tidak boleh kosong.
+              </p>
+              <p>
+                <span class="tag">&lt;input type="submit"&gt;</span> digunakan
+                untuk membuat tombol yang difungsikan mengirimkan data dari
+                semua inputnya. dan
+                <span class="tag">&lt;input type="reset"&gt;</span> digunakan
+                untuk membuat tombol yang berfungsi mengulang semua masukan dari
+                pengguna.
+              </p>
+              <p>
+                Atribut lain seperti <span class="tag">name=" "</span> dan
+                <span class="tag">value=" "</span> akan dibahas pada materi
+                bahasa pemrograman web yang akan datang. Jika mau mendapatkan
+                kode di atas bisa unduh pada link berikut :
+                <b
+                  ><a
+                    href="https://github.com/ibnuahmadfauzi/belajar-html/tree/main/8-1-form"
+                    class="text-decoration-none"
+                    target="_blank"
+                    >8-1-form</a
+                  ></b
+                >
+              </p>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/html-dasar-bahasa-indonesia/membuat-tabel.html"
+                  class="btn btn-secondary"
+                  >Sebelumnya</a
+                >
+                <a href="#" class="btn btn-secondary">Selanjutnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".form-html-dasar-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>

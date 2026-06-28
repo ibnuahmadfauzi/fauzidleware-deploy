@@ -52,7 +52,7 @@ $(document).ready(function () {
 
               <a
                 href="formulir-html-dasar.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action form-html-dasar-link"
               >
                 Formulir HTML Dasar
               </a>
@@ -83,27 +83,6 @@ $(document).ready(function () {
                 class="list-group-item list-group-item-action"
               >
                 HTML untuk SEO Dasar
-              </a>
-
-              <a
-                href="html-untuk-aksesibilitas.html"
-                class="list-group-item list-group-item-action"
-              >
-                HTML untuk Aksesibilitas
-              </a>
-
-              <a
-                href="membangun-website-multi-halaman.html"
-                class="list-group-item list-group-item-action"
-              >
-                Membangun Website Multi-Halaman
-              </a>
-
-              <a
-                href="proyek-akhir-html.html"
-                class="list-group-item list-group-item-action"
-              >
-                Proyek Akhir HTML
               </a>
 
               <a
