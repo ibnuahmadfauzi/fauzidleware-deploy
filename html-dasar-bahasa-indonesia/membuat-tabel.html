@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#7. Membuat Tabel</h2>
+            <hr />
+            <div class="py-5">
+              <p>
+                Tabel merupakan salah satu elemen HTML yang digunakan untuk
+                menyajikan data dalam bentuk baris dan kolom. Penyajian data
+                menggunakan tabel membuat informasi menjadi lebih terstruktur,
+                mudah dibaca, dan mudah dibandingkan. Beberapa contoh penggunaan
+                tabel pada website antara lain:
+              </p>
+              <ul>
+                <li>Data siswa</li>
+                <li>Jadwal pelajaran</li>
+                <li>Daftar harga</li>
+                <li>Laporan penjualan</li>
+                <li>Data karyawan</li>
+                <li>Nilai ujian</li>
+              </ul>
+              <p>
+                HTML menyediakan berbagai elemen khusus yang digunakan untuk
+                membuat tabel secara tersturktur.
+              </p>
+              <br /><br />
+              <h5>
+                <b> 7.1. Pengertian Tabel </b>
+              </h5>
+              <p>
+                Tabel adalah sekumpulan data yang disusun dalam bentuk
+                <b>baris (row)</b> dan <b>kolom (column)</b>. Setiap perpotongan
+                antar baris dan kolom disebut sebagai <b>sel (cell)</b>. Contoh
+                tampilan tabel:
+              </p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Kelas</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>Andi</td>
+                    <td>VII A</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Budi</td>
+                    <td>VII B</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Citra</td>
+                    <td>VII A</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                Pada HTML, tabel dibuat menggunakan beberapa elemen yang saling
+                melengkapi.
+              </p>
+              <br /><br />
+              <h5>
+                <b>7.2. Tag <span class="tag">&lt;table&gt;</span></b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;table&gt;</span> digunakan sebagai
+                wadah utama seluruh isi tabel. Semua bagian tabel seperti baris,
+                kolom, dan judul harus berada di dalam elemen
+                <span class="tag">&lt;table&gt;</span>. Berikut contoh dasar
+                dari penggunaan elemen <span class="tag">&lt;table&gt;</span>:
+              </p>
+              <div class="box-code">
+                <div>&lt;table&gt;</div>
+                <div>&nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;HTML&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;/tr&gt;</div>
+                <div>&lt;/table&gt;</div>
+              </div>
+              <br />
+              <p>Pada contoh di atas:</p>
+              <ul>
+                <li><span class="tag">&lt;table&gt;</span> membuat tabel</li>
+                <li><span class="tag">&lt;tr&gt;</span> membuat satu baris</li>
+                <li><span class="tag">&lt;td&gt;</span> membuat satu sel</li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b>7.3. Baris Tabel (<span class="tag">&lt;tr&gt;</span>)</b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;tr&gt;</span> merupakan singkatan
+                dari <b>Table Row</b>. Elemen ini digunakan untuk membuat satu
+                baris pada tabel. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;table&gt;</div>
+                <div>&nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Andi&lt;/td&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;VII A&lt;/td&gt;
+                </div>
+                <div>&nbsp; &nbsp; &lt;/tr&gt;</div>
+                <div>&lt;/table&gt;</div>
+              </div>
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-tabel.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 7.1 : </span> contoh
+                    tampilan tabel
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                perhatikan bahwa secara default elemen
+                <span class="tag">&lt;table&gt;</span> tidak membawa garis atau
+                border. Jadi untuk menambahkannya bisa pakai atribut
+                <span class="tag">border=" "</span>. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;table border="1"&gt;</div>
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;Andi&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;VII A&lt;/td&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <div>&lt;/table&gt;</div>
+              </div>
+              <br />
+              <p>
+                Jika ingin mengatur jarak antar baris pakai atribut
+                <span class="tag">cellspacing=" "</span>, jika ingin mengatur
+                jarak baris ke konten pakai atribut
+                <span class="tag">cellpadding=" "</span>
+              </p>
+              <div class="box-code">
+                <div>
+                  &lt;table border="1" cellspacing="0" cellpadding="10"&gt;
+                </div>
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;Andi&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;VII A&lt;/td&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <div>&lt;/table&gt;</div>
+              </div>
+              <br />
+              <p>Sekarang coba kita buat beberapa baris lagi:</p>
+              <div class="box-code">
+                <div>
+                  &lt;table border="1" cellspacing="0" cellpadding="10"&gt;
+                </div>
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;1&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;Andi&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;VII A&lt;/td&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;2&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;Budi&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;VII B&lt;/td&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <div>&lt;/table&gt;</div>
+              </div>
+              <br />
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-tabel-2.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 7.2 : </span> contoh
+                    tampilan beberapa baris tabel
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <b>7.4. Kolom Tabel (<span class="tag">&lt;td&gt;</span>)</b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;td&gt;</span> merupakan singkatan
+                dari <b>Table Data</b>. Digunakan untuk membuat isi setiap sel
+                tabel. Contohnya sudah kita coba sebelumnya.
+              </p>
+              <br /><br />
+              <h5>
+                <b>7.5. Judul Kolom (<span class="tag">&lt;th&gt;</span>)</b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;th&gt;</span> merupakan singkatan
+                dari <b>Table Header</b>. Digunakan untuk membuat judul kolom.
+                Browser biasanya menampilkan isi
+                <span class="tag">&lt;th&gt;</span> dengan huruf tebal.
+                Contohnya:
+              </p>
+              <div class="box-code">
+                <div>
+                  &lt;table border="1" cellspacing="0" cellpadding="10"&gt;
+                </div>
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;th&gt;No.&lt;/th&gt;</div>
+                <div>&nbsp; &nbsp; &lt;th&gt;Nama&lt;/th&gt;</div>
+                <div>&nbsp; &nbsp; &lt;th&gt;Kelas&lt;/th&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;1&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;Andi&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;VII A&lt;/td&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;2&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;Budi&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;VII B&lt;/td&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <div>&lt;/table&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-tabel-header.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 7.3 : </span> contoh
+                    tampilan judul tabel
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Selain membuat tampilan lebih jelas, elemen
+                <span class="tag">&lt;th&gt;</span> juga memberikan makna
+                semantik sehingga browser dapat mengenali bahwa sel tersebut
+                adalah judul kolom.
+              </p>
+              <br /><br />
+              <h5>
+                <b
+                  >7.6. Penggabungan Kolom (<span class="tag">colspan</span>)</b
+                >
+              </h5>
+              <p>
+                Kadang-kadang sebuah sel perlu melebar hingga mencakup beberapa
+                kolom. Untuk itu digunakan atribut
+                <span class="tag">colspan</span>. Berikut contoh penggunaannya:
+              </p>
+              <div class="box-code">
+                <div>
+                  &lt;table border="1" cellspacing="0" cellpadding="10"&gt;
+                </div>
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;th&gt;No.&lt;/th&gt;</div>
+                <div>&nbsp; &nbsp; &lt;th&gt;Nama&lt;/th&gt;</div>
+                <div>&nbsp; &nbsp; &lt;th&gt;Kelas&lt;/th&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;1&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;Andi&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;VII A&lt;/td&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;2&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;Budi&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;VII B&lt;/td&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;td colspan="3"&gt;Data Siswa
+                  Aktif&lt;/td&gt;
+                </div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <div>&lt;/table&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/penggabungan-kolom.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 7.4 : </span> contoh
+                    penggabungan kolom
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Biasanya atribut <span class="tag">colspan=" "</span> digunakan
+                untuk judul tabel, ringkasan, pengelompokan nilai, total nilai,
+                ataupun pengelompokan data.
+              </p>
+              <br /><br />
+              <h5>
+                <b
+                  >7.7. Penggabungan Baris (<span class="tag">rowspan</span>)</b
+                >
+              </h5>
+              <p>
+                Selain kolom, HTML juga memungkinkan penggabungan beberapa baris
+                menggunakan atribut <span class="tag">rowspan=" "</span>.
+                Berikut contoh penggunannya:
+              </p>
+              <div class="box-code">
+                <div>
+                  &lt;table border="1" cellspacing="0" cellpadding="10"&gt;
+                </div>
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;th&gt;No.&lt;/th&gt;</div>
+                <div>&nbsp; &nbsp; &lt;th&gt;Nama&lt;/th&gt;</div>
+                <div>&nbsp; &nbsp; &lt;th&gt;Kelas&lt;/th&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;th rowspan="4"&gt;Kelas VII&lt;/th&gt;
+                </div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;1&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;Andi&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;VII A&lt;/td&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;2&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;Budi&lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &lt;td&gt;VII B&lt;/td&gt;</div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;td colspan="3"&gt;Data Siswa
+                  Aktif&lt;/td&gt;
+                </div>
+                <div>&nbsp; &lt;/tr&gt;</div>
+                <div>&lt;/table&gt;</div>
+              </div>
+              <br />
+              <p>
+                Dari contoh di atas, atribut
+                <span class="tag">rowspan="4"</span> akan mengambil 4 baris
+                kebawah untuk digabungkan.
+              </p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-rowspan.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 7.5 : </span> contoh
+                    penggabungan baris
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <b>7.8. Header, Body, dan Footer Tabel</b>
+              </h5>
+              <p>
+                Agar struktur tabel lebih rapi, HTML menyediakan tiga elemen
+                tambahan:
+              </p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Elemen</th>
+                    <th>Fungsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag">&lt;thead&gt;</span></td>
+                    <td>Bagian kepala tabel</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">&lt;tbody&gt;</span></td>
+                    <td>Bagian isi tabel</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">&lt;tfoot&gt;</span></td>
+                    <td>Bagian akhir tabel</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br />
+              <p>
+                Sebagai contoh silahkan gunakan project
+                <span class="tag">belajar-html</span> sebelumnya dan kita
+                modifikasi pada halaman <b>Profil</b> atau file
+                <span class="tag">profil.html</span> seperti berikut ini:
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Profil&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;h1&gt;Profil Saya&lt;/h1&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;a href="../index.html"&gt;Beranda&lt;/a&gt;
+                  | &lt;a href="profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;a href="kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;hr /&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;p&gt;Ini adalah halaman profil.&lt;/p&gt;
+                </div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;img src="../images/profil.png" alt="Foto
+                  Profil" /&gt;
+                </div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &lt;table border="1" cellspacing="0"
+                  cellpadding="10"&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;thead&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;th colspan="2"&gt;Data
+                  Profil Pribadi&lt;/th&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/thead&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;tbody&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Nama
+                  Lengkap&lt;/td&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Ibnu Ahmad
+                  Fauzi&lt;/td&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Tempat, Tanggal
+                  Lahir&lt;/td&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Blitar, 1 Januari
+                  2000&lt;/td&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Jenis
+                  Kelamin&lt;/td&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;td&gt;Laki-laki&lt;/td&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Alamat&lt;/td&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Kabupaten Blitar,
+                  Jawa Timur&lt;/td&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;td&gt;Pekerjaan&lt;/td&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Web
+                  Developer&lt;/td&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Email&lt;/td&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;td&gt;ibnu@example.com&lt;/td&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;No.
+                  Telepon&lt;/td&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;td&gt;0812-3456-7890&lt;/td&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Hobi&lt;/td&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td&gt;Membaca,
+                  Programming, dan Desain Website&lt;/td&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/tbody&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;tfoot&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;tr&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;td colspan="2"&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Data di atas
+                  merupakan contoh tabel profil pribadi menggunakan HTML.
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/td&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/tr&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/tfoot&gt;</div>
+                <div>&nbsp; &nbsp; &lt;/table&gt;</div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/tabel-profil.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 7.7 : </span> contoh
+                    penerapan tabel di halaman profil
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/html-dasar-bahasa-indonesia/menampilkan-gambar.html"
+                  class="btn btn-secondary"
+                  >Sebelumnya</a
+                >
+                <a href="#" class="btn btn-secondary">Selanjutnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".membuat-tabel-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>

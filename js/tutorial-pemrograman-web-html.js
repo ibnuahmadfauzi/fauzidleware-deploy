@@ -44,15 +44,8 @@ $(document).ready(function () {
               </a>
 
               <a
-                href="mengelola-struktur-folder-website.html"
-                class="list-group-item list-group-item-action"
-              >
-                Mengelola Struktur Folder Website
-              </a>
-
-              <a
                 href="membuat-tabel.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action membuat-tabel-link"
               >
                 Membuat Tabel
               </a>
