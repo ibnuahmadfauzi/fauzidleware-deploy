@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#10. Elemen Multimedia</h2>
+            <hr />
+            <div class="py-5">
+              <p>
+                Website modern tidak hanya berisi teks, gambar, dan tabel.
+                Tetapi juga dapat menampilkna berbagai jenis media seperti audio
+                dan video. Kehadiran multimedia membuat website menjadi lebih
+                menarik, interaktif, dan informatif. Contoh penggunaan
+                multimedia pada website antara lain:
+              </p>
+              <ul>
+                <li>Musik pada website hiburan</li>
+                <li>Video pembelajaran</li>
+                <li>Podcast</li>
+                <li>Video profil perusahaan</li>
+                <li>Dokumentasi kegiatan</li>
+                <li>Tutorial interaktif</li>
+              </ul>
+              <p>
+                Sebelum HTML5 diperkenalkan, pemutaran audio dan video pada
+                website memerlukan plugin tambahan seperti Adobe Flash. Namun,
+                sejak hadirnya HTML5, browser telah menyediakan dukungan bawaan
+                untuk menampilkan audio dan video menggunakan elemen
+                <span class="tag">&lt;audio&gt;</span> dan
+                <span class="tag">&lt;video&gt;</span>.
+              </p>
+              <br /><br />
+              <h5>
+                <b>10.1. Elemen Multimedia dalam HTML</b>
+              </h5>
+              <p>
+                Multimedia adalah segala bentuk media yang menggabungkan suara,
+                gambar, animasi, maupun video dalam sebuah halaman web. HTML
+                menyediakan dua elemen utama untuk multimedia, yaitu:
+              </p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Elemen</th>
+                    <th>Fungsi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="tag">&lt;audio&gt;</span></td>
+                    <td>Menampilkan file audio</td>
+                  </tr>
+                  <tr>
+                    <td><span class="tag">&lt;video&gt;</span></td>
+                    <td>Menampilkan file video</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                Kedua elemen tersebut merupakan bagian dari standar HTML5 dan
+                didukung oleh hampir semua browser modern.
+              </p>
+              <br /><br />
+              <h5>
+                <b>10.2. Menampilkan Audio</b>
+              </h5>
+              <p>
+                Untuk menampilkan audio digunakan elemen
+                <span class="tag">&lt;audio&gt;</span>. Berikut contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;audio controls&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+                </div>
+                <div>&lt;/audio&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-audio.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 10.1 : </span> contoh
+                    menampilkan audio
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>Pada contoh di atas:</p>
+              <ul>
+                <li>
+                  <span class="tag">&lt;audio&gt;</span> digunakan untuk membuat
+                  pemutar audio
+                </li>
+                <li>
+                  <span class="tag">controls</span> menampilkan tombol pemutar
+                </li>
+                <li>
+                  <span class="tag">&lt;source&gt;</span> menentukan lokasi file
+                  audio
+                </li>
+                <li>
+                  <span class="tag">type</span> menjelaskan format file audio
+                </li>
+              </ul>
+              <p>Browser mendukung beberapa format audio:</p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Format</th>
+                    <th>MIME Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>MP3</td>
+                    <td>audio/mpeg</td>
+                  </tr>
+                  <tr>
+                    <td>OGG</td>
+                    <td>audio/ogg</td>
+                  </tr>
+                  <tr>
+                    <td>WAV</td>
+                    <td>audio/wav</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br /><br />
+              <h5>
+                <b>10.3. Menampilkan VIdeo</b>
+              </h5>
+              <p>
+                Untuk menampilkan video digunakan elemen
+                <span class="tag">&lt;video&gt;</span>. Berikut contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;video controls&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;source src="video.mp4" type="video/mp4"&gt;
+                </div>
+                <div>&lt;/video&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-video.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 10.2 : </span> contoh
+                    menampilkan video
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>Beberapa format video:</p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Format</th>
+                    <th>MIME Type</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>MP4</td>
+                    <td>video/mp4</td>
+                  </tr>
+                  <tr>
+                    <td>WebM</td>
+                    <td>video/webm</td>
+                  </tr>
+                  <tr>
+                    <td>OGG</td>
+                    <td>video/ogg</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                Format MP4 merupakan format yang paling umum digunaka karena
+                didukung oleh hampir semua browser modern.
+              </p>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/html-dasar-bahasa-indonesia/formulir-html-dasar.html"
+                  class="btn btn-secondary"
+                  >Sebelumnya</a
+                >
+                <a
+                  href="/html-dasar-bahasa-indonesia/elemen-multimedia.html"
+                  class="btn btn-secondary"
+                  >Selanjutnya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".elemen-multimedia-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>

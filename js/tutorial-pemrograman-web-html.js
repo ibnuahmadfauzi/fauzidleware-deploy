@@ -66,7 +66,7 @@ $(document).ready(function () {
 
               <a
                 href="elemen-multimedia.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action elemen-multimedia-link"
               >
                 Elemen Multimedia
               </a>
