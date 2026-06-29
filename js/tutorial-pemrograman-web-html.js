@@ -59,7 +59,7 @@ $(document).ready(function () {
 
               <a
                 href="formulir-html-lanjutan.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action formulir-html-lanjutan-link"
               >
                 Formulir HTML Lanjutan
               </a>

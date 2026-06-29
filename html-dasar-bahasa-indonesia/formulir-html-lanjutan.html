@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#9. Formulir HTML Lanjutan</h2>
+            <hr />
+            <div class="py-5">
+              <p>
+                Pada materi sebelumnya, kita telah mempelajari cara membuat
+                formulir sederhana menggunakan berbagai jenis input seperti
+                teks, email, password, angka, tanggal, telepon, serta textarea.
+              </p>
+              <p>
+                Namun, formulir pada sebuah website umumnya tidak hanya terdiri
+                atas input teks saja. Banyak data yang lebih tepat diinputkan
+                menggunakan pilihan tertentu agar pengguna lebih mudah mengisi
+                formulir dan meminimalkan kesalahan. Sebagai contoh:
+              </p>
+              <ul>
+                <li>Memilih jenis kelamin</li>
+                <li>Memilih agama</li>
+                <li>Memilih hobi</li>
+                <li>Memilih jurusan</li>
+                <li>Memilih kota</li>
+                <li>Memilih tingkat pendidikan</li>
+              </ul>
+              <p>
+                HTML menyediakan beberapa elemen khusus untuk kebutuhan
+                tersebut, diantaranya Radio Button, Checkbox, Select Option, dan
+                Optgroup.
+              </p>
+              <br /><br />
+              <h5>
+                <b>9.1. Radio Button</b>
+              </h5>
+              <p>
+                Radio Button digunakan ketika pengguna
+                <b>hanya boleh memilih satu pilihan</b> dari beberapa pilihan
+                yang tersedia. Contoh penggunaan Radio Button:
+              </p>
+              <ul>
+                <li>Jenis Kelamin</li>
+                <li>Status Pernikahan</li>
+                <li>Metode Pembayaran</li>
+                <li>Pilihan Kelas</li>
+              </ul>
+              <p>Contoh sederhana:</p>
+              <div class="box-code">
+                <div>&lt;label&gt;</div>
+                <div>&nbsp; &nbsp; &lt;input</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; type="radio"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; name="jk"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; value="L"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; checked&gt;</div>
+                <div>&nbsp; &nbsp; Laki-laki</div>
+                <div>&lt;/label&gt;</div>
+                <br />
+                <div>&lt;br&gt;</div>
+                <br />
+                <div>&lt;label&gt;</div>
+                <div>&nbsp; &nbsp; &lt;input</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; type="radio"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; name="jk"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; value="P"&gt;</div>
+                <div>&nbsp; &nbsp; Perempuan</div>
+                <div>&lt;/label&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/struktur-radio.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 9.1 : </span> contoh radio
+                    button
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Mengapa perlu atribut <span class="tag">name=" "</span> ?. Radio
+                Button yang memiliki nilai
+                <span class="tag">name=" "</span> yang sama hanya dapat dipilih
+                salah satu pilihan. Jika atribut
+                <span class="tag">name=" "</span> nilainya berbeda, maka semua
+                Radio Button dapat dipilih secara bersamaan, sehingga fungsi
+                Radio Button menjadi tidak tepat.
+              </p>
+              <p>
+                Atribut <span class="tag">value=" "</span> digunakan sebagai
+                nilai pilihan Radio Button yang dikirim ketika formulir
+                diproses.
+              </p>
+              <p>
+                Atribut <span class="tag">checked</span> akan membuat Radio
+                Button tersebut terpilih otomatis pada awal digunakan (bisa
+                digunakan bisa tidak). Jika tidak digunakan maka ketika awal
+                formulir dibuka tidak ada Radio Button yang dipilih.
+              </p>
+              <br /><br />
+              <h5>
+                <b>9.2. Checkbox</b>
+              </h5>
+              <p>
+                Checkbox digunakan ketika pengguna
+                <b>boleh memilih lebih dari satu pilihan</b>. Contoh
+                penggunaannya:
+              </p>
+              <ul>
+                <li>Hobi</li>
+                <li>Bahasa Pemrograma</li>
+                <li>Makanan Favorit</li>
+                <li>Mata Pelajaran Favorit</li>
+              </ul>
+              <p>Berikut contoh struktur penggunannya:</p>
+              <div class="box-code">
+                <div>&lt;label&gt;</div>
+                <div>&nbsp; &nbsp; &lt;input</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; type="checkbox"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; name="hobi"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; value="Membaca"&gt;</div>
+                <div>&nbsp; &nbsp; Membaca</div>
+                <div>&lt;/label&gt;</div>
+                <br />
+                <div>&lt;br&gt;</div>
+                <br />
+                <div>&lt;label&gt;</div>
+                <div>&nbsp; &nbsp; &lt;input</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; type="checkbox"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; name="hobi"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; value="Olahraga"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; checked&gt;</div>
+                <div>&nbsp; &nbsp; Olahraga</div>
+                <div>&lt;/label&gt;</div>
+                <br />
+                <div>&lt;br&gt;</div>
+                <br />
+                <div>&lt;label&gt;</div>
+                <div>&nbsp; &nbsp; &lt;input</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; type="checkbox"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; name="hobi"</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; value="Musik"&gt;</div>
+                <div>&nbsp; &nbsp; Musik</div>
+                <div>&lt;/label&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/struktur-checkbox.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 9.2 : </span> contoh
+                    checkbox
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <b>9.3. Select Option</b>
+              </h5>
+              <p>
+                Jika pilihan sangat banyak, penggunaan Radio Button akan membuat
+                halaman menjadi panjang. Solusinya adalah menggunakan elemen
+                <span class="tag">&lt;select&gt;</span>. Contoh struktur dasar
+                penggunaannya:
+              </p>
+              <div class="box-code">
+                <div>&lt;select name="programming-language"&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;option value="php"&gt;PHP&lt;/option&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;option value="html"
+                  selected&gt;HTML&lt;/option&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;option value="css"&gt;CSS&lt;/option&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;option
+                  value="js"&gt;JavaScript&lt;/option&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;option value="cpp"&gt;C++&lt;/option&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;option value="java"&gt;Java&lt;/option&gt;
+                </div>
+                <div>&lt;/select&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/struktur-select.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 9.3 : </span> contoh select
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>Saat halaman dibuka, pilihan HTML akan langsung tampil</p>
+              <br /><br />
+              <h5>
+                <b>9.4. Optgroup</b>
+              </h5>
+              <p>
+                Jika daftar pilihan sangat banyak, kita dapat mengelompokkannya
+                menggunakan elemen <span class="tag">&lt;optgroup&gt;</span>.
+                Hal ini membuat daftar pilihan menjadi lebih rapi dan mudah
+                dipahami.
+              </p>
+              <p>Contoh formulir sederhana gabungan dari materi di atas:</p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Form Biodata&lt;/title&gt;</div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;h1&gt;Form Biodata&lt;/h1&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;form&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;Jenis
+                  Kelamin&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="radio"
+                  name="jk" value="L" /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Laki-laki</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="radio"
+                  name="jk" value="P" /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Perempuan</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;label&gt;Hobi&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="checkbox"
+                  name="hobi" value="Membaca" /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Membaca</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;br /&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="checkbox"
+                  name="hobi" value="Olahraga" /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Olahraga</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;br /&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type="checkbox"
+                  name="hobi" value="Musik" /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Musik</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;label&gt;Bahasa Pemrograman
+                  Favorit&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;select name="bahasa"&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;optgroup
+                  label="Front-End"&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;option&gt;HTML&lt;/option&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;option&gt;CSS&lt;/option&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;option&gt;JavaScript&lt;/option&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/optgroup&gt;</div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;optgroup
+                  label="Back-End"&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;option&gt;PHP&lt;/option&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;option&gt;Python&lt;/option&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;option&gt;Node.js&lt;/option&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/optgroup&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <div>&nbsp; &nbsp; &lt;/form&gt;</div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/form-lanjutan.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 9.4 : </span> contoh form
+                    biodata
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/html-dasar-bahasa-indonesia/formulir-html-dasar.html"
+                  class="btn btn-secondary"
+                  >Sebelumnya</a
+                >
+                <a href="#" class="btn btn-secondary">Selanjutnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".formulir-html-lanjutan-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>
