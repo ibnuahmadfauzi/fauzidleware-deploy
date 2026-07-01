@@ -29,9 +29,467 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <h2>#11. Semantic HTML</h2>
+            <h2>#12. Persiapan Belajar CSS</h2>
             <hr />
             <div class="py-5">
+              <p>
+                Selamat!!, kita telah mempelajari berbagai materi HTML, mulai
+                dari struktur dasar sampai belajar tentang semantic HTML. Jika
+                analoginya sebuah rumah, maka HTML adalah kerangka bangunan.
+                HTML menentukan letak pintu, jendela, ruang tamu, kamar, dan
+                bagian lainnya.
+              </p>
+              <p>
+                Namun, sebuah rumah tentu akan terlihat kurang menarik apabila
+                hanya berupa kerangka tanpa cat, lantai, plafon, maupun
+                dekorasi. Agar tampilannya menjadi indah dan nyaman dipandang,
+                diperlukan proses desain. Dalam pengembangan website, proses
+                mempercantik tamilan tersebut dilakukan menggunakan
+                <b>CSS (Cascading Styling Sheets)</b>.
+              </p>
+              <br /><br />
+              <h5>
+                <b>12.1. Apa Itu CSS ?</b>
+              </h5>
+              <p>
+                CSS adalah bahasa stylesheet yang digunakan untuk mengatur
+                tamppilan dan tata letak halaman website. Dengan CSS, kita dapat
+                mengatur berbagai aspek tampilan, seperti:
+              </p>
+              <ul>
+                <li>Warna teks</li>
+                <li>Warna latar belakang</li>
+                <li>Jenis huruf</li>
+                <li>Ukuran huruf</li>
+                <li>Jarak antar elemen</li>
+                <li>Posisi elemen</li>
+                <li>Ukuran gambar</li>
+                <li>Tata letak halaman</li>
+                <li>Animasi sederhana</li>
+                <li>Tampilan website pada berbagai ukuran layar</li>
+              </ul>
+              <p>
+                HTML bertugas menyusun struktur halaman, sedangkan CSS bertugas
+                mengatur bagaimana halaman tersebut ditampilkan kepada pengguna.
+              </p>
+              <br /><br />
+              <h5>
+                <b>12.2. Mengapa Harus Belajar CSS ?</b>
+              </h5>
+              <p>
+                Jika hanya menggunakan HTML, halaman website tetap dapat dibuka
+                oleh browser. Namun tampilannya masih sangat sederhana. Sebagai
+                contoh:
+              </p>
+              <ul>
+                <li>Semua teks menggunakan jenis huruf bawaan browser</li>
+                <li>Warna halaman masih standar</li>
+                <li>Tata letak belum rapi</li>
+                <li>Menu navigasi belum menarik</li>
+                <li>Gambar belum diatur ukurannya</li>
+                <li>Tabel dan formulir masih terlihat sederhana</li>
+              </ul>
+              <p>
+                CSS digunakan untuk mengatasi keterbatasan tersebut sehingga
+                websie menjadi lebih menarik dan nyaman digunakan.
+              </p>
+              <br /><br />
+              <h5>
+                <b>12.3. Perbedaan HTML dan CSS</b>
+              </h5>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>HTML</th>
+                    <th>CSS</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Menyusun struktur halaman</td>
+                    <td>Mengatur tampilan halaman</td>
+                  </tr>
+                  <tr>
+                    <td>Membuat heading, paragraf, tabel, gambar, formulir</td>
+                    <td>Mengatur warna, ukuran, posisi, dan tata letak</td>
+                  </tr>
+                  <tr>
+                    <td>Menentukan isi website</td>
+                    <td>Menentukan desain website</td>
+                  </tr>
+                  <tr>
+                    <td>Wajib dimiliki setiap halaman web</td>
+                    <td>Digunakan untuk mempercantik halaman</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                HTML dan CSS saling melengkapi. Keduanya hampir selalu digunakan
+                secara bersamaan dalam pengembangan website modern.
+              </p>
+              <br /><br />
+              <h5>
+                <b>12.4. Website HTML Semantic</b>
+              </h5>
+              <p>
+                Untuk menutup materi kita buat satu halaman web HTML dengan
+                susunan semantic yang akan digunakan untuk praktek materi CSS
+                yang akan datang.
+              </p>
+              <p>Berikut susunan foldernya:</p>
+              <div class="box-folder">
+                <div>belajar-html/</div>
+                <div>│</div>
+                <div>├── index.html</div>
+                <div>│</div>
+                <div>├── pages/</div>
+                <div>│ &nbsp; ├── profil.html</div>
+                <div>│ &nbsp; └── kontak.html</div>
+              </div>
+              <br /><br />
+              <p>
+                <b>Halaman Beranda - File index.html</b>
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html lang="id"&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;meta charset="UTF-8" /&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;title&gt;Beranda - Belajar
+                  HTML&lt;/title&gt;
+                </div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;header&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;h1&gt;Belajar HTML Dasar&lt;/h1&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;p&gt;Website sederhana menggunakan
+                  Semantic HTML.&lt;/p&gt;
+                </div>
+                <div>&nbsp; &nbsp; &lt;/header&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;nav&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;a
+                  href="index.html"&gt;Beranda&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;a
+                  href="pages/profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;a
+                  href="pages/kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <div>&nbsp; &nbsp; &lt;/nav&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;main&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;section&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Selamat
+                  Datang&lt;/h2&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;article&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Selamat datang di
+                  website sederhana yang dibuat menggunakan HTML.
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Website ini terdiri
+                  dari tiga halaman yang saling terhubung melalui
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; menu navigasi.
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Seluruh struktur
+                  halaman menggunakan Semantic HTML agar kode lebih
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; rapi dan mudah
+                  dipahami.
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/article&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/section&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;aside&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Menu Cepat&lt;/h3&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;ul&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  &lt;li&gt;Beranda&lt;/li&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Profil&lt;/li&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Kontak&lt;/li&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/aside&gt;</div>
+                <div>&nbsp; &nbsp; &lt;/main&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;footer&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;p&gt;&amp;copy; 2026 Belajar HTML
+                  Dasar&lt;/p&gt;
+                </div>
+                <div>&nbsp; &nbsp; &lt;/footer&gt;</div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br /><br />
+              <p>
+                <b>Halaman Profil - File profil.html</b>
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html lang="id"&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;meta charset="UTF-8" /&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;title&gt;Profil - Belajar HTML&lt;/title&gt;
+                </div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;header&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;h1&gt;Profil Website&lt;/h1&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;p&gt;Mengenal lebih dekat website
+                  ini.&lt;/p&gt;
+                </div>
+                <div>&nbsp; &nbsp; &lt;/header&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;nav&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;a
+                  href="../index.html"&gt;Beranda&lt;/a&gt; | &lt;a
+                  href="profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;a
+                  href="kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <div>&nbsp; &nbsp; &lt;/nav&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;main&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;section&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;article&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Tentang
+                  Website&lt;/h2&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Website ini dibuat
+                  sebagai media pembelajaran HTML dasar. Seluruh
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; contoh yang
+                  digunakan bertujuan membantu pemula memahami struktur
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; dokumen HTML.
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/article&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;article&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Tujuan&lt;/h2&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;ul&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Belajar
+                  struktur HTML.&lt;/li&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Mengenal
+                  Semantic HTML.&lt;/li&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;li&gt;Membuat
+                  website sederhana.&lt;/li&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/ul&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/article&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/section&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;aside&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Informasi&lt;/h3&gt;
+                </div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Website ini belum
+                  menggunakan CSS sehingga tampilannya masih mengikuti
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; tampilan bawaan browser.
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/aside&gt;</div>
+                <div>&nbsp; &nbsp; &lt;/main&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;footer&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;p&gt;&amp;copy; 2026 Belajar HTML
+                  Dasar&lt;/p&gt;
+                </div>
+                <div>&nbsp; &nbsp; &lt;/footer&gt;</div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br /><br />
+              <p>
+                <b>Halaman Kontak - File kontak.html</b>
+              </p>
+              <div class="box-code">
+                <div>&lt;!doctype html&gt;</div>
+                <div>&lt;html lang="id"&gt;</div>
+                <div>&nbsp; &lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;meta charset="UTF-8" /&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;title&gt;Kontak - Belajar HTML&lt;/title&gt;
+                </div>
+                <div>&nbsp; &lt;/head&gt;</div>
+                <div>&nbsp; &lt;body&gt;</div>
+                <div>&nbsp; &nbsp; &lt;header&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;h1&gt;Hubungi Kami&lt;/h1&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;p&gt;Silakan kirimkan pesan kepada
+                  kami.&lt;/p&gt;
+                </div>
+                <div>&nbsp; &nbsp; &lt;/header&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;nav&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;a
+                  href="../index.html"&gt;Beranda&lt;/a&gt; | &lt;a
+                  href="profil.html"&gt;Profil&lt;/a&gt; |
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;a
+                  href="kontak.html"&gt;Kontak&lt;/a&gt;
+                </div>
+                <div>&nbsp; &nbsp; &lt;/nav&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;main&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;section&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;h2&gt;Form Kontak&lt;/h2&gt;
+                </div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;form action="#"
+                  method="post"&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label
+                  for="nama"&gt;Nama&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input
+                  type="text" id="nama" name="nama" /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label
+                  for="email"&gt;Email&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input
+                  type="email" id="email" name="email" /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label
+                  for="pesan"&gt;Pesan&lt;/label&gt;&lt;br /&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;textarea
+                  id="pesan" name="pesan" rows="5"
+                  cols="40"&gt;&lt;/textarea&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input
+                  type="submit" value="Kirim" /&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input
+                  type="reset" value="Reset" /&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/p&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &nbsp; &lt;/form&gt;</div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/section&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &nbsp; &lt;aside&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;Informasi
+                  Kontak&lt;/h3&gt;
+                </div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Email:
+                  info@example.com&lt;/p&gt;
+                </div>
+                <br />
+                <div>
+                  &nbsp; &nbsp; &nbsp; &nbsp; &lt;p&gt;Telepon:
+                  0812-3456-7890&lt;/p&gt;
+                </div>
+                <div>&nbsp; &nbsp; &nbsp; &lt;/aside&gt;</div>
+                <div>&nbsp; &nbsp; &lt;/main&gt;</div>
+                <br />
+                <div>&nbsp; &nbsp; &lt;footer&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &nbsp; &lt;p&gt;&amp;copy; 2026 Belajar HTML
+                  Dasar&lt;/p&gt;
+                </div>
+                <div>&nbsp; &nbsp; &lt;/footer&gt;</div>
+                <div>&nbsp; &lt;/body&gt;</div>
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br /><br />
+              <p>Berikut hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/website-html-semantic.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 12.1 : </span> hasil
+                    website html dengan semantic
+                  </sub>
+                </p>
+              </div>
               <br /><br /><br />
               <div class="d-flex justify-content-between">
                 <a
