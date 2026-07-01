@@ -73,21 +73,14 @@ $(document).ready(function () {
 
               <a
                 href="semantic-html.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action semantic-html-link"
               >
                 Semantic HTML
               </a>
 
               <a
-                href="html-untuk-seo-dasar.html"
-                class="list-group-item list-group-item-action"
-              >
-                HTML untuk SEO Dasar
-              </a>
-
-              <a
                 href="persiapan-belajar-css.html"
-                class="list-group-item list-group-item-action"
+                class="list-group-item list-group-item-action persiapan-belajar-css-link"
               >
                 Persiapan Belajar CSS
               </a>

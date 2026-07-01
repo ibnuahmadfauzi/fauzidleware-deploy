@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#11. Semantic HTML</h2>
+            <hr />
+            <div class="py-5">
+              <p>
+                Pada bab-bab sebelumnya, kita telah mempelajari berbagai elemen
+                HTML untuk menampilkan teks, gambar, tabel, formulir, hingga
+                multimedia. Seluruh elemen tersebut dapat digunakan untuk
+                membangun sebuah halaman web.
+              </p>
+              <p>
+                Namun, jika sebuah website hanya menggunakan elemen seperti
+                <span class="tag">&lt;div&gt;</span> untuk membungkus seluruh
+                isi halaman, maka browser maupun mesin pencari akan kesulitan
+                memahami bagian-bagian penting dari halaman tersebut.
+              </p>
+              <p>
+                HTML5 memperkenalkan <b>Semantic HTML</b>, yaitu sekumpulan
+                elemen yang memiliki makna tertentu sehingga struktur halaman
+                menjadi lebih jelas, mudah dipahami, dan lebih teroganisir.
+              </p>
+              <br /><br />
+              <h5>
+                <b>11.1. Apa itu Semantic HTML ?</b>
+              </h5>
+              <p>
+                Semantic HTML adalah penggunaan elemen HTML yang memiliki
+                <b>arti atau makna</b> sesuai dengan isi yang dibungkus. Sebagai
+                contoh:
+              </p>
+              <ul>
+                <li>
+                  <span class="tag">&lt;header&gt;</span>
+                  berarti bagian kepala halaman
+                </li>
+                <li><span class="tag">&lt;nav&gt;</span> berarti navigasi</li>
+                <li>
+                  <span class="tag">&lt;main&gt;</span> berarti isi utama
+                  halaman
+                </li>
+                <li>
+                  <span class="tag">&lt;footer&gt;</span> berarti bagian bawah
+                  halaman
+                </li>
+              </ul>
+              <p>
+                Dengan menggunakan Semantic HTML, kode menjadi lebih mudah
+                dipahami baik oleh manusia maupun oleh browser.
+              </p>
+              <br /><br />
+              <h5>
+                <b>11.2. Mengapa Semantic HTML Penting ?</b>
+              </h5>
+              <p>
+                Penggunaan Semantic HTML memberikan banyak keuntungan dalam
+                pengembangan website modern.
+              </p>
+              <p>
+                <b>1. Struktur halaman lebih jelas</b>
+              </p>
+              <p>
+                Setiap bagian halaman memiliki elemen yang sesuai dengan
+                fungsinya. Contoh:
+              </p>
+              <div class="box-code">
+                <div>Header</div>
+                <div>&darr;</div>
+                <div>Navigasi</div>
+                <div>&darr;</div>
+                <div>Konten Utama</div>
+                <div>&darr;</div>
+                <div>Sidebar</div>
+                <div>&darr;</div>
+                <div>Footer</div>
+              </div>
+              <br />
+              <p>
+                Struktur seperti ini lebih mudah dipahami dibandingkan hanya
+                menggunakan banyak elemen <span class="tag">&lt;div&gt;</span>.
+              </p>
+              <p>
+                <b>2. Mempermudah membaca kode</b>
+              </p>
+              <p>
+                Perhatikan conoth berikut ketika menggunakan
+                <span class="tag">&lt;div&gt;</span> :
+              </p>
+              <div class="box-code">
+                <div>&lt;div&gt;</div>
+                <div>&nbsp; &nbsp; ...</div>
+                <div>&lt;/div&gt;</div>
+                <br />
+                <div>&lt;div&gt;</div>
+                <div>&nbsp; &nbsp; ...</div>
+                <div>&lt;/div&gt;</div>
+                <br />
+                <div>&lt;div&gt;</div>
+                <div>&nbsp; &nbsp; ...</div>
+                <div>&lt;/div&gt;</div>
+              </div>
+              <br />
+              <p>
+                Sulit mengetahui fungsi masing-masing bagian. Sedangkan ketika
+                menggunakan Semantic HTML:
+              </p>
+              <div class="box-code">
+                <div>&lt;header&gt;</div>
+                <br />
+                <div>&lt;/header&gt;</div>
+                <br />
+                <div>&lt;nav&gt;</div>
+                <br />
+                <div>&lt;/nav&gt;</div>
+                <br />
+                <div>&lt;main&gt;</div>
+                <br />
+                <div>&lt;/main&gt;</div>
+                <br />
+                <div>&lt;footer&gt;</div>
+                <br />
+                <div>&lt;/footer&gt;</div>
+              </div>
+              <br />
+              <p>
+                Dari nama elemennya saja kita sudah mengetahui fungsi setiap
+                bagian.
+              </p>
+              <p>
+                <b>3. Membantu mesin pencari (SEO)</b>
+              </p>
+              <p>
+                Mesin pencari seperti Google lebih mudah memahami struktur
+                halaman apabila menggunakan elemen semantik. Sebagai contoh:
+              </p>
+              <ul>
+                <li>Mana isi utama artikel</li>
+                <li>Mana menu navigasi</li>
+                <li>Mana informasi tambahan</li>
+                <li>Mana bagian penutup</li>
+              </ul>
+              <p>Hal ini dapat membantu proses pengindeksan halaman.</p>
+              <p>
+                <b>4. Meningkatkan aksesibilitas</b>
+              </p>
+              <p>
+                Screen reader yang digunakan oleh pengguna berkebutuhan khusus
+                dapat mengenali bagian-bagian halaman dengan lebih baik.
+                Misalnya:
+              </p>
+              <ul>
+                <li>Header</li>
+                <li>Navigasi</li>
+                <li>Konten utama</li>
+                <li>Footer</li>
+              </ul>
+              <p>Tanpa harus membaca seluruh halaman dari awal.</p>
+              <br /><br />
+              <h5>
+                <b>11.3. Elemen <span class="tag">&lt;header&gt;</span></b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;header&gt;</span> digunakan untuk
+                menampilkan bagian kepala suatu halaman atau suatu bagian
+                tertentu. Biasanya berisi:
+              </p>
+              <ul>
+                <li>Logo</li>
+                <li>Judul website</li>
+                <li>Judul artikel</li>
+                <li>Deskripsi singkat</li>
+              </ul>
+              <p>
+                Elemen <span class="tag">&lt;header&gt;</span> digunakan pada
+                bagian atas website, bagian atas artkel, ataupun bagian atas
+                section tertentu.
+              </p>
+              <br /><br />
+              <h5>
+                <b>11.4. Elemen <span class="tag">&lt;nav&gt;</span></b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;nav&gt;</span> digunakan untuk
+                menampilkan kumpulan tautan navigasi. Biasanya berisi:
+              </p>
+              <ul>
+                <li>Menu utama</li>
+                <li>Menu samping</li>
+                <li>Breadcrumb</li>
+                <li>Daftar halaman</li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b>11.5. Elemen <span class="tag">&lt;main&gt;</span></b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;main&gt;</span> dgunakan untuk
+                membungkus <b>isi utama halaman</b>. Bagian inilah yang menjadi
+                fokus utama website. Misalnya:
+              </p>
+              <ul>
+                <li>Artikel</li>
+                <li>Produk</li>
+                <li>Galeri</li>
+                <li>Konten pembelajaran</li>
+              </ul>
+              <p>
+                Dalam satu halaman HTML sebaiknya hanya terdapat satu elemen
+                <span class="tag">&lt;main&gt;</span>.
+              </p>
+              <br /><br />
+              <h5>
+                <b>11.6. Elemen <span class="tag">&lt;section&gt;</span></b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;section&gt;</span> digunakan untuk
+                mengelompokkan suatu bagian yang memiliki tema tertentu.
+                Misalnya:
+              </p>
+              <ul>
+                <li>Profil</li>
+                <li>Layanan</li>
+                <li>Galeri</li>
+                <li>Testimoni</li>
+              </ul>
+              <p>
+                Elemen <span class="tag">&lt;section&gt;</span> digunakan untuk
+                membungkus konten yang dapat berdiri sendiri.
+              </p>
+              <br /><br />
+              <h5>
+                <b>11.7. Elemen <span class="tag">&lt;article&gt;</span></b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;article&gt;</span> digunalan untuk
+                membungkus konten yang dapat berdiri sendiri. Contohnya:
+              </p>
+              <ul>
+                <li>Artikel blog</li>
+                <li>Berita</li>
+                <li>Tutorial</li>
+                <li>Postingan forum</li>
+              </ul>
+              <p>
+                <b
+                  >Perbedaan <span class="tag">&lt;section&gt;</span> dan
+                  <span class="tag">&lt;article&gt;</span></b
+                >
+              </p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th><span class="tag">&lt;section&gt;</span></th>
+                    <th><span class="tag">&lt;article&gt;</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Mengelompokkan bagian halaman</td>
+                    <td>Konten yang berdiri sendiri</td>
+                  </tr>
+                  <tr>
+                    <td>Bagian dari halaman</td>
+                    <td>Dapat dipublikasi saecara terpisah</td>
+                  </tr>
+                  <tr>
+                    <td>Contoh: Profil, Layanan</td>
+                    <td>Contoh: Artikel, Berita</td>
+                  </tr>
+                </tbody>
+              </table>
+              <br /><br />
+              <h5>
+                <b>11.8. Elemen <span class="tag">&lt;aside&gt;</span></b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;aside&gt;</span> sigunakan untuk
+                menampilkan informasi tambahan yang berkaitan dengan isi utama.
+                Biasanya berisi:
+              </p>
+              <ul>
+                <li>Artikel populer</li>
+                <li>Kategori</li>
+                <li>Iklan</li>
+                <li>Profil penulis</li>
+                <li>Daftar artkel terbaru</li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b>11.9. Elemen <span class="tag">&lt;footer&gt;</span></b>
+              </h5>
+              <p>
+                Elemen <span class="tag">&lt;footer&gt;</span> digunakan untuk
+                menampilkan bagian bawah halamn. Biasanya berisi:
+              </p>
+              <ul>
+                <li>Copyright</li>
+                <li>Kontak</li>
+                <li>Alamat</li>
+                <li>Media sosial</li>
+                <li>Informasi perusahaan</li>
+              </ul>
+              <p>
+                Biasanya elemen ini diletakkan pada bagian paling bawah halaman.
+                Namun, sebuah artikel juga dapat memiliki footer tersendiri.
+              </p>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/html-dasar-bahasa-indonesia/elemen-multimedia.html"
+                  class="btn btn-secondary"
+                  >Sebelumnya</a
+                >
+                <a
+                  href="/html-dasar-bahasa-indonesia/persiapan-belajar-css.html"
+                  class="btn btn-secondary"
+                  >Selanjutnya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-html.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".semantic-html-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>
