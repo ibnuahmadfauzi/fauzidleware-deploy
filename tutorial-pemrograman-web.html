@@ -27,22 +27,7 @@
 
     <section id="tutorial">
       <div class="container my-5">
-        <div class="row">
-          <div class="col-lg-3">
-            <div class="card rounded-0 card-box-tutorial" style="width: 100%">
-              <img
-                src="/images/sampul-html-dasar.png"
-                class="card-img-top"
-                alt="Tutorial Pemrograman Web - HTML Dasar - Ibnu Ahmad Fauzi"
-              />
-              <div class="card-body">
-                <h5 class="card-title text-center">
-                  Tutorial HTML Dasar Bahasa Indonesia
-                </h5>
-              </div>
-            </div>
-          </div>
-        </div>
+        <div class="row" id="container-tutorial-web"></div>
       </div>
     </section>
 
@@ -71,7 +56,7 @@
               <div class="row">
                 <div class="col-lg-4">
                   <img
-                    src="/images/logo-html.png"
+                    src=""
                     alt="Logo HTML - Tutorial Pemrograman Web - Ibnu Ahmad Fauzi"
                     class="w-100"
                   />
@@ -82,61 +67,43 @@
                       <td>
                         <b>Judul</b>
                       </td>
-                      <td>Tutorial HTML Dasar</td>
+                      <td class="detail-judul"></td>
                     </tr>
                     <tr>
                       <td>
                         <b>Bahasa</b>
                       </td>
-                      <td>Indonesia</td>
+                      <td class="detail-bahasa"></td>
                     </tr>
                     <tr>
                       <td>
                         <b>Penyusun</b>
                       </td>
-                      <td>Ibnu Ahmad Fauzi</td>
+                      <td class="detail-penyusun"></td>
                     </tr>
                     <tr>
                       <td>
                         <b>Jenis Konten</b>
                       </td>
-                      <td>Teks Bacaan</td>
+                      <td class="detail-konten"></td>
                     </tr>
                     <tr>
                       <td>
                         <b>Terakhir Diperbarui</b>
                       </td>
-                      <td>01 Juli 2026</td>
+                      <td class="detail-update"></td>
                     </tr>
                     <tr>
                       <td>
                         <b>Jumlah Halaman</b>
                       </td>
-                      <td>12</td>
+                      <td class="detail-halaman"></td>
                     </tr>
                     <tr>
                       <td colspan="2">
                         <b>Deskripsi :</b>
                         <p style="text-align: justify">
-                          <small>
-                            Materi tutorial HTML Dasar ini dirancang untuk
-                            membantu pembaca menguasai bahasa markup HTML secara
-                            menyeluruh tanpa melibatkan CSS maupun JavaScript.
-                            Pembelajaran dimulai dari persiapan lingkungan
-                            pengembangan, pengenalan struktur dokumen HTML,
-                            pembuatan berbagai jenis konten seperti teks,
-                            gambar, tabel, dan formulir, hingga penerapan
-                            Semantic HTML, SEO dasar, aksesibilitas, serta
-                            pengembangan website multi-halaman. Setiap materi
-                            disusun secara sistematis dan dilengkapi praktik
-                            langsung agar pembaca tidak hanya memahami teori,
-                            tetapi juga mampu membangun struktur website yang
-                            baik sesuai standar pengembangan web modern. Setelah
-                            menyelesaikan seluruh materi, pembaca akan memiliki
-                            fondasi HTML yang kuat dan siap melanjutkan ke tahap
-                            pembelajaran CSS untuk mempercantik tampilan
-                            website.
-                          </small>
+                          <small class="detail-deskripsi"></small>
                         </p>
                       </td>
                     </tr>
@@ -153,10 +120,7 @@
             >
               Tutup
             </button>
-            <a
-              href="/html-dasar-bahasa-indonesia/pengenalan-html.html"
-              class="btn btn-primary btn-sm"
-            >
+            <a href="" class="btn btn-primary btn-sm detail-link">
               Mulai Belajar
             </a>
           </div>
@@ -186,6 +150,7 @@
       referrerpolicy="no-referrer"
     ></script>
 
+    <script src="/utils/data-tutorial.js"></script>
     <script src="js/script.js"></script>
     <script src="js/script-tutorial.js"></script>
     <script src="js/tutorial-pemrograman-web.js"></script>
