@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#1. Mengenal PHP</h2>
+            <hr />
+            <div class="my-5">
+              <h5>
+                <b>1.1. Apa itu PHP ?</b>
+              </h5>
+              <p>
+                PHP merupakan singkatan dari <b>PHP: Hypertext Preprocessor</b>,
+                yaitu sebuah bahasa pemrogramana yang dirancang khusus untuk
+                membangun aplikasi berbasis web. PHP termasuk bahasa pemrograman
+                <b>server-side</b>, artinya seluruh kode PHP diproses terlebih
+                dahulu oleh server sebelum hasilnya dikirimkan ke browser
+                pengguna.
+              </p>
+              <p>
+                Awalnya PHP dikembangankan oleh <b>Rasmus Lerdorf</b> pada tahun
+                1994 sebagai sekumpulan skrip sederhana untuk mengelola halaman
+                web pribadi. Seiring perkembangan teknologi, PHP berkembang
+                menjadi salah satu bahasa pemrograman web paling populer di
+                dunia dan digunakan oleh berbagai website besar. Beberapa
+                website yang menggunakan PHP antara lain:
+              </p>
+              <ul>
+                <li>Facebook (pada awal pengembangannya)</li>
+                <li>WordPress</li>
+                <li>Wikipedia</li>
+                <li>Joomla</li>
+                <li>Drupal</li>
+                <li>Moodle</li>
+              </ul>
+              <p>
+                Saat ini PHP juga menjadi dasar berbagai framework populer
+                seperti Laravel, CodeIgniter, Symfony, dan Yii.
+              </p>
+              <p>PHP memiliki banyak keunggulan, diantaranya:</p>
+              <ul>
+                <li>Gratis dan bersifat open source</li>
+                <li>Mudah dipelajari oleh pemula</li>
+                <li>Mendukung hampir semua sistem operasi</li>
+                <li>Kompatibel dengan berbagai web server</li>
+                <li>Memiliki komunitas yang sangat besar</li>
+                <li>Mendukung banyak jenis database</li>
+                <li>
+                  Menjadi dasar dari framework Laravel yang banyak digunakan di
+                  industri
+                </li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b>1.2. Cara Kerja PHP</b>
+              </h5>
+              <p>
+                Berbeda dengan HTML yang langsung dibaca oleh browser, file PHP
+                harus diproses terlebih dahulu oleh server. Alur kerjanya
+                sebagai berikut:
+              </p>
+              <ol>
+                <li>Pengguna membuka halaman website melalui browser</li>
+                <li>Browser mengirimkan permintaan (request) ke server</li>
+                <li>Server menerima permintaan tersebut</li>
+                <li>Mesin PHP mengeksekusi seluruh kode PHP</li>
+                <li>Jika diperlukan, PHP mengambil data dari database</li>
+                <li>PHP menghasilkan halaman HTML</li>
+                <li>Server mengirimkan hasil HTML ke browser</li>
+                <li>Browser menampilkan halaman kepada pengguna</li>
+              </ol>
+              <p>
+                Dengan kata lain, browser <b>tidak pernah melihat kode PHP</b>,
+                melainkan hanya menerima hasil akhirnya berupa HTML, CSS,
+                JavaScript, gambar, atau file lainnya.
+              </p>
+              <br /><br />
+              <h5>
+                <b>1.3. Client vs Server</b>
+              </h5>
+              <p>
+                Dalam pengembangan web, terdapat dua komponen utama, yaitu
+                <b>client</b> dan <b>server</b>.
+              </p>
+              <p>
+                <b>Client</b>
+              </p>
+              <p>
+                Client adalah perangkat yang digunakan oleh pengguna untuk
+                mengakses website. Contohnya:
+              </p>
+              <ul>
+                <li>Google Chrome</li>
+                <li>Mozilla Firefox</li>
+                <li>Microsoft Edge</li>
+                <li>Safari</li>
+              </ul>
+              <p>Tugas client adalah:</p>
+              <ul>
+                <li>Mengirim permintaan ke server</li>
+                <li>Menampilkan halaman web</li>
+                <li>Menjalankan HTML</li>
+                <li>Menjalankan CSS</li>
+                <li>Menjalankan JavaScript</li>
+              </ul>
+              <p>
+                <b>Server</b>
+              </p>
+              <p>
+                Server merupakan komputer yang menyediakan layanan kepada
+                client. Tugas server antara lain:
+              </p>
+              <ul>
+                <li>Menjalankan program PHP</li>
+                <li>Mengakses database</li>
+                <li>Mengelola file</li>
+                <li>Memproses login</li>
+                <li>Menghasilkan halaman web</li>
+              </ul>
+              <p>Contoh web server:</p>
+              <ul>
+                <li>Apache</li>
+                <li>Nginx</li>
+                <li>LiteSpeed</li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b>1.4. Request dan Response</b>
+              </h5>
+              <p>
+                Website bekerja menggunakan mekanisme komunikasi antara browser
+                dan server.
+              </p>
+              <p>
+                <b>Request</b>
+              </p>
+              <p>
+                Request adalah permintaan dari browser menuju server. Contoh
+                request:
+              </p>
+              <ul>
+                <li>Membuka halaman web</li>
+                <li>Login</li>
+                <li>Mengirim formulir</li>
+                <li>Mengunggah file</li>
+              </ul>
+              <p>
+                <b>Response</b>
+              </p>
+              <p>
+                Response adalah jawaban dari server kepada browser. Isi response
+                dapat berupa:
+              </p>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>JSON</li>
+                <li>Gambar</li>
+                <li>Video</li>
+                <li>File PDF</li>
+              </ul>
+              <p>
+                Sebagai contoh, ketika pengguna membuka halaman
+                <span class="tag">http://localhost/index.php</span>, browser
+                mengirimkan request ke server. Server menjalankan file
+                <span class="tag">index.php</span>, memproses seluruh kode PHP
+                di dalamnya, kemudian mengirimkan response berupa halaman HTML
+                yang ditampilkan di browser.
+              </p>
+              <br /><br />
+              <h5>
+                <b>1.5. Instalasi PHP</b>
+              </h5>
+              <p>
+                Ada beberapa cara untuk menggunakan PHP pada komputer. Namun
+                untuk tutorial ini kita akan menggunakan paket instalasi dari
+                <b>XAMPP</b>. Paket tersebut berisi:
+              </p>
+              <ul>
+                <li>Apache</li>
+                <li>PHP</li>
+                <li>MariaDB/MySQL</li>
+                <li>phpMyAdmin</li>
+              </ul>
+              <p>Kelebihannya:</p>
+              <ul>
+                <li>Mudah dipasang</li>
+                <li>Cocok untuk pemula</li>
+                <li>Banyak digunakan dalam pembelajaran</li>
+              </ul>
+              <p>
+                <b>Langkah Instalasi:</b>
+              </p>
+              <ol>
+                <li>
+                  Buka website
+                  <b
+                    ><a
+                      href="https://www.apachefriends.org/download.html"
+                      class="text-decoration-none"
+                      >apachefriends.org</a
+                    ></b
+                  >
+                </li>
+                <li>Unduh XAMPP sesuai sistem operasi</li>
+                <li>Jalankan installer</li>
+                <li>Pilih komponen Apache dan MySQL</li>
+                <li>Selesaikan proses instalasi</li>
+                <li>Buka XAMPP Control Panel</li>
+                <li>Jalankan Apache</li>
+                <li>Jalankan MySQL</li>
+              </ol>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/xampp-controlpanel.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 1.1 : </span> tampilan
+                    XAMPP Control Panel
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Folder project berada pada
+                <span class="tag">C:\xampp\htdocs\</span>
+              </p>
+              <br /><br />
+              <h5>
+                <b>1.6. Struktur Sederhana Project PHP</b>
+              </h5>
+              <p>
+                Sebuah project PHP sederhana biasanya memiliki struktur seperti
+                berikut:
+              </p>
+              <div class="box-folder">
+                <div>belajar-html/</div>
+                <div>│</div>
+                <div>├── assets/</div>
+                <div>│ &nbsp; ├── css/</div>
+                <div>│ &nbsp; ├── js/</div>
+                <div>│ &nbsp; └── images/</div>
+                <div>│</div>
+                <div>├── include/</div>
+                <div>│ &nbsp; ├── header.php</div>
+                <div>│ &nbsp; └── footer.php</div>
+                <div>│</div>
+                <div>├── pages/</div>
+                <div>│ &nbsp; ├── profil.html</div>
+                <div>│ &nbsp; └── kontak.html</div>
+                <div>│</div>
+                <div>├── index.php</div>
+                <div>└── about.php</div>
+              </div>
+              <br />
+              <p>Penjelasan:</p>
+              <ul>
+                <li>
+                  <span class="tag">assets/</span> menyimpan CSS, JavaScript,
+                  gambar, dan file pendukung lainnya
+                </li>
+                <li>
+                  <span class="tag">includes/</span> berisi file yang digunakan
+                  berulan, seperti header dan footer
+                </li>
+                <li>
+                  <span class="tag">pages/</span> berisi halaman-halaman website
+                </li>
+                <li>
+                  <span class="tag">index.php</span> merupakan halaman utama
+                  yang pertama kali diakses
+                </li>
+              </ul>
+              <br /><br />
+              <h5>
+                <b>1.7. Praktik Sederhana</b>
+              </h5>
+              <p>
+                Buat folder dengan nama <span class="tag">belajar-php</span> di
+                dalam lokasi <span class="tag">C:\xampp\htdocs\</span>. Lalu
+                buat fle <span class="tag">index.php</span> di dalam folder
+                <span class="tag">C:\xampp\htdocs\belajar-php</span> dan isi
+                dengan kode berikut:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo "Hello, World!";</div>
+              </div>
+              <br />
+              <p>
+                Lalu buka web browser dan kunjungi url:
+                <span class="tag">http://localhost/belajar-php/</span>
+              </p>
+              <br />
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/file-php-pertama.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 1.2 : </span> website
+                    pertama dengan PHP
+                  </sub>
+                </p>
+              </div>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/tutorial-pemrograman-web.html"
+                  class="btn btn-secondary"
+                  >Keluar</a
+                >
+                <a href="#" class="btn btn-secondary">Selanjutnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-php-dasar.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".mengenal-php-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>

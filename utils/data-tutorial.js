@@ -25,6 +25,6 @@ let dataTutorialWebProgramming = [
     halaman: "-",
     deskripsi:
       "Dasar-Dasar PHP merupakan tahap awal dalam mempelajari bahasa pemrograman PHP yang berfokus pada pemahaman konsep-konsep fundamental sebagai landasan dalam pengembangan aplikasi web. Pada materi ini, pembaca akan mempelajari cara kerja PHP sebagai bahasa pemrograman sisi server (server-side scripting), sintaks dasar, penggunaan variabel dan tipe data, operator, percabangan, perulangan, fungsi, array, hingga pengolahan data dari formulir HTML. Selain itu, dibahas pula penggunaan superglobal, pengelolaan sesi (session), cookie, upload file, pemisahan kode menggunakan include dan require, serta penanganan kesalahan (error handling). Melalui kombinasi penjelasan teori, contoh kode, dan latihan praktik, pembaca akan memiliki kemampuan untuk membangun aplikasi web dinamis sederhana menggunakan PHP sebagai bekal sebelum mempelajari konsep-konsep yang lebih lanjut seperti pemrograman berorientasi objek (OOP), database, dan framework PHP.",
-    link: "#",
+    link: "/php-dasar-bahasa-indonesia/mengenal-php.html",
   },
 ];
