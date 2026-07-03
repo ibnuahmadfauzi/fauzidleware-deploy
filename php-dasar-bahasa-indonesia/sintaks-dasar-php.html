@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#2. Sintaks Dasar PHP</h2>
+            <hr />
+            <div class="my-5">
+              <h5>
+                <b>2.1. Pengertian Sintaks PHP</b>
+              </h5>
+              <p>
+                Sintaks adalah aturan penulisan kode dalam suatu bahasa
+                pemrograman. Setiap bahasa memiliki aturan sintaks yang berbeda,
+                termasuk PHP. Apabila sintaks ditulis dengan benar, program
+                dapat dijalankan dengan baik. Sebaliknya, kesalahan penulisan
+                sintaks (<i>syntax error</i>) akan menyebabkan program gagal
+                dijalankan. Sebagai contoh, program PHP yang benar adalah:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo "Hello, World!";</div>
+              </div>
+              <br />
+              <p>
+                Sedangkan contoh berikut akan menghasilkan kesalahan karena
+                tidak diakhiri dengan tanda titik koma(<span class="tag">;</span
+                >)
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo "Hello, World!"</div>
+              </div>
+              <br />
+              <p>
+                Oleh karena itu, memahami sintaks dasar merupakan langkah
+                pertama yang harus dikuasai sebelum mempelajari konsep-konsep
+                PHP yang lebih kompleks.
+              </p>
+              <br /><br />
+              <h5>
+                <b>2.2. Tag PHP</b>
+              </h5>
+              <p>
+                Seluruh kode PHP harus ditulis di dalam tag PHP. Tag ini memberi
+                tahu web server bahwa bagian tersebut merupakan kode PHP yang
+                harus diproses.
+              </p>
+              <p>
+                <b>Tag Pembuka</b>
+              </p>
+              <p>Tag pembuka yang direkomendasikan adalah:</p>
+              <p>
+                <span class="tag">&lt;?php</span>
+              </p>
+              <p>
+                <b>Tag Penutup</b>
+              </p>
+              <p>Tag penutup ditulis sebagai berikut:</p>
+              <p>
+                <span class="tag">?&gt;</span>
+              </p>
+              <p>
+                Namun, jika file hanya brisi kode PHP tanpa HTML, tag penutup
+                <b>disarankan untuk dihilangkan</b> agar menghindari keluarnya
+                karakter atau spasi yang tidak diinginkan. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo "Hello, World!";</div>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <b>2.3. Aturan Penulisan Sintaks PHP</b>
+              </h5>
+              <p>
+                Saat menulis kode PHP, terdapat beberapa aturan yang perlu
+                diperhatikan.
+              </p>
+              <p>
+                <b>1. Setiap pernyataan diakhiri titik koma</b>
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo "Hello, World!";</div>
+                <div>echo "Belajar PHP Dasar";</div>
+              </div>
+              <br />
+              <p>
+                <b>2. PHP Bersifat Case Sensitive</b>
+              </p>
+              <p>
+                Nama variabel bersifat sensitif terhadap huruf besar dan kecil.
+                Contohnya <span class="tag">$nama</span> berbeda dengan
+                <span class="tag">$Nama</span>. Sebaliknya beberapa keyword
+                bawaan PHP seperti <span class="tag">echo</span>,
+                <span class="tag">if</span>, <span class="tag">while</span>,
+                <span class="tag">function</span> tidak membedakan huruf besar
+                dan kecil. Meskipun penuisan huruf kecil tetap menjadi standar
+                yang dianjurkan.
+              </p>
+              <p>
+                <b>3. Spasi tidak berpengaruh</b>
+              </p>
+              <p>Kode berikut memiliki hasil yang sama:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo &nbsp; &nbsp; &nbsp; "Hello, World!";</div>
+              </div>
+              <br />
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo "Hello, World!";</div>
+              </div>
+              <br />
+              <p>
+                Walaupun demikian, gunakan indentasi spasi yang rapi agar kode
+                mudah dibaca.
+              </p>
+              <br /><br />
+              <h5>
+                <b>2.4. Komentar pada PHP</b>
+              </h5>
+              <p>
+                Komentar adalah bagian kode yang tidak akan dijalankan oleh
+                program. Komentar digunakan untuk memberikan penjelasan kepada
+                programmer lain maupun kepada diri sendiri. PHP menyediakan tiga
+                jenis komentar:
+              </p>
+              <p>
+                <b
+                  >1. Komentar satu baris menggunakan
+                  <span class="tag">//</span></b
+                >
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>// menampilkan teks</div>
+                <div>echo "Hello, World!";</div>
+              </div>
+              <br />
+              <p>
+                <b
+                  >2. Komentar satu baris menggunakan
+                  <span class="tag">#</span></b
+                >
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div># menampilkan teks</div>
+                <div>echo "Hello, World!";</div>
+              </div>
+              <br />
+              <p>
+                <b>3. Komentar banyak baris</b>
+              </p>
+              <p>
+                Digunakan untuk membuat dokumentasi atau menjelaskan bagian
+                program yang cukup panjang.
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>/*</div>
+                <div>&nbsp; &nbsp; file PHP pertama</div>
+                <div>&nbsp; &nbsp; ditulis oleh:</div>
+                <div>&nbsp; &nbsp; Ibnu Ahmad Fauzi</div>
+                <div>*/</div>
+                <div>echo "Hello, World!";</div>
+              </div>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/php-dasar-bahasa-indonesia/mengenal-php.html"
+                  class="btn btn-secondary"
+                  >Keluar</a
+                >
+                <a href="#" class="btn btn-secondary">Selanjutnya</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-php-dasar.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".sintaks-dasar-php-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>
