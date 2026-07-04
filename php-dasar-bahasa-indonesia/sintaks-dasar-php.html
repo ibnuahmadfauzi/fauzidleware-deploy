@@ -194,11 +194,209 @@
                 <div>echo "Hello, World!";</div>
               </div>
               <br /><br /><br />
+              <h5>
+                <b>2.5. Menampilkan output</b>
+              </h5>
+              <p>
+                Output adalah hasil yang dikirimkan oleh PHP kepada browser. PHP
+                menyediakan beberapa cara untuk menampilkan output.
+              </p>
+              <p>
+                <b>1. echo</b>
+              </p>
+              <p>
+                <span class="tag">echo</span> merupakan perintah yang paling
+                sering digunakan. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo "Hello, World!";</div>
+              </div>
+              <br />
+              <p>
+                Jika mau menampilkan data angka, tidak perlu ditambah tanda
+                petik seperti berikut ini:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo 255;</div>
+              </div>
+              <br />
+              <p>
+                Atau jika ingin menampilkan beberapa data sekaligus bisa dipisah
+                dengan tanda koma <span class="tag">,</span> seperti berikut
+                ini:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo "Nama: ", "Ibnu";</div>
+              </div>
+              <br />
+              <p>
+                <b>2. print</b>
+              </p>
+              <p>
+                <span class="tag">print</span> hampir sama dengan
+                <span class="tag">echo</span>, tetapi hanya dapat mencetak satu
+                argumen. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>print "Belajar PHP";</div>
+              </div>
+              <br />
+              <p>
+                Dalam praktik sehari-hari, <span class="tag">echo</span> lebih
+                sering digunakan.
+              </p>
+              <p>
+                <b>3. printf</b>
+              </p>
+              <p>
+                <span class="tag">printf</span> digunakan untuk menampilkan data
+                dengan format tertentu. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>$nama = "Ibnu";</div>
+                <div>$umur = 25;</div>
+                <br />
+                <div>
+                  printf("Nama saya %s dan umur saya %d tahun.", $nama, $umur);
+                </div>
+              </div>
+              <br />
+              <p>
+                <b>4. var_dump()</b>
+              </p>
+              <p>
+                <span class="tag">var_dimp()</span> digunakan untuk melihat isi
+                variabel secara lengkap, termasuk tipe data dan panjang datanya.
+                Fungsi ini sangat membantu saay proses debugging. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>$nama = "Ibnu";</div>
+                <br />
+                <div>var_dump($nama);</div>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <b>2.6. Menampilkan HTML Menggunakan PHP</b>
+              </h5>
+              <p>
+                PHP dapat menghasilkan kode HTML secara langsung. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>echo "&lt;h1&gt;Hello, World!&lt;/h1&gt;";</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/html-dalam-php.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 2.1 : </span> HTML dalam
+                    PHP
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Karena HTML dikirim sebagai output, browser akan merendernya
+                sebagaimana halaman web biasa.
+              </p>
+              <br /><br />
+              <br />
+              <h5>
+                <b>2.7. Menggabungkan HTML dan PHP</b>
+              </h5>
+              <p>
+                Salah satu keunggulan PHP adalah kemampuannya untuk disisipkan
+                di dalam dokumen HTML.
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <div>$judul = "Belajar Bahasa PHP";</div>
+                <div>$subjudul = "Back-end Web Developer";</div>
+                <div>?&gt;</div>
+                <br />
+                <div>&lt;!DOCTYPE html&gt;</div>
+                <div>&lt;html&gt;</div>
+                <br />
+                <div>&lt;head&gt;</div>
+                <div>&nbsp; &nbsp; &lt;title&gt;Belajar PHP&lt;/title&gt;</div>
+                <div>&lt;/head&gt;</div>
+                <br />
+                <div>&lt;body&gt;</div>
+                <div>
+                  &nbsp; &nbsp; &lt;h1&gt;&lt;?php echo $judul ?&gt;&lt;/h1&gt;
+                </div>
+                <div>
+                  &nbsp; &nbsp; &lt;h3&gt;&lt;?php echo $subjudul
+                  ?&gt;&lt;/h3&gt;
+                </div>
+                <div>&lt;/body&gt;</div>
+                <br />
+                <div>&lt;/html&gt;</div>
+              </div>
+              <br />
+              <br /><br />
+              <h5>
+                <b>2.8. Membuat Halaman Web Profil Sederhana</b>
+              </h5>
+              <p>
+                Sekarang kita susun halaman web profil sederhana yang nantinya
+                akan diolah sepanjang
+                <b
+                  ><a
+                    href="/php-dasar-bahasa-indonesia/mengenal-php.html"
+                    class="text-decoration-none"
+                    >Tutorial PHP Dasar Bahasa Indonesia</a
+                  ></b
+                >
+                ini dengan hasil seperti berikut:
+              </p>
+              <div class="box-image-tutorial">
+                <img
+                  src="/images/tutorial/tampilan-website-php-sederhana.png"
+                />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 2.2 : </span> website
+                    profil sederhana
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                Silahkan download kodenya di sini :
+                <b
+                  ><a
+                    href="https://github.com/ibnuahmadfauzi/belajar-php/tree/main/2-1-sintaks-dasar"
+                    target="_blank"
+                    class="text-decoration-none"
+                    >2-1-sintaks-dasar</a
+                  ></b
+                >
+              </p>
+              <p>
+                Tampilannya tidak asing bukan ?. Project ini sering kita gunakan
+                ditutorial HTML Dasar dan CSS Dasar, namun untuk tutorial PHP
+                Dasar sengaja saya buat polosan tidak ada CSS biar tidak
+                bingung. Tapi jika mau ditambah CSS sekalian tidak masalah.
+              </p>
+              <br /><br /><br />
               <div class="d-flex justify-content-between">
                 <a
                   href="/php-dasar-bahasa-indonesia/mengenal-php.html"
                   class="btn btn-secondary"
-                  >Keluar</a
+                  >Sebelumnya</a
                 >
                 <a href="#" class="btn btn-secondary">Selanjutnya</a>
               </div>
