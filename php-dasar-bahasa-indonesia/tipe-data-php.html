@@ -1,0 +1,551 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <nav></nav>
+
+    <section id="bacaan-tutorial">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2>#4. Tipe Data</h2>
+            <hr />
+            <div class="my-5">
+              <h5>
+                <strong> 4.1. Pengertian Tipe Data </strong>
+              </h5>
+              <p>
+                Tipe data adalah klasifikasi suatu nilai yang menunjukkan jenis
+                data yang disimpan di dalam sebuah variabel. Dengan adanya tipe
+                data, PHP dapat mengetahui bagaimana suatu nilai diproses,
+                disimpan, maupun ditampilkan.
+              </p>
+              <p>
+                Sebagai contoh, nama seseorang disimpan sebagai teks
+                (<em>string</em>), umur disimpan sebagai bilangan bulat
+                (<em>integer</em>), sedangkan nilai rata-rata dapat disimpan
+                sebagai bilangan desimal (<em>float</em>).
+              </p>
+              <p>
+                PHP merupakan bahasa pemrograman yang menerapkan konsep
+                <strong>dynamic typing</strong>, sehingga tipe data tidak perlu
+                ditentukan secara manual ketika membuat variabel. PHP akan
+                menentukan tipe data secara otomatis berdasarkan nilai yang
+                diberikan.
+              </p>
+              <p>Contohnya:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>$nama = "Ibnu Ahmad Fauzi";</div>
+                <div>$umur = 25;</div>
+                <div>$tinggi = 170.5;</div>
+                <div>$aktif = true;</div>
+              </div>
+              <br />
+              <p>Pada contoh di atas:</p>
+              <ul>
+                <li>
+                  <span class="tag">$nama</span> bertipe <strong>string</strong>
+                </li>
+                <li>
+                  <span class="tag">$umur</span> bertipe
+                  <strong>integer</strong>
+                </li>
+                <li>
+                  <span class="tag">$tinggi</span> bertipe
+                  <strong>float</strong>
+                </li>
+                <li>
+                  <span class="tag">$aktif</span> bertipe
+                  <strong>boolean</strong>
+                </li>
+              </ul>
+              <br /><br />
+              <h5>
+                <strong>4.2. Jenis-Jenis Tipe Data PHP</strong>
+              </h5>
+              <p>Secara umum, PHP memiliki delapan tipe data utama, yaitu:</p>
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Tipe Data</th>
+                    <th>Keterangan</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>String</td>
+                    <td>Menyimpan teks atau karakter</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Integer</td>
+                    <td>Menyimpan bilangan bulat</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Float (Double)</td>
+                    <td>Menyimpan bilangan pecahan</td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Boolean</td>
+                    <td>Menyimpan nilai benar atau salah</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Array</td>
+                    <td>Menyimpan kumpulan data</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>Object</td>
+                    <td>Menyimpan objek dari sebuah class</td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>NULL</td>
+                    <td>Menunjukkan variabel tidak memiliki nilai</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Resource</td>
+                    <td>Menyimpan referensi terhadap sumber daya eksternal</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                Selain itu, PHP juga mengenal tipe <strong>Callable</strong>,
+                yaitu tipe khusus yang mempresentasikan fungsi atau method yang
+                dapat dipanggil sebagai callback.
+              </p>
+              <br /><br />
+              <h5>
+                <strong>4.3. String</strong>
+              </h5>
+              <p>
+                String adalah tipe data yang digunakan untuk menyimpan teks atau
+                kumpulan karakter. String dapat ditulis menggunakan tanda kutip
+                tunggal (<span class="tag">' '</span>) maupun kutip ganda (<span
+                  class="tag"
+                  >" "</span
+                >).
+              </p>
+              <p>Contohnya:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>$nama = "Ibnu Ahmad Fauzi";</div>
+                <div>$alamat = 'Kabupaten Blitar';</div>
+                <br />
+                <div>echo $nama;</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>echo $alamat;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-string.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 4.1 : </span> contoh output
+                    string
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>
+                String dapat berisi huruf, angka, simbol, maupun karakter
+                khusus. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>$nama = "Ibnu Ahmad Fauzi";</div>
+                <div>$alamat = 'Kabupaten Blitar';</div>
+                <div>$kode = "BNBWT-2025";</div>
+                <div>$website = "fauzidleware.vercel.app";</div>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <strong>4.4. Integer</strong>
+              </h5>
+              <p>
+                Integer merupakan tipe data yang digunakan untuk menyimpan
+                bilangan bulat tanpa angka di belakang koma.
+              </p>
+              <p>Contohnya:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>$umur = 26;</div>
+                <div>$tahun = 2026;</div>
+                <div>$stok = 150;</div>
+                <br />
+                <div>echo $umur;</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>echo $tahun;</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>echo $stok;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-integer.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 4.2 : </span> contoh output
+                    integer
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>Integer dapat bernilai positif maupun negatif. Contohnya:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>// integer positif</div>
+                <div>$harga = 100000;</div>
+                <br />
+                <div>// integer negatif</div>
+                <div>$saldo = -50000;</div>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <strong>4.5. Float (Double)</strong>
+              </h5>
+              <p>
+                Float digunakan untuk menyimpan bilangan pecahan atau desimal.
+              </p>
+              <p>Contohnya:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>$tinggi = 170.5;</div>
+                <div>$berat = 65.8;</div>
+                <div>$nilai = 89.75;</div>
+                <br />
+                <div>echo $tinggi;</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>echo $berat;</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>echo $nilai;</div>
+              </div>
+              <br />
+              <p>Hasilnya:</p>
+              <div class="box-image-tutorial">
+                <img src="/images/tutorial/contoh-float.png" />
+              </div>
+              <div class="text-center">
+                <p>
+                  <sub>
+                    <span class="fw-semibold">Gambar 4.3 : </span> contoh output
+                    float
+                  </sub>
+                </p>
+              </div>
+              <br />
+              <p>Tipe data float biasanya digunakan pada:</p>
+              <ul>
+                <li>Nilai ujian</li>
+                <li>Harga barang</li>
+                <li>Berat badan</li>
+                <li>Tinggi badan</li>
+                <li>Perhitungan ilmiah</li>
+              </ul>
+              <p>
+                Penulisan koma dalam bilangan desimal tipe data float tidak
+                dengan tanda koma biasanya, tapi dengan tanda titik
+                <span class="tag">.</span>. Contohnya bukan
+                <span class="tag">3,14</span> tapi yang benar
+                <span class="tag">3.14</span>.
+              </p>
+              <br /><br />
+              <h5>
+                <strong>4.6. Boolean</strong>
+              </h5>
+              <p>
+                Boolean merupakan tipe data yang hanya memiliki dua kemungkinan
+                nilai.
+              </p>
+              <ul>
+                <li><span class="tag">true</span></li>
+                <li><span class="tag">false</span></li>
+              </ul>
+              <p>
+                Boolean lebih sering digunakan dalam percabangan. Contohnya:
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>$login = true;</div>
+                <br />
+                <div>if ($login) {</div>
+                <div>&nbsp; &nbsp; echo "Selamat datang";</div>
+                <div>}</div>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <strong>4.7. Array</strong>
+              </h5>
+              <p>
+                Array merupakan tipe data yang digunakan untuk menyimpan banyak
+                data dalam satu variabel.
+              </p>
+              <p>Contohnya:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>
+                  $buah = ["Apel", "Jeruk", "Mangga", "Rambutan", "Jambu"];
+                </div>
+                <br />
+                <div>echo $buah[4];</div>
+              </div>
+              <br />
+              <p>Array akan dibahas lebih mendalam pada bab tersendiri.</p>
+              <br /><br />
+              <h5>
+                <strong>4.8. Object</strong>
+              </h5>
+              <p>
+                Object merupakan hasil dari sebuah class pada konsep
+                <strong>Object Oriented Programming (OOP)</strong>.
+              </p>
+              <p>Contoh sederhana:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>class Mahasiswa</div>
+                <div>{</div>
+                <div>&nbsp; &nbsp; public $nama = "Ibnu Ahmad Fauzi";</div>
+                <div>}</div>
+                <br />
+                <div>$data = new Mahasiswa();</div>
+                <div>echo $data-&gt;nama;</div>
+              </div>
+              <br />
+              <p>
+                Object akan dipelajari secara lengkap pada materi
+                <strong>OOP</strong>.
+              </p>
+              <br /><br />
+              <h5>
+                <strong>4.9. NULL</strong>
+              </h5>
+              <p>
+                NULL menunjukkan bahwa suatu variabel tidak memiliki nilai. NULL
+                sering digunakan untuk:
+              </p>
+              <ul>
+                <li>Mengosongkan variabel</li>
+                <li>Menandai data yang belum diisi</li>
+                <li>Menunjukkan tidak adanya nilai</li>
+              </ul>
+              <br /><br />
+              <h5>
+                <strong>4.10. Resource</strong>
+              </h5>
+              <p>
+                Resource merupakan tipe data khusus yang digunakan untuk
+                menyimpan refernsi terhadap sumber daya eksternal yang dikelola
+                oleh PHP, seperti koneksi database, file yang sedang dibuka,
+                atau stream jaringan.
+              </p>
+              <p>
+                Pada PHP modern, beberapa ekstesi telah mengganti penggunaan
+                <em>resource</em> dengan objek, namun konsep ini masih penting
+                untuk dipahami.
+              </p>
+              <p>Contoh penggunaannya:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>$file = fopen("data.txt", "r");</div>
+                <br />
+                <div>var_dump($file);</div>
+              </div>
+              <br />
+              <p>
+                Output yang muncul akan menunjukkan bahwa variabel tersebut
+                bertipe <span class="tag">resource</span> (atau objek pada
+                ekstensi tertentu).
+              </p>
+              <br /><br />
+              <h5>
+                <strong>4.11. Callable</strong>
+              </h5>
+              <p>
+                Callable adalah tipe data yang merepresentasikan fungsi, method,
+                atau objek yang dapat dipanggil layaknya sebuah fungsi.
+              </p>
+              <p>Contohnya:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>function sapa()</div>
+                <div>{</div>
+                <div>&nbsp; &nbsp; echo "Hello, World!";</div>
+                <div>}</div>
+                <br />
+                <div>$fungsi = "sapa";</div>
+                <br />
+                <div>$fungsi();</div>
+              </div>
+              <br />
+              <p>
+                Callable banyak digunakan pada callback function, event, maupun
+                framework modern.
+              </p>
+              <br /><br />
+              <h5>
+                <strong>4.12. Mengecek Tipe Data</strong>
+              </h5>
+              <p>
+                PHP menyediakan beberapa fungsi untuk mengetahui tipe data suatu
+                variabel.
+              </p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>$nilai = 90;</div>
+                <div>$nama = "Ibnu Ahmad Fauzi";</div>
+                <div>$ipk = 3.6;</div>
+                <div>$aktif = true;</div>
+                <div>
+                  $matkul = ["Pemrograman Berorientasi Objek", "Sistem Operasi",
+                  "Simulasi Digital"];
+                </div>
+                <br />
+                <div>echo gettype($nilai);</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>var_dump($nilai);</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>var_dump(is_string($nama));</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>var_dump(is_int($nilai));</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>var_dump(is_float($ipk));</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>var_dump(is_bool($aktif));</div>
+                <div>echo "&lt;br&gt;";</div>
+                <div>var_dump(is_array($matkul));</div>
+              </div>
+              <br /><br /><br />
+              <h5>
+                <strong>4.13. Konversi Tipe Data (Type Casting)</strong>
+              </h5>
+              <p>
+                Dalam kondisi tertentu, kita perlu mengubah suatu tipe data
+                menjadi tipe data lain.
+              </p>
+              <p>Contoh mengubah string menjadi integer:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>$angka = "100";</div>
+                <div>$hasil = (int) $angka;</div>
+                <br />
+                <div>var_dump($hasil);</div>
+              </div>
+              <br />
+              <p>Atau mengubah integer menjadi string:</p>
+              <div class="box-code">
+                <div>&lt;?php</div>
+                <br />
+                <div>$angka = 100;</div>
+                <div>$hasil = (string) $angka;</div>
+                <br />
+                <div>var_dump($hasil);</div>
+              </div>
+              <br />
+              <p>Beberapa tipe <em>casting</em> yang sering digunakan:</p>
+              <ul>
+                <li><span class="tag">(int)</span></li>
+                <li><span class="tag">(float)</span></li>
+                <li><span class="tag">(string)</span></li>
+                <li><span class="tag">(bool)</span></li>
+                <li><span class="tag">(array)</span></li>
+                <li><span class="tag">(object)</span></li>
+              </ul>
+              <br /><br /><br />
+              <div class="d-flex justify-content-between">
+                <a
+                  href="/php-dasar-bahasa-indonesia/variabel-php.html"
+                  class="btn btn-secondary"
+                  >Sebelumnya</a
+                >
+                <a href="/php-dasar-bahasa-indonesia/" class="btn btn-secondary"
+                  >Selanjutnya</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="daftar-materi"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
+      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
+      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="/js/script.js"></script>
+    <script src="/js/tutorial-pemrograman-web.js"></script>
+    <script src="/js/tutorial-pemrograman-web-php-dasar.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".tipe-data-php-link").addClass("active");
+      });
+    </script>
+  </body>
+</html>
