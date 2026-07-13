@@ -51,3 +51,42 @@ let smt1PPG = [
       "Mata kuliah Literasi Kesehatan Mental bertujuan membekali mahasiswa PPG dengan pemahaman mengenai pentingnya kesehatan mental dalam kehidupan pribadi maupun lingkungan pendidikan. Melalui mata kuliah ini, mahasiswa mempelajari konsep dasar kesehatan mental, faktor-faktor yang memengaruhi kesejahteraan psikologis, cara mengenali tanda-tanda permasalahan kesehatan mental, serta strategi menjaga dan meningkatkan kesehatan mental diri sendiri maupun peserta didik. Selain itu, mahasiswa diajak untuk mengembangkan sikap empati, komunikasi yang positif, dan kemampuan menciptakan lingkungan belajar yang aman, nyaman, serta mendukung perkembangan sosial-emosional peserta didik. Dengan bekal literasi kesehatan mental yang baik, calon guru diharapkan mampu mendukung terciptanya proses pembelajaran yang sehat, inklusif, dan berorientasi pada kesejahteraan seluruh warga sekolah.",
   },
 ];
+
+let smt2PPG = [
+  {
+    title: "Pencegahan dan Penanganan Kekerasan di Perguruan Tinggi",
+    link: "https://drive.google.com/drive/folders/1_ky3Xoom2NKnR9RQbT8EgPAeGKLLsiOt?usp=sharing",
+    description:
+      "Mata kuliah Pencegahan dan Penanganan Kekerasan di Perguruan Tinggi membekali mahasiswa dengan pemahaman mengenai berbagai bentuk kekerasan yang dapat terjadi di lingkungan perguruan tinggi, termasuk kekerasan seksual, perundungan, diskriminasi, serta bentuk kekerasan lainnya. Mahasiswa mempelajari regulasi, kebijakan, mekanisme pencegahan, pelaporan, penanganan, serta perlindungan terhadap korban sesuai dengan prinsip hak asasi manusia dan lingkungan belajar yang aman. Melalui mata kuliah ini, mahasiswa diharapkan mampu berperan aktif dalam menciptakan budaya akademik yang inklusif, aman, saling menghormati, serta bebas dari segala bentuk kekerasan.",
+  },
+  {
+    title: "Pembelajaran Mendalam dan Asesmen Lanjut",
+    link: "https://drive.google.com/drive/folders/1ozdFg61KJEFAOr8HLiSKJj1J-zR-S2ks?usp=sharing",
+    description:
+      "Mata kuliah Pembelajaran Mendalam dan Asesmen Lanjut membahas konsep pembelajaran yang berpusat pada peserta didik dengan tujuan mengembangkan kemampuan berpikir kritis, kreatif, kolaboratif, komunikasi, serta pemecahan masalah. Mahasiswa mempelajari strategi pembelajaran yang mendorong pemahaman konseptual secara mendalam, sekaligus merancang berbagai bentuk asesmen autentik yang mampu mengukur pengetahuan, keterampilan, dan sikap peserta didik secara komprehensif. Melalui mata kuliah ini, mahasiswa diharapkan mampu merancang, melaksanakan, dan mengevaluasi pembelajaran yang bermakna sesuai dengan kebutuhan peserta didik dan perkembangan kurikulum.",
+  },
+  {
+    title: "Pembelajaran Sosial Emosional",
+    link: "https://drive.google.com/drive/folders/1mI73_pR6VPvq_mlLgbgeal2e-CixFddU?usp=sharing",
+    description:
+      "Mata kuliah Pembelajaran Sosial Emosional membekali mahasiswa dengan pemahaman mengenai pentingnya pengembangan kompetensi sosial dan emosional dalam proses pembelajaran. Mahasiswa mempelajari konsep kesadaran diri, pengelolaan emosi, kesadaran sosial, keterampilan membangun hubungan, serta pengambilan keputusan yang bertanggung jawab sebagai bagian dari pembentukan karakter peserta didik. Selain itu, mahasiswa juga belajar mengintegrasikan pembelajaran sosial emosional ke dalam kegiatan belajar mengajar sehingga mampu menciptakan lingkungan kelas yang aman, positif, dan mendukung perkembangan akademik maupun nonakademik peserta didik.",
+  },
+  {
+    title: "Pendidikan Inklusi",
+    link: "https://drive.google.com/drive/folders/1kOwSMQyTWIDJafZ3gF7P2yFDgNzax0PY?usp=sharing",
+    description:
+      "Mata kuliah Pendidikan Inklusi memberikan pemahaman mengenai penyelenggaraan pendidikan yang memberikan kesempatan belajar yang setara bagi seluruh peserta didik tanpa membedakan latar belakang, kondisi, maupun kebutuhan khusus. Mahasiswa mempelajari konsep pendidikan inklusif, karakteristik peserta didik berkebutuhan khusus, identifikasi kebutuhan belajar, diferensiasi pembelajaran, penyediaan akomodasi yang layak, serta kolaborasi dengan berbagai pihak dalam mendukung pembelajaran yang inklusif. Melalui mata kuliah ini, mahasiswa diharapkan mampu merancang dan melaksanakan pembelajaran yang menghargai keberagaman serta menciptakan lingkungan belajar yang ramah bagi semua peserta didik.",
+  },
+  {
+    title: "Seminar Pendidikan Profesi Guru",
+    link: "https://drive.google.com/drive/folders/10BrDlCZayBreXF86FZm94GJ9mGGpoEDn?usp=sharing",
+    description:
+      "Mata kuliah Seminar Pendidikan Profesi Guru merupakan wadah bagi mahasiswa untuk mempresentasikan, mendiskusikan, dan merefleksikan berbagai hasil kajian, pengalaman, maupun praktik yang telah diperoleh selama mengikuti Pendidikan Profesi Guru. Mahasiswa mengembangkan kemampuan berpikir kritis, menyampaikan gagasan secara ilmiah, memberikan argumentasi berdasarkan data, serta menerima masukan dari dosen maupun sesama mahasiswa. Melalui kegiatan seminar, mahasiswa diharapkan mampu meningkatkan kompetensi akademik, profesional, kemampuan komunikasi ilmiah, serta kesiapan menjadi guru profesional yang reflektif dan terus berkembang.",
+  },
+  {
+    title: "Proyek Kepemimpinan",
+    link: "https://drive.google.com/drive/folders/14qnfCZHWMOUa5sScumEhI3iVRxN56j6X?usp=sharing",
+    description:
+      "Mata kuliah Proyek Kepemimpinan memberikan pengalaman kepada mahasiswa untuk merancang, melaksanakan, dan mengevaluasi sebuah proyek yang bertujuan memberikan dampak positif bagi lingkungan pendidikan maupun masyarakat. Mahasiswa mengembangkan kemampuan kepemimpinan, kerja sama tim, komunikasi, pengambilan keputusan, manajemen program, serta penyelesaian masalah melalui pelaksanaan proyek secara nyata. Melalui mata kuliah ini, mahasiswa diharapkan mampu menunjukkan jiwa kepemimpinan yang berintegritas, adaptif, inovatif, serta mampu menjadi agen perubahan dalam meningkatkan kualitas pendidikan.",
+  },
+];
