@@ -33,4 +33,20 @@ $(document).ready(function () {
     `;
   });
   $("#matakuliah-semester1").html(semester1HTML);
+
+  let semester2HTML = ``;
+  smt2PPG.forEach((matakuliah) => {
+    semester2HTML += `
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">${matakuliah.title}</h5>
+          <p class="card-text">
+            ${matakuliah.description}
+          </p>
+          <a href="${matakuliah.link}" target="_blank" class="btn btn-sm btn-primary">Lembar Kerja</a>
+        </div>
+      </div>
+    `;
+  });
+  $("#matakuliah-semester2").html(semester2HTML);
 });
