@@ -36,14 +36,6 @@ $(document).ready(function () {
                 <li><a class="dropdown-item" href="/filosofi-mengajar.html">Filosofi Mengajar</a></li>
               </ul>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-light tutorial-nav" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                TUTORIAL
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="/tutorial-pemrograman-web.html">Web Programming</a></li>
-              </ul>
-            </li>
             <li class="nav-item me-2 ms-2">
               <a class="nav-link text-light dokumentasi-nav" href="/dokumentasi.html"
                 >DOKUMENTASI</a

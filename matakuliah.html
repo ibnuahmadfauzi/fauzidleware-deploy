@@ -28,9 +28,50 @@
     <div class="container my-5" id="matakuliah">
       <div id="matakuliah-matrikulasi"></div>
       <h2>Semester - 01</h2>
+      <div class="text-center my-3">
+        <button class="btn btn-primary btn-refleksi-matkul-smt1">
+          Refleksi Semester 1
+        </button>
+      </div>
       <div id="matakuliah-semester1"></div>
       <h2>Semester - 02</h2>
+      <div class="text-center my-3">
+        <button class="btn btn-primary btn-refleksi-matkul-smt2">
+          Refleksi Semester 2
+        </button>
+      </div>
       <div id="matakuliah-semester2"></div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="refleksiMatkulModal"
+      tabindex="-1"
+      aria-labelledby="refleksiMatkulModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="refleksiMatkulModalLabel">
+              Modal title
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <iframe
+              id="refleksiMatkulModalIframe"
+              src=""
+              style="width: 100%; height: 80vh"
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </div>
 
     <footer></footer>
