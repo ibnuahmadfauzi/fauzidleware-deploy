@@ -2,21 +2,21 @@ $(document).ready(function () {
   $("title").text("Mata Kuliah | Ibnu Ahmad Fauzi | Portofolio Web Page");
   $(".ppg-prajabatan-nav").addClass("active");
 
-  let matrikulasiHTML = ``;
-  praPPG.forEach((matakuliah) => {
-    matrikulasiHTML += `
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">${matakuliah.title}</h5>
-          <p class="card-text">
-            ${matakuliah.description}
-          </p>
-          <a href="${matakuliah.link}" target="_blank" class="btn btn-sm btn-primary">Lembar Kerja</a>
-        </div>
-      </div>
-    `;
-  });
-  $("#matakuliah-matrikulasi").html(matrikulasiHTML);
+  // let matrikulasiHTML = ``;
+  // praPPG.forEach((matakuliah) => {
+  //   matrikulasiHTML += `
+  //     <div class="card">
+  //       <div class="card-body">
+  //         <h5 class="card-title">${matakuliah.title}</h5>
+  //         <p class="card-text">
+  //           ${matakuliah.description}
+  //         </p>
+  //         <a href="${matakuliah.link}" target="_blank" class="btn btn-sm btn-primary">Lembar Kerja</a>
+  //       </div>
+  //     </div>
+  //   `;
+  // });
+  // $("#matakuliah-matrikulasi").html(matrikulasiHTML);
 
   function modalDokumenRefleksiMatkul(url, name) {
     $("#refleksiMatkulModalLabel").text(name);
@@ -27,13 +27,13 @@ $(document).ready(function () {
   let semester1HTML = ``;
   smt1PPG.forEach((matakuliah) => {
     semester1HTML += `
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">${matakuliah.title}</h5>
-          <p class="card-text">
-            ${matakuliah.description}
-          </p>
-          <a href="${matakuliah.link}" target="_blank" class="btn btn-sm btn-primary">Lembar Kerja</a>
+      <div class="col-lg-4">
+        <div class="card mb-4" style="width: 100%;">
+          <img src="/images/${matakuliah.image}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-title">${matakuliah.title}</h6>
+            <a href="${matakuliah.link}" class="btn btn-primary btn-sm">Lembar Kerja</a>
+          </div>
         </div>
       </div>
     `;
@@ -50,13 +50,13 @@ $(document).ready(function () {
   let semester2HTML = ``;
   smt2PPG.forEach((matakuliah) => {
     semester2HTML += `
-      <div class="card mb-3">
-        <div class="card-body">
-          <h5 class="card-title">${matakuliah.title}</h5>
-          <p class="card-text">
-            ${matakuliah.description}
-          </p>
-          <a href="${matakuliah.link}" target="_blank" class="btn btn-sm btn-primary">Lembar Kerja</a>
+      <div class="col-lg-4">
+        <div class="card mb-4" style="width: 100%;">
+          <img src="/images/${matakuliah.image}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h6 class="card-title">${matakuliah.title}</h6>
+            <a href="${matakuliah.link}" class="btn btn-primary btn-sm">Lembar Kerja</a>
+          </div>
         </div>
       </div>
     `;

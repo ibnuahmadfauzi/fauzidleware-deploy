@@ -25,35 +25,56 @@
   <body>
     <nav></nav>
 
-    <div class="container my-5" id="matakuliah">
-      <!-- <div id="matakuliah-matrikulasi"></div> -->
-      <h2>Semester - 01</h2>
-      <div class="text-center my-3">
-        <button class="btn btn-primary btn-refleksi-matkul-smt1">
-          Refleksi Semester 1
+    <div class="container my-5">
+      <img src="/images/refleksi-ppg.png" class="w-100" alt="" />
+      <h3 class="fw-semibold text-center mt-5">PPG Prajabatan</h3>
+      <div class="text-center mb-3">
+        <button class="btn btn-sm btn-primary btn-refleksi-ppg">
+          Refleksi PPG
         </button>
       </div>
-      <div class="row" id="matakuliah-semester1"></div>
-      <h2>Semester - 02</h2>
-      <div class="text-center my-3">
-        <button class="btn btn-primary btn-refleksi-matkul-smt2">
-          Refleksi Semester 2
-        </button>
+      <div class="row">
+        <div class="col-lg-6">
+          <p style="text-align: justify">
+            Saya, Ibnu Ahmad Fauzi, mengikuti Program Pendidikan Profesi Guru
+            (PPG) Prajabatan bidang studi Pengembangan Perangkat Lunak dan Gim
+            (PPLG) di Universitas Negeri Surabaya. Selama program ini, saya
+            mengikuti perkuliahan, diskusi, tugas kolaboratif, seminar, proyek
+            kepemimpinan, dan Praktik Pengalaman Lapangan di SMK Negeri 1
+            Surabaya. Dalam kegiatan PPL, saya memperoleh pengalaman merancang
+            dan melaksanakan pembelajaran Dasar Pemrograman Komputer, khususnya
+            materi JavaScript, bagi siswa kelas X RPL serta menghubungkan teori
+            yang dipelajari di perkuliahan dengan situasi nyata di kelas.
+          </p>
+        </div>
+        <div class="col-lg-6">
+          <p style="text-align: justify">
+            Program PPG Prajabatan membantu saya mengembangkan kompetensi
+            pedagogik, profesional, sosial, dan kepribadian sebagai calon guru.
+            Saya belajar mengenali karakteristik dan kebutuhan murid, mengelola
+            kelas, menerapkan pembelajaran mendalam dan inklusif,
+            mengintegrasikan pembelajaran sosial emosional, serta menggunakan
+            asesmen untuk memperbaiki proses belajar. Berbagai pengalaman
+            tersebut membentuk saya menjadi calon guru PPLG yang lebih
+            reflektif, adaptif, bertanggung jawab, dan berkomitmen menghadirkan
+            pembelajaran teknologi yang bermakna, menyenangkan, serta berpusat
+            pada murid.
+          </p>
+        </div>
       </div>
-      <div class="row" id="matakuliah-semester2"></div>
     </div>
 
     <div
       class="modal fade"
-      id="refleksiMatkulModal"
+      id="refleksiPPGModal"
       tabindex="-1"
-      aria-labelledby="refleksiMatkulModalLabel"
+      aria-labelledby="refleksiPPGModalLabel"
       aria-hidden="true"
     >
       <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="refleksiMatkulModalLabel">
+            <h1 class="modal-title fs-5" id="refleksiPPGModalLabel">
               Modal title
             </h1>
             <button
@@ -65,7 +86,7 @@
           </div>
           <div class="modal-body">
             <iframe
-              id="refleksiMatkulModalIframe"
+              id="refleksiPPGModalIframe"
               src=""
               style="width: 100%; height: 80vh"
             ></iframe>
@@ -97,7 +118,6 @@
     ></script>
 
     <script src="js/script.js"></script>
-    <script src="utils/data-matakuliah.js"></script>
-    <script src="js/matakuliah.js"></script>
+    <script src="js/refleksi-ppg.js"></script>
   </body>
 </html>
