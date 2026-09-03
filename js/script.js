@@ -1,4 +1,8 @@
 $(document).ready(function () {
+  // set facivon in all page
+  let faviconElement = `<link rel="icon" type="image/x-icon" href="/images/favicon.ico">`;
+  $("head").append(faviconElement);
+
   // Set the HTML content of the <nav> element to the navbar structure
   let navbarHtml = `
       <div class="container-fluid">
