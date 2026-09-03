@@ -35,10 +35,7 @@ $(document).ready(function () {
                 <li><a class="dropdown-item" href="/artefak.html">Analisis Artefak</a></li>
                 <li><a class="dropdown-item" href="/penilaian-siklus.html">Penilaian Siklus</a></li>
                 <li><a class="dropdown-item" href="/matakuliah.html">Mata Kuliah</a></li>
-                <li><a class="dropdown-item" href="/model-guru.html">Model Guru</a></li>
                 <li><a class="dropdown-item" href="/refleksi-ppg.html">Refleksi PPG</a></li>
-                <li><a class="dropdown-item" href="/refleksi-ppl.html">Refleksi PPL</a></li>
-                <li><a class="dropdown-item" href="/filosofi-mengajar.html">Filosofi Mengajar</a></li>
               </ul>
             </li>
             <li class="nav-item me-2 ms-2">
