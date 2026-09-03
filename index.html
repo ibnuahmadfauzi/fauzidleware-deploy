@@ -21,6 +21,352 @@
     />
 
     <link rel="stylesheet" href="css/style.css" />
+
+    <style>
+      /* Seluruh style dibatasi oleh .pm-section agar tidak mengganggu halaman lain. */
+      .pm-section {
+        --pm-primary: #b74343;
+        --pm-salmon: #e8877c;
+        --pm-salmon-soft: #f9e4e1;
+        --pm-charcoal: #292727;
+        --pm-muted: #696363;
+        --pm-surface: #fffdfc;
+        --pm-border: rgba(41, 39, 39, 0.12);
+
+        position: relative;
+        overflow: hidden;
+        color: var(--pm-charcoal);
+        background:
+          radial-gradient(
+            circle at 8% 12%,
+            rgba(232, 135, 124, 0.16),
+            transparent 22rem
+          ),
+          radial-gradient(
+            circle at 92% 88%,
+            rgba(183, 67, 67, 0.1),
+            transparent 25rem
+          ),
+          #fbf9f8;
+        font-family: "Poppins", "Segoe UI", sans-serif;
+      }
+
+      .pm-section::before,
+      .pm-section::after {
+        position: absolute;
+        width: 15rem;
+        height: 15rem;
+        border: 1px solid rgba(183, 67, 67, 0.12);
+        border-radius: 50%;
+        content: "";
+        pointer-events: none;
+      }
+
+      .pm-section::before {
+        top: -7rem;
+        right: -6rem;
+      }
+
+      .pm-section::after {
+        bottom: -9rem;
+        left: -6rem;
+      }
+
+      .pm-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .pm-eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.55rem;
+        padding: 0.5rem 0.9rem;
+        color: var(--pm-primary);
+        background: var(--pm-salmon-soft);
+        border: 1px solid rgba(183, 67, 67, 0.16);
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .pm-eyebrow::before {
+        width: 0.55rem;
+        height: 0.55rem;
+        background: var(--pm-primary);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .pm-title {
+        max-width: 58rem;
+        margin-inline: auto;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 800;
+        line-height: 1.12;
+        letter-spacing: -0.04em;
+      }
+
+      .pm-title-accent {
+        color: var(--pm-primary);
+      }
+
+      .pm-lead {
+        max-width: 57rem;
+        margin-inline: auto;
+        color: var(--pm-muted);
+        font-size: 1.05rem;
+        line-height: 1.85;
+      }
+
+      .pm-principle-card {
+        position: relative;
+        padding: 1.75rem;
+        overflow: hidden;
+        background: rgba(255, 253, 252, 0.94);
+        border: 1px solid var(--pm-border);
+        border-radius: 1.25rem;
+        box-shadow: 0 1rem 2.5rem rgba(41, 39, 39, 0.07);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease,
+          border-color 180ms ease;
+      }
+
+      .pm-principle-card::after {
+        position: absolute;
+        right: -2.2rem;
+        bottom: -2.6rem;
+        width: 7rem;
+        height: 7rem;
+        background: var(--pm-salmon-soft);
+        border-radius: 50%;
+        content: "";
+        opacity: 0.7;
+      }
+
+      .pm-principle-card:hover {
+        transform: translateY(-0.4rem);
+        border-color: rgba(183, 67, 67, 0.3);
+        box-shadow: 0 1.25rem 3rem rgba(41, 39, 39, 0.12);
+      }
+
+      .pm-card-number {
+        display: inline-grid;
+        position: relative;
+        z-index: 1;
+        width: 3rem;
+        height: 3rem;
+        place-items: center;
+        flex: 0 0 auto;
+        color: #fff;
+        background: linear-gradient(
+          135deg,
+          var(--pm-primary),
+          var(--pm-salmon)
+        );
+        border-radius: 0.9rem;
+        font-weight: 800;
+        box-shadow: 0 0.65rem 1.2rem rgba(183, 67, 67, 0.2);
+      }
+
+      .pm-principle-card h3 {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        font-size: 1.25rem;
+        font-weight: 750;
+      }
+
+      .pm-principle-card p {
+        position: relative;
+        z-index: 1;
+        margin: 1.25rem 0 0;
+        color: var(--pm-muted);
+        font-size: 1rem;
+        line-height: 1.75;
+      }
+
+      .pm-path {
+        padding: clamp(1.5rem, 4vw, 2.5rem);
+        background: var(--pm-surface);
+        border: 1px solid var(--pm-border);
+        border-radius: 1.5rem;
+        box-shadow: 0 1rem 3rem rgba(41, 39, 39, 0.06);
+      }
+
+      .pm-section-label {
+        color: var(--pm-primary);
+        font-size: 0.82rem;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .pm-subtitle {
+        font-size: clamp(1.5rem, 3vw, 2.15rem);
+        font-weight: 800;
+        letter-spacing: -0.025em;
+      }
+
+      .pm-path-description {
+        max-width: 48rem;
+        color: var(--pm-muted);
+        line-height: 1.75;
+      }
+
+      .pm-steps {
+        position: relative;
+      }
+
+      .pm-steps::before {
+        position: absolute;
+        top: 1.45rem;
+        right: 16.66%;
+        left: 16.66%;
+        height: 2px;
+        background: linear-gradient(90deg, var(--pm-salmon), var(--pm-primary));
+        content: "";
+        opacity: 0.35;
+      }
+
+      .pm-step {
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+
+      .pm-step-number {
+        display: inline-grid;
+        width: 3rem;
+        height: 3rem;
+        margin-bottom: 1rem;
+        place-items: center;
+        color: #fff;
+        background: var(--pm-charcoal);
+        border: 0.35rem solid var(--pm-surface);
+        border-radius: 50%;
+        font-weight: 800;
+        box-shadow: 0 0 0 1px rgba(41, 39, 39, 0.1);
+      }
+
+      .pm-step h4 {
+        font-size: 1.05rem;
+        font-weight: 750;
+      }
+
+      .pm-step p {
+        max-width: 18rem;
+        margin: 0 auto;
+        color: var(--pm-muted);
+        font-size: 0.95rem;
+        line-height: 1.65;
+      }
+
+      .pm-application {
+        position: relative;
+        padding: clamp(1.75rem, 5vw, 3.25rem);
+        overflow: hidden;
+        color: #fff;
+        background:
+          linear-gradient(135deg, rgba(232, 135, 124, 0.19), transparent 52%),
+          var(--pm-charcoal);
+        border-radius: 1.5rem;
+        box-shadow: 0 1.5rem 3.5rem rgba(41, 39, 39, 0.2);
+      }
+
+      .pm-application::after {
+        position: absolute;
+        right: -5rem;
+        bottom: -7rem;
+        width: 18rem;
+        height: 18rem;
+        border: 3rem solid rgba(232, 135, 124, 0.08);
+        border-radius: 50%;
+        content: "";
+        pointer-events: none;
+      }
+
+      .pm-application-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      .pm-application .pm-section-label {
+        color: #f4aaa2;
+      }
+
+      .pm-application p {
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.8;
+      }
+
+      .pm-topic {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.48rem 0.8rem;
+        color: #fff;
+        background: rgba(255, 255, 255, 0.09);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 999px;
+        font-size: 0.86rem;
+        font-weight: 600;
+      }
+
+      .pm-error-note {
+        padding: 1rem 1.1rem;
+        background: rgba(232, 135, 124, 0.12);
+        border-left: 4px solid var(--pm-salmon);
+        border-radius: 0 0.8rem 0.8rem 0;
+      }
+
+      .pm-error-note strong {
+        color: #ffd1cc;
+      }
+
+      @media (max-width: 767.98px) {
+        .pm-title {
+          letter-spacing: -0.025em;
+        }
+
+        .pm-principle-card {
+          padding: 1.35rem;
+        }
+
+        .pm-steps::before {
+          top: 1.5rem;
+          bottom: 1.5rem;
+          left: 1.45rem;
+          width: 2px;
+          height: auto;
+        }
+
+        .pm-step {
+          display: grid;
+          grid-template-columns: 3rem 1fr;
+          gap: 0 1rem;
+          text-align: left;
+        }
+
+        .pm-step-number {
+          grid-row: 1 / span 2;
+          margin-bottom: 0;
+        }
+
+        .pm-step p {
+          max-width: none;
+          margin: 0;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .pm-principle-card {
+          transition: none;
+        }
+      }
+    </style>
   </head>
   <body>
     <nav></nav>
@@ -100,7 +446,172 @@
       </div>
     </section>
 
-    <section id="quotes">
+    <section
+      class="pm-section py-5"
+      id="pembelajaran-mendalam"
+      aria-labelledby="pm-title"
+    >
+      <div class="container pm-content py-4 py-lg-5">
+        <header class="text-center mb-5">
+          <h2 class="pm-title mb-4" id="pm-title">
+            Pembelajaran Mendalam dalam
+            <span class="pm-title-accent">Perjalanan Saya</span>
+          </h2>
+          <p class="pm-lead mb-0">
+            Pembelajaran Mendalam merupakan pendekatan yang memuliakan murid
+            dengan menghadirkan proses belajar yang berkesadaran, bermakna, dan
+            menggembirakan. Pembelajaran tidak hanya diarahkan pada penguasaan
+            materi, tetapi juga pada kemampuan murid memahami pengetahuan,
+            menerapkannya dalam berbagai situasi, dan merefleksikan pengalaman
+            belajarnya. Pendekatan ini mendukung perkembangan murid secara utuh
+            melalui olah pikir, olah hati, olah rasa, dan olah raga.
+          </p>
+        </header>
+
+        <div class="row g-4" aria-label="Prinsip Pembelajaran Mendalam">
+          <div class="col-md-6 col-lg-4">
+            <article class="pm-principle-card h-100">
+              <div class="d-flex align-items-center gap-3">
+                <span class="pm-card-number" aria-hidden="true">01</span>
+                <h3>Berkesadaran</h3>
+              </div>
+              <p>
+                Murid memahami tujuan pembelajaran, mengenali proses belajarnya,
+                serta mampu menentukan strategi dan melakukan refleksi untuk
+                memperbaiki hasil belajar.
+              </p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <article class="pm-principle-card h-100">
+              <div class="d-flex align-items-center gap-3">
+                <span class="pm-card-number" aria-hidden="true">02</span>
+                <h3>Bermakna</h3>
+              </div>
+              <p>
+                Materi pembelajaran dihubungkan dengan pengalaman, kebutuhan,
+                dan permasalahan nyata sehingga pengetahuan dapat digunakan
+                dalam kehidupan maupun dunia kerja.
+              </p>
+            </article>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mx-md-auto">
+            <article class="pm-principle-card h-100">
+              <div class="d-flex align-items-center gap-3">
+                <span class="pm-card-number" aria-hidden="true">03</span>
+                <h3>Menggembirakan</h3>
+              </div>
+              <p>
+                Pembelajaran berlangsung dalam suasana yang aman, positif,
+                menantang, dan inklusif. Murid dapat mencoba, berkolaborasi,
+                menyampaikan gagasan, serta belajar dari kesalahan tanpa merasa
+                takut.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <section class="pm-path mt-5" aria-labelledby="pm-path-title">
+          <div class="text-center mb-4 mb-md-5">
+            <span class="pm-section-label">Pengalaman Belajar</span>
+            <h3 class="pm-subtitle mt-2 mb-3" id="pm-path-title">
+              Memahami, Mengaplikasi, dan Merefleksi
+            </h3>
+            <p class="pm-path-description mx-auto mb-0">
+              Pengalaman belajar dirancang melalui tiga tahapan yang saling
+              berkaitan agar murid mampu membangun pemahaman, menghasilkan
+              karya, dan memperbaiki proses belajarnya.
+            </p>
+          </div>
+
+          <div class="row g-4 g-md-3 pm-steps">
+            <div class="col-md-4">
+              <div class="pm-step">
+                <span class="pm-step-number" aria-hidden="true">1</span>
+                <h4>Memahami</h4>
+                <p>
+                  Membangun konsep melalui asesmen awal, pertanyaan pemantik,
+                  dan eksplorasi.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="pm-step">
+                <span class="pm-step-number" aria-hidden="true">2</span>
+                <h4>Mengaplikasi</h4>
+                <p>
+                  Menerapkan pengetahuan dalam tugas atau proyek yang dekat
+                  dengan kehidupan nyata.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="pm-step">
+                <span class="pm-step-number" aria-hidden="true">3</span>
+                <h4>Merefleksi</h4>
+                <p>
+                  Menilai proses dan hasil belajar untuk menentukan perbaikan
+                  berikutnya.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <article
+          class="pm-application mt-5"
+          aria-labelledby="pm-application-title"
+        >
+          <div class="row g-4 g-lg-5 align-items-start pm-application-content">
+            <div class="col-lg-4">
+              <span class="pm-section-label">Praktik Nyata</span>
+              <h3
+                class="pm-subtitle text-white mt-2 mb-3"
+                id="pm-application-title"
+              >
+                Penerapan dalam Pembelajaran PPLG
+              </h3>
+              <div
+                class="d-flex flex-wrap gap-2 mt-4"
+                aria-label="Materi JavaScript"
+              >
+                <span class="pm-topic">Variabel</span>
+                <span class="pm-topic">Percabangan</span>
+                <span class="pm-topic">Perulangan</span>
+                <span class="pm-topic">Array</span>
+                <span class="pm-topic">Object</span>
+                <span class="pm-topic">DOM</span>
+              </div>
+            </div>
+
+            <div class="col-lg-8">
+              <p>
+                Dalam pembelajaran Dasar Pemrograman Komputer di SMK Negeri 1
+                Surabaya, Pembelajaran Mendalam saya terapkan melalui asesmen
+                awal, pertanyaan pemantik, pembelajaran berbasis proyek,
+                diskusi, presentasi, dan refleksi. Murid tidak hanya mempelajari
+                konsep JavaScript, tetapi juga menggunakannya untuk menghasilkan
+                program sederhana dan aplikasi web interaktif.
+              </p>
+              <div class="pm-error-note mt-4">
+                <p class="mb-0">
+                  <strong>Kesalahan adalah bagian dari proses belajar.</strong>
+                  Murid diajak menganalisis penyebab kesalahan, mencoba
+                  alternatif penyelesaian, menerima umpan balik, dan memperbaiki
+                  programnya. Proses tersebut membantu mengembangkan penalaran
+                  kritis, kreativitas, kolaborasi, kemandirian, dan kemampuan
+                  komunikasi.
+                </p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="quotes" class="mt-5">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-8">
