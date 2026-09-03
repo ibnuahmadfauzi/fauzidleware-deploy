@@ -32,7 +32,7 @@ $(document).ready(function () {
           <img src="/images/${matakuliah.image}" class="card-img-top" alt="...">
           <div class="card-body">
             <h6 class="card-title">${matakuliah.title}</h6>
-            <a href="${matakuliah.link}" class="btn btn-primary btn-sm">Lembar Kerja</a>
+            <a href="${matakuliah.link}" class="btn btn-primary btn-sm" target="_blank">Lembar Kerja</a>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@ $(document).ready(function () {
           <img src="/images/${matakuliah.image}" class="card-img-top" alt="...">
           <div class="card-body">
             <h6 class="card-title">${matakuliah.title}</h6>
-            <a href="${matakuliah.link}" class="btn btn-primary btn-sm">Lembar Kerja</a>
+            <a href="${matakuliah.link}" class="btn btn-primary btn-sm" target="_blank">Lembar Kerja</a>
           </div>
         </div>
       </div>
