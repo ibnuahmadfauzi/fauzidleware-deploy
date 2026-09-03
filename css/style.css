@@ -7,28 +7,28 @@
   font-family: "Poppins", sans-serif;
 }
 body {
-  color: #373737;
+  color: #292727;
 }
 .after-hero {
-  background-color: #af3e3e;
+  background-color: #e98278;
   padding: 5px 0;
 }
 .after-hero a {
   text-align: center;
   display: block;
-  color: #ffffff;
+  color: #faf8f7;
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
 }
 .after-hero a:hover {
-  color: #af3e3e;
-  background-color: #ffffff;
+  color: #e98278;
+  background-color: #faf8f7;
   border-radius: 10px;
 }
 .box-code {
-  background-color: #373737;
-  color: #ffffff;
+  background-color: #292727;
+  color: #faf8f7;
   padding: 20px;
   font-family: monospace;
   font-weight: 200;
@@ -39,7 +39,7 @@ body {
 }
 .box-folder {
   background-color: #e4e0e0;
-  color: #373737;
+  color: #292727;
   padding: 20px;
   font-family: monospace;
   font-weight: 600;
@@ -53,36 +53,36 @@ body {
 /* Bootstrap Reset */
 /* ================================================================== */
 .bg-primary {
-  background-color: #af3e3e !important;
+  background-color: #e98278 !important;
 }
 .text-light {
-  color: #ffffff !important;
+  color: #faf8f7 !important;
 }
 .btn-primary {
-  background-color: #af3e3e;
+  background-color: #e98278;
   border: none;
-  box-shadow: 3px 3px #373737;
+  box-shadow: 3px 3px #292727;
   border-radius: 0px;
 }
 .btn-primary:hover {
-  background-color: #373737;
-  color: #ffffff;
+  background-color: #292727;
+  color: #faf8f7;
   box-shadow: none;
 }
 .btn-secondary {
   background-color: #6c757d;
   border: none;
-  box-shadow: 3px 3px #373737;
+  box-shadow: 3px 3px #292727;
   border-radius: 0px;
 }
 .btn-secondary:hover {
-  background-color: #373737;
-  color: #ffffff;
+  background-color: #292727;
+  color: #faf8f7;
   box-shadow: none;
 }
 nav .active {
-  background-color: #ffffff;
-  color: #af3e3e !important;
+  background-color: #faf8f7;
+  color: #e98278 !important;
   border-radius: 10px;
 }
 .list-group-item.active,
@@ -99,8 +99,8 @@ nav .active {
 /* Footer Section */
 /* ================================================================== */
 footer {
-  background-color: #af3e3e;
-  color: #ffffff;
+  background-color: #e98278;
+  color: #faf8f7;
   padding: 20px 0;
 }
 footer p {
@@ -201,8 +201,8 @@ footer p {
   font-variant: small-caps;
 }
 #profil table span {
-  background-color: #af3e3e;
-  color: #ffffff;
+  background-color: #e98278;
+  color: #faf8f7;
   padding: 10px 13px;
   font-size: 0.9rem;
 }
@@ -281,7 +281,7 @@ footer p {
 #analisis-artefak .card h6 {
   font-size: 1rem;
   font-weight: 400;
-  color: #af3e3e;
+  color: #e98278;
 }
 /* ================================================================== */
 
@@ -560,8 +560,8 @@ span.tag {
     border-spacing: 7px;
   }
   #profil table span {
-    background-color: #af3e3e;
-    color: #ffffff;
+    background-color: #e98278;
+    color: #faf8f7;
     padding: 5px 7px;
     font-size: 0.9rem;
   }
@@ -644,7 +644,7 @@ span.tag {
   #analisis-artefak .card h6 {
     font-size: 1rem;
     font-weight: 400;
-    color: #af3e3e;
+    color: #e98278;
   }
   #analisis-artefak btn {
     margin-top: 10px;
