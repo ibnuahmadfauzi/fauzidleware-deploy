@@ -443,6 +443,14 @@ span.tag {
   border-radius: 5px;
 }
 /* ================================================================== */
+@media (min-width: 1366px) {
+  #hero .hero-description {
+    padding: 200px 0;
+  }
+  #welcome .welcome-description {
+    padding: 200px 0;
+  }
+}
 
 /* ================================================================== */
 /* Stye for Mobile Responsive */
