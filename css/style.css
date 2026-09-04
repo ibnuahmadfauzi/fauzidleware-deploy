@@ -20,11 +20,21 @@ body {
   text-decoration: none;
   font-size: 1rem;
   font-weight: 500;
+
+  /* Mengatur kecepatan animasi */
+  transition:
+    color 0.5s ease,
+    background-color 0.5s ease,
+    border-radius 0.5s ease,
+    box-shadow 0.5s ease,
+    transform 0.5s ease;
 }
 .after-hero a:hover {
   color: #e98278;
   background-color: #faf8f7;
-  border-radius: 10px;
+  border-radius: 0;
+  box-shadow: 3px 3px #292727;
+  transform: translate(-2px, -2px);
 }
 .box-code {
   background-color: #292727;
@@ -60,14 +70,23 @@ body {
 }
 .btn-primary {
   background-color: #e98278;
+  color: #faf8f7;
   border: none;
+  border-radius: 0;
   box-shadow: 3px 3px #292727;
-  border-radius: 0px;
+
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease,
+    box-shadow 0.5s ease,
+    transform 0.5s ease;
 }
+
 .btn-primary:hover {
   background-color: #292727;
   color: #faf8f7;
   box-shadow: none;
+  transform: translate(3px, 3px);
 }
 .btn-secondary {
   background-color: #6c757d;
@@ -82,8 +101,11 @@ body {
 }
 nav .active {
   background-color: #faf8f7;
+  box-shadow: 3px 3px #292727;
+  border-radius: 0px;
   color: #e98278 !important;
-  border-radius: 10px;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 .list-group-item.active,
 .list-group-item.active:hover,

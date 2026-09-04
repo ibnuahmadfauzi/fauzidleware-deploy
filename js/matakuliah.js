@@ -28,7 +28,7 @@ $(document).ready(function () {
   smt1PPG.forEach((matakuliah) => {
     semester1HTML += `
       <div class="col-lg-4">
-        <div class="card mb-4" style="width: 100%;">
+        <div class="card mb-4 border-0 rounded-0 shadow" style="width: 100%;">
           <img src="/images/${matakuliah.image}" class="card-img-top" alt="...">
           <div class="card-body">
             <h6 class="card-title">${matakuliah.title}</h6>
@@ -51,7 +51,7 @@ $(document).ready(function () {
   smt2PPG.forEach((matakuliah) => {
     semester2HTML += `
       <div class="col-lg-4">
-        <div class="card mb-4" style="width: 100%;">
+        <div class="card mb-4 border-0 rounded-0 shadow" style="width: 100%;">
           <img src="/images/${matakuliah.image}" class="card-img-top" alt="...">
           <div class="card-body">
             <h6 class="card-title">${matakuliah.title}</h6>
