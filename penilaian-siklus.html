@@ -1,99 +1,389 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Fauzidleware | Penilaian Siklus</title>
 
+    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
+    />
+    <!-- Google Fonts: Space Grotesk -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!-- Memanggil Global CSS milik Anda -->
+    <link rel="stylesheet" href="/css/style.css" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* --- STYLES KHUSUS HALAMAN PENILAIAN SIKLUS --- */
+      .page-header {
+        padding: 60px 0;
+        background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="%23111111"/></svg>');
+      }
+      .page-title-box {
+        display: inline-block;
+        transform: rotate(-1deg);
+      }
+
+      .penilaian-section {
+        padding: 40px 0 80px;
+      }
+
+      .semester-badge {
+        background-color: #111;
+        color: #fff;
+        padding: 10px 20px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        border: var(--border-thick);
+        box-shadow:
+          4px 4px 0 #fff,
+          6px 6px 0 #111;
+        display: inline-block;
+        margin-bottom: 2rem;
+        transform: rotate(-2deg);
+      }
+
+      .siklus-card {
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: #fff;
+      }
+
+      .siklus-number {
+        position: absolute;
+        top: -20px;
+        right: 20px;
+        background-color: var(--accent-yellow);
+        border: 3px solid #111;
+        font-size: 1.2rem;
+        font-weight: 700;
+        padding: 5px 15px;
+        box-shadow: 2px 2px 0 #111;
+      }
+
+      .siklus-content {
+        flex-grow: 1;
+        margin-top: 1rem;
+      }
+
+      /* Diubah menjadi tag button tapi style dipertahankan */
+      .btn-lampiran {
+        display: inline-block;
+        font-weight: 700;
+        padding: 0.8rem;
+        background-color: var(--accent-blue);
+        color: #111;
+        border: 2px solid #111;
+        box-shadow: 3px 3px 0px #111;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+        cursor: pointer;
+      }
+
+      .btn-lampiran:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0px #111;
+        background-color: var(--accent-yellow);
+      }
+
+      .btn-lampiran-8 {
+        background-color: var(--accent-green);
+      }
+
+      /* Coming Soon Box */
+      .coming-soon-box {
+        background: repeating-linear-gradient(
+          45deg,
+          #f8f9fa,
+          #f8f9fa 20px,
+          #e9ecef 20px,
+          #e9ecef 40px
+        );
+        border: var(--border-thick);
+        padding: 4rem 2rem;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .coming-soon-stamp {
+        background-color: var(--accent-yellow);
+        color: #111;
+        font-weight: 700;
+        font-size: 2rem;
+        padding: 10px 30px;
+        border: 4px solid #111;
+        display: inline-block;
+        transform: rotate(-5deg);
+        box-shadow: 6px 6px 0 #111;
+      }
+
+      /* --- STYLES KHUSUS MODAL NEOBRUTALISM --- */
+      .modal-content.brutal-modal {
+        border: var(--border-thick);
+        border-radius: 0;
+        box-shadow: 10px 10px 0 #111;
+        background-color: var(--bg-color); /* Salmon */
+      }
+      .modal-header.brutal-header {
+        background-color: var(--accent-yellow);
+        border-bottom: var(--border-thick);
+        border-radius: 0;
+        padding: 1rem 1.5rem;
+      }
+      .modal-title {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .btn-close-brutal {
+        background-color: #fff;
+        border: 2px solid #111;
+        opacity: 1;
+        box-shadow: 2px 2px 0 #111;
+        transition: all 0.2s;
+      }
+      .btn-close-brutal:hover {
+        background-color: #ff4d4d;
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px 0 #111;
+      }
+      .modal-body.brutal-body {
+        background-color: #fff;
+        padding: 0;
+        height: 70vh; /* Tinggi iframe 70% tinggi layar */
+        border-bottom: var(--border-thick);
+      }
+      .modal-footer.brutal-footer {
+        background-color: #fff;
+        border-top: none;
+        padding: 1rem;
+      }
+      .btn-tutup {
+        background-color: var(--accent-blue);
+        color: #111;
+        font-weight: 700;
+        border: 2px solid #111;
+        padding: 8px 20px;
+        box-shadow: 3px 3px 0 #111;
+        transition: all 0.2s;
+      }
+      .btn-tutup:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0 #111;
+        background-color: #fff;
+      }
+    </style>
   </head>
   <body>
-    <nav></nav>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top"></nav>
 
-    <section id="penilaian-guru-pamong">
+    <!-- PAGE HEADER -->
+    <section class="page-header text-center">
       <div class="container">
-        <div class="mb-4">
-          <h1>Penilaian Guru Pamong - 3 Siklus</h1>
-          <h3>
-            Lampiran 7 (Perangkat Pembelajaran) & Lampiran 8 (Praktik Mengajar)
-          </h3>
+        <div
+          class="page-title-box bg-white-brutal p-3 brutal-border brutal-shadow mb-3"
+        >
+          <h1
+            class="m-0 text-decoration-underline"
+            style="text-decoration-thickness: 6px"
+          >
+            PENILAIAN SIKLUS
+          </h1>
         </div>
-        <div class="row justify-content-center">
-          <div class="col-lg-4">
-            <div class="card border-0 rounded-0 shadow" style="width: 100%">
-              <div class="card-body text-center">
-                <h1><i class="fa-solid fa-database"></i></h1>
-                <h5 class="card-title">
-                  Variabel, Tipe Data, dan Operator (JavaScript)
-                </h5>
-                <h6 class="card-subtitle mb-5 text-body-secondary">Siklus 1</h6>
-                <button
-                  class="btn btn-sm btn-primary btn-lampiran7-siklus1 me-3"
-                >
-                  <i class="fa-solid fa-file-pdf"></i> Lampiran 7
-                </button>
-                <button
-                  class="btn btn-sm btn-primary btn-lampiran8-siklus1 me-3"
-                >
-                  <i class="fa-solid fa-file-pdf"></i> lampiran 8
-                </button>
+        <div>
+          <p
+            class="fs-5 fw-bold bg-yellow-brutal d-inline-block px-3 py-2 brutal-border brutal-shadow"
+          >
+            Penilaian Guru Pamong
+          </p>
+        </div>
+        <p class="mt-2 fw-bold text-dark">
+          <span class="bg-white px-2 border border-dark"
+            >Lampiran 7 (Perangkat)</span
+          >
+          &
+          <span class="bg-white px-2 border border-dark"
+            >Lampiran 8 (Praktik)</span
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- PENILAIAN SECTION -->
+    <section class="penilaian-section">
+      <div class="container">
+        <!-- SEMESTER 1 -->
+        <div class="mb-5">
+          <div class="text-center text-md-start">
+            <div class="semester-badge">Semester 1</div>
+          </div>
+
+          <div class="row g-5 mt-2">
+            <!-- SIKLUS 1 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="siklus-card brutal-border brutal-shadow">
+                <div class="siklus-number">SIKLUS 1</div>
+                <div class="siklus-content">
+                  <h3 class="border-bottom border-dark border-2 pb-2 mb-3">
+                    Variabel, Tipe Data, dan Operator
+                  </h3>
+                  <p
+                    class="fw-bold bg-light p-2 border border-dark border-1 fs-6"
+                  >
+                    JavaScript Dasar
+                  </p>
+                </div>
+                <!-- TOMBOL TRIGGER MODAL -->
+                <div class="mt-3">
+                  <button
+                    type="button"
+                    class="btn-lampiran"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPenilaian"
+                    data-materi="Siklus 1: JS Dasar"
+                    data-jenis="Lampiran 7 (Perangkat)"
+                    data-url="https://drive.google.com/file/d/1Ml5rCnSmxu3HqjGX5giqlULIHG5ciegQ/preview"
+                  >
+                    Lampiran 7
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn-lampiran btn-lampiran-8"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPenilaian"
+                    data-materi="Siklus 1: JS Dasar"
+                    data-jenis="Lampiran 8 (Praktik)"
+                    data-url="https://drive.google.com/file/d/1DWnIP3QOuROHgF6E1TYZU5AcAiKNMqQC/preview"
+                  >
+                    Lampiran 8
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- SIKLUS 2 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="siklus-card brutal-border brutal-shadow">
+                <div class="siklus-number">SIKLUS 2</div>
+                <div class="siklus-content">
+                  <h3 class="border-bottom border-dark border-2 pb-2 mb-3">
+                    Percabangan, Perulangan, & Function
+                  </h3>
+                  <p
+                    class="fw-bold bg-light p-2 border border-dark border-1 fs-6"
+                  >
+                    JavaScript Menengah
+                  </p>
+                </div>
+                <!-- TOMBOL TRIGGER MODAL -->
+                <div class="mt-3">
+                  <button
+                    type="button"
+                    class="btn-lampiran"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPenilaian"
+                    data-materi="Siklus 2: JS Menengah"
+                    data-jenis="Lampiran 7 (Perangkat)"
+                    data-url="https://drive.google.com/file/d/1IKDFXrfhyIq_3owz5GFtl9kfrAlGWwJ4/preview"
+                  >
+                    Lampiran 7
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn-lampiran btn-lampiran-8"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPenilaian"
+                    data-materi="Siklus 2: JS Menengah"
+                    data-jenis="Lampiran 8 (Praktik)"
+                    data-url="https://drive.google.com/file/d/12bKOzN5hWAMzh-67f2vUAiXRjptCvnaK/preview"
+                  >
+                    Lampiran 8
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- SIKLUS 3 -->
+            <div class="col-lg-4 col-md-6">
+              <div class="siklus-card brutal-border brutal-shadow">
+                <div class="siklus-number">SIKLUS 3</div>
+                <div class="siklus-content">
+                  <h3 class="border-bottom border-dark border-2 pb-2 mb-3">
+                    Array, Object, Document Object Model
+                  </h3>
+                  <p
+                    class="fw-bold bg-light p-2 border border-dark border-1 fs-6"
+                  >
+                    JavaScript Lanjutan & DOM
+                  </p>
+                </div>
+                <!-- TOMBOL TRIGGER MODAL -->
+                <div class="mt-3">
+                  <button
+                    type="button"
+                    class="btn-lampiran"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPenilaian"
+                    data-materi="Siklus 3: JS & DOM"
+                    data-jenis="Lampiran 7 (Perangkat)"
+                    data-url="https://drive.google.com/file/d/1y_0XZIq-v0zrAREBesp2UpCjrZ802pSJ/preview"
+                  >
+                    Lampiran 7
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn-lampiran btn-lampiran-8"
+                    data-bs-toggle="modal"
+                    data-bs-target="#modalPenilaian"
+                    data-materi="Siklus 3: JS & DOM"
+                    data-jenis="Lampiran 8 (Praktik)"
+                    data-url="https://drive.google.com/file/d/1XsRZCT1YUU-AgVYoL8v1StV_ByN6y3Ag/preview"
+                  >
+                    Lampiran 8
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="card border-0 rounded-0 shadow" style="width: 100%">
-              <div class="card-body text-center">
-                <h1><i class="fa-solid fa-arrows-spin"></i></h1>
-                <h5 class="card-title">
-                  Percabangan, Perulangan, dan Function (JavaScript)
-                </h5>
-                <h6 class="card-subtitle mb-5 text-body-secondary">Siklus 2</h6>
-                <button
-                  class="btn btn-sm btn-primary btn-lampiran7-siklus2 me-3"
-                >
-                  <i class="fa-solid fa-file-pdf"></i> Lampiran 7
-                </button>
-                <button
-                  class="btn btn-sm btn-primary btn-lampiran8-siklus2 me-3"
-                >
-                  <i class="fa-solid fa-file-pdf"></i> lampiran 8
-                </button>
-              </div>
+        </div>
+
+        <!-- SEMESTER 2 -->
+        <div class="mt-5 pt-5 border-top border-dark border-4">
+          <div class="text-center text-md-start">
+            <div
+              class="semester-badge"
+              style="background-color: var(--accent-blue); color: #111"
+            >
+              Semester 2
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="card border-0 rounded-0 shadow" style="width: 100%">
-              <div class="card-body text-center">
-                <h1><i class="fa-solid fa-object-ungroup"></i></h1>
-                <h5 class="card-title">
-                  Array, Object, Document Object Model (JavaScript)
-                </h5>
-                <h6 class="card-subtitle mb-5 text-body-secondary">Siklus 3</h6>
-                <button
-                  class="btn btn-sm btn-primary btn-lampiran7-siklus3 me-3"
+
+          <div class="row mt-4">
+            <div class="col-12">
+              <div class="coming-soon-box brutal-shadow">
+                <div class="coming-soon-stamp">COMING SOON</div>
+                <p
+                  class="mt-4 fs-4 fw-bold text-dark bg-white d-inline-block px-3 py-1 border border-dark"
                 >
-                  <i class="fa-solid fa-file-pdf"></i> Lampiran 7
-                </button>
-                <button
-                  class="btn btn-sm btn-primary btn-lampiran8-siklus3 me-3"
-                >
-                  <i class="fa-solid fa-file-pdf"></i> lampiran 8
-                </button>
+                  Persiapan 4 Siklus Pembelajaran
+                </p>
               </div>
             </div>
           </div>
@@ -101,60 +391,112 @@
       </div>
     </section>
 
+    <!-- ============================================== -->
+    <!-- MODAL DINAMIS NEOBRUTALISM                     -->
+    <!-- ============================================== -->
     <div
       class="modal fade"
-      id="modalPenilaianGuruPamong"
+      id="modalPenilaian"
       tabindex="-1"
-      aria-labelledby="modalPenilaianGuruPamongLabel"
+      aria-labelledby="judulModalPenilaian"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="modalPenilaianGuruPamongLabel">
-              Modal title
-            </h1>
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content brutal-modal">
+          <div class="modal-header brutal-header">
+            <div>
+              <!-- Label Jenis Penilaian akan otomatis berubah menjadi "Lampiran 7" atau "Lampiran 8" -->
+              <span
+                id="labelJenisPenilaian"
+                class="bg-white px-2 py-1 border border-dark fw-bold me-2 shadow-sm text-uppercase"
+                >JENIS</span
+              >
+              <h5
+                class="modal-title d-inline-block align-middle m-0"
+                id="judulModalPenilaian"
+              >
+                Siklus Ke-X
+              </h5>
+            </div>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-brutal"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+
+          <div class="modal-body brutal-body">
+            <!-- Iframe tempat menampilkan PDF/Gambar Penilaian -->
             <iframe
-              id="modalPenilaianGuruPamongIframe"
+              id="iframePenilaian"
               src=""
-              style="width: 100%; height: 80vh"
+              width="100%"
+              height="100%"
+              style="border: none"
             ></iframe>
+          </div>
+
+          <div class="modal-footer brutal-footer justify-content-between">
+            <p class="mb-0 text-muted fs-6 fst-italic">
+              *Hasil Scan/Digital Penilaian oleh Guru Pamong SMK N 1 Surabaya.
+            </p>
+            <button type="button" class="btn btn-tutup" data-bs-dismiss="modal">
+              Tutup Penilaian
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <footer></footer>
+    <!-- FOOTER -->
+    <footer class="footer"></footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Bootstrap Bundle & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
-      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!-- Memanggil Script JS milik Anda -->
+    <script src="/js/script.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
-      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!-- SCRIPT LOGIKA MODAL DINAMIS -->
+    <script>
+      $(document).ready(function () {
+        // Ketika Modal Penilaian akan ditampilkan
+        $("#modalPenilaian").on("show.bs.modal", function (event) {
+          // Tombol mana yang diklik
+          var button = $(event.relatedTarget);
 
-    <script src="js/script.js"></script>
-    <script src="js/penilaian-siklus.js"></script>
+          // Ambil data atribut
+          var namaMateri = button.data("materi");
+          var jenisPenilaian = button.data("jenis");
+          var urlDokumen = button.data("url");
+
+          // Masukkan data ke dalam Modal
+          var modal = $(this);
+          modal.find("#judulModalPenilaian").text(namaMateri);
+          modal.find("#labelJenisPenilaian").text(jenisPenilaian);
+
+          // Ubah warnanya biar estetik (Hijau untuk Lampiran 8, Biru untuk 7)
+          if (jenisPenilaian.includes("8")) {
+            modal
+              .find("#labelJenisPenilaian")
+              .css("background-color", "var(--accent-green)");
+          } else {
+            modal
+              .find("#labelJenisPenilaian")
+              .css("background-color", "var(--accent-blue)");
+          }
+
+          // Set iframe src
+          modal.find("#iframePenilaian").attr("src", urlDokumen);
+        });
+
+        // Bersihkan iframe saat modal ditutup
+        $("#modalPenilaian").on("hidden.bs.modal", function () {
+          $(this).find("#iframePenilaian").attr("src", "");
+        });
+      });
+    </script>
   </body>
 </html>

@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fauzidleware | Tulisan & Refleksi</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts: Space Grotesk -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Memanggil Global CSS milik Anda -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <style>
+      /* --- STYLES KHUSUS HALAMAN TULISAN/BLOG --- */
+      .page-header {
+        padding: 80px 0 60px;
+        background-color: var(--accent-yellow);
+        border-bottom: var(--border-thick);
+        background-image:
+          radial-gradient(#111 15%, transparent 16%),
+          radial-gradient(#111 15%, transparent 16%);
+        background-size: 40px 40px;
+        background-position:
+          0 0,
+          20px 20px;
+      }
+
+      .header-box {
+        background-color: #fff;
+        padding: 2rem;
+        display: inline-block;
+        transform: rotate(-2deg);
+        box-shadow: 10px 10px 0 #111;
+      }
+
+      .blog-section {
+        padding: 60px 0 100px;
+        background-color: var(--accent-blue);
+      }
+
+      /* Brutal Blog Card */
+      .blog-card {
+        background-color: #fff;
+        border: var(--border-thick);
+        box-shadow: var(--shadow-hard);
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.2s ease-in-out;
+        position: relative;
+      }
+
+      .blog-card:hover {
+        transform: translate(4px, 4px);
+        box-shadow: var(--shadow-hard-hover);
+        background-color: #f8f9fa;
+      }
+
+      .blog-thumbnail {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-bottom: var(--border-thick);
+        filter: grayscale(20%); /* Sedikit efek vintage/raw */
+        transition: filter 0.3s;
+      }
+
+      .blog-card:hover .blog-thumbnail {
+        filter: grayscale(0%);
+      }
+
+      .blog-content {
+        padding: 1.5rem;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .blog-category {
+        display: inline-block;
+        background-color: var(--accent-green);
+        color: #111;
+        font-weight: 700;
+        font-size: 0.8rem;
+        padding: 4px 10px;
+        border: 2px solid #111;
+        align-self: flex-start;
+        margin-bottom: 1rem;
+        box-shadow: 2px 2px 0 #111;
+      }
+
+      /* Kategori warna berbeda */
+      .cat-refleksi {
+        background-color: var(--accent-yellow);
+      }
+      .cat-tech {
+        background-color: var(--accent-green);
+      }
+      .cat-opini {
+        background-color: var(--bg-color);
+      }
+
+      .blog-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        text-transform: none; /* Override uppercase dari global css */
+      }
+
+      .blog-title a {
+        color: #111;
+        text-decoration: none;
+      }
+
+      .blog-title a:hover {
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+      }
+
+      .blog-excerpt {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+        flex-grow: 1;
+      }
+
+      .blog-meta {
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-top: 2px solid #111;
+        padding-top: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .btn-read {
+        background-color: #111;
+        color: #fff;
+        padding: 5px 15px;
+        font-weight: 700;
+        border: 2px solid #111;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .btn-read:hover {
+        background-color: #fff;
+        color: #111;
+      }
+
+      /* Variasi ukuran card untuk layout asimetris */
+      .card-featured {
+        grid-column: span 2;
+      }
+      @media (max-width: 991px) {
+        .card-featured {
+          grid-column: span 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top"></nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header text-center">
+      <div class="container">
+        <div class="header-box brutal-border">
+          <h1 class="display-4 fw-bold mb-0">TULISAN & REFLEKSI</h1>
+        </div>
+        <div class="mt-4">
+          <p
+            class="fs-5 fw-bold bg-white d-inline-block px-4 py-2 brutal-border"
+            style="box-shadow: 4px 4px 0 #111"
+          >
+            Catatan Perjalanan, Pemikiran, dan Eksplorasi Teknologi
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- BLOG FEED SECTION -->
+    <section class="blog-section">
+      <div class="container">
+        <!-- Grid System for Blog Posts -->
+        <div class="row g-4">
+          <!-- ARTIKEL 1 (FEATURED - Lebih Lebar) -->
+          <div class="col-lg-8 col-md-12">
+            <article class="blog-card">
+              <!-- Gunakan placeholder atau gambar asli Anda -->
+              <img
+                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop&q=60"
+                alt="Coding Setup"
+                class="blog-thumbnail"
+                style="height: 300px"
+              />
+              <div class="blog-content">
+                <span class="blog-category cat-refleksi">Refleksi PPL</span>
+                <h2 class="blog-title">
+                  <a href="#"
+                    >Mengatasi "Ketakutan Error" pada Siswa Saat Belajar
+                    Pemrograman</a
+                  >
+                </h2>
+                <p class="blog-excerpt">
+                  Saat mengajar dasar pemrograman JavaScript di kelas X RPL,
+                  saya menyadari satu hal: siswa sering kali takut mencoba
+                  karena takut programnya "error". Dalam tulisan ini, saya
+                  merenungkan bagaimana mengubah paradigma error dari sebuah
+                  kegagalan menjadi bagian integral dari proses belajar.
+                </p>
+                <div class="blog-meta">
+                  <span>📅 19 Okt 2026</span>
+                  <a href="#" class="btn-read">Baca Selengkapnya &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 2 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <img
+                src="https://images.unsplash.com/photo-1627398240309-08a9a216e5c5?w=500&auto=format&fit=crop&q=60"
+                alt="JavaScript Code"
+                class="blog-thumbnail"
+              />
+              <div class="blog-content">
+                <span class="blog-category cat-tech">Teknologi Web</span>
+                <h2 class="blog-title">
+                  <a href="#"
+                    >Mengapa Vanilla JS Masih Relevan di Era Framework?</a
+                  >
+                </h2>
+                <p class="blog-excerpt">
+                  Sebelum melompat ke React atau Vue, pemahaman kuat tentang
+                  Vanilla JS dan DOM Manipulation adalah fondasi yang tidak
+                  boleh dilewatkan oleh calon programmer muda.
+                </p>
+                <div class="blog-meta">
+                  <span>📅 12 Okt 2026</span>
+                  <a href="#" class="btn-read">Baca &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 3 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <img
+                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&auto=format&fit=crop&q=60"
+                alt="Education"
+                class="blog-thumbnail"
+              />
+              <div class="blog-content">
+                <span class="blog-category cat-opini">Opini Pendidikan</span>
+                <h2 class="blog-title">
+                  <a href="#"
+                    >Teknologi Saja Tidak Cukup: Pentingnya Olah Rasa di Kelas
+                    IT</a
+                  >
+                </h2>
+                <p class="blog-excerpt">
+                  Menghadapi Gen Z di lab komputer membutuhkan lebih dari
+                  sekadar materi teknis. Bagaimana kita mengintegrasikan
+                  pendidikan nilai saat belajar coding?
+                </p>
+                <div class="blog-meta">
+                  <span>📅 05 Okt 2026</span>
+                  <a href="#" class="btn-read">Baca &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 4 -->
+          <div class="col-lg-4 col-md-6">
+            <article class="blog-card">
+              <img
+                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60"
+                alt="Code Review"
+                class="blog-thumbnail"
+              />
+              <div class="blog-content">
+                <span class="blog-category cat-refleksi">Jurnal Harian</span>
+                <h2 class="blog-title">
+                  <a href="#"
+                    >Menyusun Modul Ajar: Menyeimbangkan Teori dan Praktik</a
+                  >
+                </h2>
+                <p class="blog-excerpt">
+                  Pengalaman dan tantangan yang saya hadapi saat menyusun
+                  perangkat pembelajaran (Siklus 1) agar selaras dengan prinsip
+                  Pembelajaran Mendalam.
+                </p>
+                <div class="blog-meta">
+                  <span>📅 28 Sep 2026</span>
+                  <a href="#" class="btn-read">Baca &rarr;</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- ARTIKEL 5 -->
+          <div class="col-lg-4 col-md-6">
+            <article
+              class="blog-card"
+              style="background-color: var(--accent-yellow)"
+            >
+              <div class="blog-content justify-content-center text-center">
+                <h2 class="display-1">🚀</h2>
+                <h3 class="fw-bold mt-3">Ide Tulisan Berikutnya?</h3>
+                <p class="fs-6 mt-2 fw-bold">
+                  Saya sedang merangkum pengalaman implementasi 'Project Based
+                  Learning' untuk materi DOM.
+                </p>
+                <span
+                  class="bg-white border border-dark px-3 py-2 fw-bold mt-3 d-inline-block"
+                  >Coming Soon...</span
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer"></footer>
+
+    <!-- Bootstrap Bundle & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Memanggil Script JS milik Anda -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>

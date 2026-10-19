@@ -1,713 +1,316 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Fauzidleware | Portofolio PPG Prajabatan</title>
 
+    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
+    />
+    <!-- Google Fonts: Space Grotesk for that Neobrutalist feel -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-
-    <link rel="stylesheet" href="css/style.css" />
-
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
     <style>
-      /* Seluruh style dibatasi oleh .pm-section agar tidak mengganggu halaman lain. */
-      .pm-section {
-        --pm-primary: #b74343;
-        --pm-salmon: #e8877c;
-        --pm-salmon-soft: #f9e4e1;
-        --pm-charcoal: #292727;
-        --pm-muted: #696363;
-        --pm-surface: #fffdfc;
-        --pm-border: rgba(41, 39, 39, 0.12);
-
-        position: relative;
-        overflow: hidden;
-        color: var(--pm-charcoal);
-        background:
-          radial-gradient(
-            circle at 8% 12%,
-            rgba(232, 135, 124, 0.16),
-            transparent 22rem
-          ),
-          radial-gradient(
-            circle at 92% 88%,
-            rgba(183, 67, 67, 0.1),
-            transparent 25rem
-          ),
-          #fbf9f8;
-        font-family: "Poppins", "Segoe UI", sans-serif;
-      }
-
-      .pm-section::before,
-      .pm-section::after {
-        position: absolute;
-        width: 15rem;
-        height: 15rem;
-        border: 1px solid rgba(183, 67, 67, 0.12);
-        border-radius: 50%;
-        content: "";
-        pointer-events: none;
-      }
-
-      .pm-section::before {
-        top: -7rem;
-        right: -6rem;
-      }
-
-      .pm-section::after {
-        bottom: -9rem;
-        left: -6rem;
-      }
-
-      .pm-content {
+      /* --- HERO SECTION --- */
+      .hero-section {
+        padding: 100px 0;
         position: relative;
         z-index: 1;
       }
-
-      .pm-eyebrow {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.55rem;
-        padding: 0.5rem 0.9rem;
-        color: var(--pm-primary);
-        background: var(--pm-salmon-soft);
-        border: 1px solid rgba(183, 67, 67, 0.16);
-        border-radius: 999px;
-        font-size: 0.82rem;
+      .hero-card {
+        padding: 3rem;
+        border-radius: 0;
+      }
+      .hero-title {
+        font-size: 4rem;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        text-shadow: 3px 3px 0px #fff;
+      }
+      .hero-image {
+        width: 100%;
+        max-width: 400px;
+        border: var(--border-thick);
+        box-shadow: var(--shadow-hard);
+        background-color: #fff;
+        object-fit: cover;
+        aspect-ratio: 1/1;
+      }
+      .btn-brutal {
+        display: inline-block;
         font-weight: 700;
-        letter-spacing: 0.08em;
         text-transform: uppercase;
+        padding: 1rem 2rem;
+        background-color: var(--accent-yellow);
+        color: var(--text-color);
+        border: var(--border-thick);
+        box-shadow: var(--shadow-hard);
+        text-decoration: none;
+        cursor: pointer;
+        margin-top: 1rem;
+      }
+      .btn-brutal:hover {
+        transform: translate(4px, 4px);
+        box-shadow: var(--shadow-hard-hover);
+        color: var(--text-color);
       }
 
-      .pm-eyebrow::before {
-        width: 0.55rem;
-        height: 0.55rem;
-        background: var(--pm-primary);
+      /* --- STORY SECTION --- */
+      .story-section {
+        padding: 80px 0;
+        background-color: var(--accent-blue);
+        border-top: var(--border-thick);
+        border-bottom: var(--border-thick);
+      }
+      .story-box {
+        padding: 2.5rem;
+      }
+
+      /* --- QUOTE SECTION --- */
+      .quote-section {
+        padding: 80px 0;
+        background-color: #fff;
+      }
+      .quote-mark {
+        font-size: 6rem;
+        line-height: 0;
+        color: var(--bg-color);
+        margin-bottom: 2rem;
+        display: block;
+      }
+      .khd-portrait {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
         border-radius: 50%;
-        content: "";
+        border: var(--border-thick);
       }
 
-      .pm-title {
-        max-width: 58rem;
-        margin-inline: auto;
-        font-size: clamp(2rem, 5vw, 3.5rem);
-        font-weight: 800;
-        line-height: 1.12;
-        letter-spacing: -0.04em;
+      /* --- LOCATION SECTION --- */
+      .location-section {
+        padding: 80px 0;
+        border-top: var(--border-thick);
+        background-color: var(--accent-green);
+      }
+      .map-container {
+        width: 100%;
+        height: 300px;
+        border: var(--border-thick);
+        background-color: #ccc; /* Placeholder if iframe fails */
       }
 
-      .pm-title-accent {
-        color: var(--pm-primary);
-      }
-
-      .pm-lead {
-        max-width: 57rem;
-        margin-inline: auto;
-        color: var(--pm-muted);
-        font-size: 1.05rem;
-        line-height: 1.85;
-      }
-
-      .pm-principle-card {
-        position: relative;
-        padding: 1.75rem;
-        overflow: hidden;
-        background: rgba(255, 253, 252, 0.94);
-        border: 1px solid var(--pm-border);
-        border-radius: 1.25rem;
-        box-shadow: 0 1rem 2.5rem rgba(41, 39, 39, 0.07);
-        transition:
-          transform 180ms ease,
-          box-shadow 180ms ease,
-          border-color 180ms ease;
-      }
-
-      .pm-principle-card::after {
+      /* Decorative Elements */
+      .starburst {
         position: absolute;
-        right: -2.2rem;
-        bottom: -2.6rem;
-        width: 7rem;
-        height: 7rem;
-        background: var(--pm-salmon-soft);
-        border-radius: 50%;
-        content: "";
-        opacity: 0.7;
+        top: -20px;
+        right: -20px;
+        width: 80px;
+        z-index: 10;
+        animation: spin 10s linear infinite;
       }
-
-      .pm-principle-card:hover {
-        transform: translateY(-0.4rem);
-        border-color: rgba(183, 67, 67, 0.3);
-        box-shadow: 0 1.25rem 3rem rgba(41, 39, 39, 0.12);
-      }
-
-      .pm-card-number {
-        display: inline-grid;
-        position: relative;
-        z-index: 1;
-        width: 3rem;
-        height: 3rem;
-        place-items: center;
-        flex: 0 0 auto;
-        color: #fff;
-        background: linear-gradient(
-          135deg,
-          var(--pm-primary),
-          var(--pm-salmon)
-        );
-        border-radius: 0.9rem;
-        font-weight: 800;
-        box-shadow: 0 0.65rem 1.2rem rgba(183, 67, 67, 0.2);
-      }
-
-      .pm-principle-card h3 {
-        position: relative;
-        z-index: 1;
-        margin: 0;
-        font-size: 1.25rem;
-        font-weight: 750;
-      }
-
-      .pm-principle-card p {
-        position: relative;
-        z-index: 1;
-        margin: 1.25rem 0 0;
-        color: var(--pm-muted);
-        font-size: 1rem;
-        line-height: 1.75;
-      }
-
-      .pm-path {
-        padding: clamp(1.5rem, 4vw, 2.5rem);
-        background: var(--pm-surface);
-        border: 1px solid var(--pm-border);
-        border-radius: 1.5rem;
-        box-shadow: 0 1rem 3rem rgba(41, 39, 39, 0.06);
-      }
-
-      .pm-section-label {
-        color: var(--pm-primary);
-        font-size: 0.82rem;
-        font-weight: 800;
-        letter-spacing: 0.1em;
-        text-transform: uppercase;
-      }
-
-      .pm-subtitle {
-        font-size: clamp(1.5rem, 3vw, 2.15rem);
-        font-weight: 800;
-        letter-spacing: -0.025em;
-      }
-
-      .pm-path-description {
-        max-width: 48rem;
-        color: var(--pm-muted);
-        line-height: 1.75;
-      }
-
-      .pm-steps {
-        position: relative;
-      }
-
-      .pm-steps::before {
-        position: absolute;
-        top: 1.45rem;
-        right: 16.66%;
-        left: 16.66%;
-        height: 2px;
-        background: linear-gradient(90deg, var(--pm-salmon), var(--pm-primary));
-        content: "";
-        opacity: 0.35;
-      }
-
-      .pm-step {
-        position: relative;
-        z-index: 1;
-        text-align: center;
-      }
-
-      .pm-step-number {
-        display: inline-grid;
-        width: 3rem;
-        height: 3rem;
-        margin-bottom: 1rem;
-        place-items: center;
-        color: #fff;
-        background: var(--pm-charcoal);
-        border: 0.35rem solid var(--pm-surface);
-        border-radius: 50%;
-        font-weight: 800;
-        box-shadow: 0 0 0 1px rgba(41, 39, 39, 0.1);
-      }
-
-      .pm-step h4 {
-        font-size: 1.05rem;
-        font-weight: 750;
-      }
-
-      .pm-step p {
-        max-width: 18rem;
-        margin: 0 auto;
-        color: var(--pm-muted);
-        font-size: 0.95rem;
-        line-height: 1.65;
-      }
-
-      .pm-application {
-        position: relative;
-        padding: clamp(1.75rem, 5vw, 3.25rem);
-        overflow: hidden;
-        color: #fff;
-        background:
-          linear-gradient(135deg, rgba(232, 135, 124, 0.19), transparent 52%),
-          var(--pm-charcoal);
-        border-radius: 1.5rem;
-        box-shadow: 0 1.5rem 3.5rem rgba(41, 39, 39, 0.2);
-      }
-
-      .pm-application::after {
-        position: absolute;
-        right: -5rem;
-        bottom: -7rem;
-        width: 18rem;
-        height: 18rem;
-        border: 3rem solid rgba(232, 135, 124, 0.08);
-        border-radius: 50%;
-        content: "";
-        pointer-events: none;
-      }
-
-      .pm-application-content {
-        position: relative;
-        z-index: 1;
-      }
-
-      .pm-application .pm-section-label {
-        color: #f4aaa2;
-      }
-
-      .pm-application p {
-        color: rgba(255, 255, 255, 0.8);
-        line-height: 1.8;
-      }
-
-      .pm-topic {
-        display: inline-flex;
-        align-items: center;
-        padding: 0.48rem 0.8rem;
-        color: #fff;
-        background: rgba(255, 255, 255, 0.09);
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        border-radius: 999px;
-        font-size: 0.86rem;
-        font-weight: 600;
-      }
-
-      .pm-error-note {
-        padding: 1rem 1.1rem;
-        background: rgba(232, 135, 124, 0.12);
-        border-left: 4px solid var(--pm-salmon);
-        border-radius: 0 0.8rem 0.8rem 0;
-      }
-
-      .pm-error-note strong {
-        color: #ffd1cc;
-      }
-
-      @media (max-width: 767.98px) {
-        .pm-title {
-          letter-spacing: -0.025em;
-        }
-
-        .pm-principle-card {
-          padding: 1.35rem;
-        }
-
-        .pm-steps::before {
-          top: 1.5rem;
-          bottom: 1.5rem;
-          left: 1.45rem;
-          width: 2px;
-          height: auto;
-        }
-
-        .pm-step {
-          display: grid;
-          grid-template-columns: 3rem 1fr;
-          gap: 0 1rem;
-          text-align: left;
-        }
-
-        .pm-step-number {
-          grid-row: 1 / span 2;
-          margin-bottom: 0;
-        }
-
-        .pm-step p {
-          max-width: none;
-          margin: 0;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .pm-principle-card {
-          transition: none;
+      @keyframes spin {
+        100% {
+          transform: rotate(360deg);
         }
       }
     </style>
   </head>
   <body>
-    <nav></nav>
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg sticky-top"></nav>
 
-    <section id="hero">
+    <!-- HERO SECTION -->
+    <section class="hero-section">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="hero-description">
-              <h3>Halo, saya</h3>
-              <h1>Ibnu Ahmad Fauzi</h1>
-              <h3>Mahasiswa PPG Prajabatan</h3>
-              <h4>Belajar Mendalam, Berkarya Nyata, Bertumbuh Bersama.</h4>
-              <p>
-                "Menghadirkan pembelajaran PPLG yang berkesadaran, bermakna, dan
-                menggembirakan melalui teknologi, kolaborasi, dan refleksi."
+        <div class="row align-items-center">
+          <div class="col-lg-7 mb-5 mb-lg-0">
+            <div
+              class="hero-card bg-white-brutal brutal-border brutal-shadow position-relative"
+            >
+              <!-- SVG Starburst Decoration -->
+              <svg
+                class="starburst"
+                viewBox="0 0 100 100"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M50 0 L58 38 L96 30 L66 58 L90 90 L50 72 L10 90 L34 58 L4 30 L42 38 Z"
+                  fill="#FBEA69"
+                  stroke="#111"
+                  stroke-width="3"
+                />
+              </svg>
+
+              <h3 class="mb-2">Halo, saya</h3>
+              <h1 class="hero-title">Ibnu Ahmad Fauzi</h1>
+              <h3
+                class="bg-yellow-brutal d-inline-block px-2 border border-dark mb-4"
+              >
+                Mahasiswa PPG Prajabatan
+              </h3>
+
+              <p class="fw-bold fs-5 mb-3">
+                > Belajar Mendalam, Berkarya Nyata, Bertumbuh Bersama.
               </p>
-              <div>
-                <a href="/artefak.html" class="btn btn-primary btn-sm"
-                  >Jelajahi Portfolio</a
-                >
+
+              <div
+                class="p-3 border border-dark mb-4"
+                style="
+                  background-color: #f8f9fa;
+                  border-left: 8px solid #111 !important;
+                "
+              >
+                <p class="fst-italic mb-0">
+                  "Menghadirkan pembelajaran PPLG yang berkesadaran, bermakna,
+                  dan menggembirakan melalui teknologi, kolaborasi, dan
+                  refleksi."
+                </p>
               </div>
+
+              <a href="#portfolio" class="btn-brutal"
+                >Jelajahi Portfolio &rarr;</a
+              >
             </div>
           </div>
-          <div class="col-lg-6"></div>
+          <div class="col-lg-5 text-center">
+            <img
+              src="/images/ibnu.png"
+              alt="Foto Ibnu Ahmad Fauzi"
+              class="hero-image"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <div class="after-hero">
+    <!-- STORY SECTION -->
+    <section class="story-section">
       <div class="container">
-        <div class="row">
-          <div class="col-lg-4">
-            <a href="/">HOME</a>
+        <div class="row align-items-center flex-row-reverse">
+          <div class="col-lg-7 mb-4 mb-lg-0">
+            <div class="story-box bg-white-brutal brutal-border brutal-shadow">
+              <h2
+                class="mb-4 text-decoration-underline"
+                style="text-decoration-thickness: 4px"
+              >
+                Perjalanan Menjadi Pendidik Profesional
+              </h2>
+              <p class="fs-5">
+                Ketertarikan saya pada dunia pendidikan berawal dari keyakinan
+                bahwa setiap peserta didik memiliki potensi yang dapat
+                berkembang apabila mendapatkan bimbingan yang tepat.
+              </p>
+              <p class="fs-5">
+                Sebagai seseorang yang memiliki minat pada bidang teknologi dan
+                pengembangan perangkat lunak, saya ingin berkontribusi dalam
+                membekali generasi muda dengan keterampilan yang relevan dengan
+                perkembangan zaman.
+              </p>
+              <p class="fs-5 fw-bold bg-yellow-brutal p-2 border border-dark">
+                Menjadi pendidik bukan hanya tentang menyampaikan materi, tetapi
+                juga tentang menginspirasi, membimbing, dan membantu peserta
+                didik menemukan potensi terbaik dalam dirinya.
+              </p>
+            </div>
           </div>
-          <div class="col-lg-4">
-            <a href="/profil.html">PROFIL MAHASISWA</a>
-          </div>
-          <div class="col-lg-4">
-            <a href="/artefak.html">ARTEFAK</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section id="welcome">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6">
+          <div class="col-lg-5 text-center">
             <img
               src="/images/homepage.png"
               alt="Dokumentasi Mengajar"
-              class="img-fluid"
+              class="hero-image brutal-shadow"
+              style="transform: rotate(-3deg)"
             />
           </div>
-          <div class="col-lg-6">
-            <div class="welcome-description">
-              <h5>
-                <i class="fa-solid fa-lightbulb"></i>
-              </h5>
-              <h5>Perjalanan Menjadi Pendidik Profesional</h5>
-              <p>
-                Ketertarikan saya pada dunia pendidikan berawal dari keyakinan
-                bahwa setiap peserta didik memiliki potensi yang dapat
-                berkembang apabila mendapatkan bimbingan yang tepat. Sebagai
-                seseorang yang memiliki minat pada bidang teknologi dan
-                pengembangan perangkat lunak, saya ingin berkontribusi dalam
-                membekali generasi muda dengan keterampilan yang relevan dengan
-                perkembangan zaman. Menjadi pendidik bukan hanya tentang
-                menyampaikan materi, tetapi juga tentang menginspirasi,
-                membimbing, dan membantu peserta didik menemukan potensi terbaik
-                dalam dirinya.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <section
-      class="pm-section py-5"
-      id="pembelajaran-mendalam"
-      aria-labelledby="pm-title"
-    >
-      <div class="container pm-content py-4 py-lg-5">
-        <header class="text-center mb-5">
-          <h2 class="pm-title mb-4" id="pm-title">
-            Pembelajaran Mendalam dalam
-            <span class="pm-title-accent">Perjalanan Saya</span>
-          </h2>
-          <p class="pm-lead mb-0">
-            Pembelajaran Mendalam merupakan pendekatan yang memuliakan murid
-            dengan menghadirkan proses belajar yang berkesadaran, bermakna, dan
-            menggembirakan. Pembelajaran tidak hanya diarahkan pada penguasaan
-            materi, tetapi juga pada kemampuan murid memahami pengetahuan,
-            menerapkannya dalam berbagai situasi, dan merefleksikan pengalaman
-            belajarnya. Pendekatan ini mendukung perkembangan murid secara utuh
-            melalui olah pikir, olah hati, olah rasa, dan olah raga.
-          </p>
-        </header>
-
-        <div class="row g-4" aria-label="Prinsip Pembelajaran Mendalam">
-          <div class="col-md-6 col-lg-4">
-            <article class="pm-principle-card h-100">
-              <div class="d-flex align-items-center gap-3">
-                <span class="pm-card-number" aria-hidden="true">01</span>
-                <h3>Berkesadaran</h3>
-              </div>
-              <p>
-                Murid memahami tujuan pembelajaran, mengenali proses belajarnya,
-                serta mampu menentukan strategi dan melakukan refleksi untuk
-                memperbaiki hasil belajar.
-              </p>
-            </article>
-          </div>
-
-          <div class="col-md-6 col-lg-4">
-            <article class="pm-principle-card h-100">
-              <div class="d-flex align-items-center gap-3">
-                <span class="pm-card-number" aria-hidden="true">02</span>
-                <h3>Bermakna</h3>
-              </div>
-              <p>
-                Materi pembelajaran dihubungkan dengan pengalaman, kebutuhan,
-                dan permasalahan nyata sehingga pengetahuan dapat digunakan
-                dalam kehidupan maupun dunia kerja.
-              </p>
-            </article>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mx-md-auto">
-            <article class="pm-principle-card h-100">
-              <div class="d-flex align-items-center gap-3">
-                <span class="pm-card-number" aria-hidden="true">03</span>
-                <h3>Menggembirakan</h3>
-              </div>
-              <p>
-                Pembelajaran berlangsung dalam suasana yang aman, positif,
-                menantang, dan inklusif. Murid dapat mencoba, berkolaborasi,
-                menyampaikan gagasan, serta belajar dari kesalahan tanpa merasa
-                takut.
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <section class="pm-path mt-5" aria-labelledby="pm-path-title">
-          <div class="text-center mb-4 mb-md-5">
-            <span class="pm-section-label">Pengalaman Belajar</span>
-            <h3 class="pm-subtitle mt-2 mb-3" id="pm-path-title">
-              Memahami, Mengaplikasi, dan Merefleksi
+    <!-- QUOTE SECTION -->
+    <section class="quote-section">
+      <div class="container text-center">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <img
+              src="/images/kihajardewantara.jpeg"
+              alt="Ki Hajar Dewantara"
+              class="khd-portrait brutal-shadow mb-4"
+            />
+            <h2>Ki Hajar Dewantara</h2>
+            <h3
+              class="bg-yellow-brutal d-inline-block px-3 py-2 brutal-border mb-3"
+            >
+              "Ing ngarso sung tulodo, ing madya mangun karso, tut wuri
+              handayani."
             </h3>
-            <p class="pm-path-description mx-auto mb-0">
-              Pengalaman belajar dirancang melalui tiga tahapan yang saling
-              berkaitan agar murid mampu membangun pemahaman, menghasilkan
-              karya, dan memperbaiki proses belajarnya.
+            <p class="fs-4 fw-bold">
+              Di depan memberi teladan, di tengah membangun semangat, dan di
+              belakang memberikan dorongan.
             </p>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="row g-4 g-md-3 pm-steps">
-            <div class="col-md-4">
-              <div class="pm-step">
-                <span class="pm-step-number" aria-hidden="true">1</span>
-                <h4>Memahami</h4>
-                <p>
-                  Membangun konsep melalui asesmen awal, pertanyaan pemantik,
-                  dan eksplorasi.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="pm-step">
-                <span class="pm-step-number" aria-hidden="true">2</span>
-                <h4>Mengaplikasi</h4>
-                <p>
-                  Menerapkan pengetahuan dalam tugas atau proyek yang dekat
-                  dengan kehidupan nyata.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="pm-step">
-                <span class="pm-step-number" aria-hidden="true">3</span>
-                <h4>Merefleksi</h4>
-                <p>
-                  Menilai proses dan hasil belajar untuk menentukan perbaikan
-                  berikutnya.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <article
-          class="pm-application mt-5"
-          aria-labelledby="pm-application-title"
+    <!-- LOCATION SECTION -->
+    <section class="location-section">
+      <div class="container">
+        <h2
+          class="text-center mb-5 bg-white-brutal d-inline-block px-4 py-2 brutal-border brutal-shadow mx-auto"
+          style="display: table !important"
         >
-          <div class="row g-4 g-lg-5 align-items-start pm-application-content">
-            <div class="col-lg-4">
-              <span class="pm-section-label">Praktik Nyata</span>
-              <h3
-                class="pm-subtitle text-white mt-2 mb-3"
-                id="pm-application-title"
-              >
-                Penerapan dalam Pembelajaran PPLG
-              </h3>
-              <div
-                class="d-flex flex-wrap gap-2 mt-4"
-                aria-label="Materi JavaScript"
-              >
-                <span class="pm-topic">Variabel</span>
-                <span class="pm-topic">Percabangan</span>
-                <span class="pm-topic">Perulangan</span>
-                <span class="pm-topic">Array</span>
-                <span class="pm-topic">Object</span>
-                <span class="pm-topic">DOM</span>
-              </div>
-            </div>
-
-            <div class="col-lg-8">
-              <p>
-                Dalam pembelajaran Dasar Pemrograman Komputer di SMK Negeri 1
-                Surabaya, Pembelajaran Mendalam saya terapkan melalui asesmen
-                awal, pertanyaan pemantik, pembelajaran berbasis proyek,
-                diskusi, presentasi, dan refleksi. Murid tidak hanya mempelajari
-                konsep JavaScript, tetapi juga menggunakannya untuk menghasilkan
-                program sederhana dan aplikasi web interaktif.
-              </p>
-              <div class="pm-error-note mt-4">
-                <p class="mb-0">
-                  <strong>Kesalahan adalah bagian dari proses belajar.</strong>
-                  Murid diajak menganalisis penyebab kesalahan, mencoba
-                  alternatif penyelesaian, menerima umpan balik, dan memperbaiki
-                  programnya. Proses tersebut membantu mengembangkan penalaran
-                  kritis, kreativitas, kolaborasi, kemandirian, dan kemampuan
-                  komunikasi.
-                </p>
-              </div>
+          LOKASI PELAKSANAAN
+        </h2>
+        <div class="row g-5">
+          <!-- LPTK -->
+          <div class="col-md-6">
+            <div class="bg-white-brutal brutal-border brutal-shadow p-4 h-100">
+              <h3 class="mb-1">LPTK</h3>
+              <h4 class="text-muted mb-3">Universitas Negeri Surabaya</h4>
+              <!-- Ganti src di bawah dengan embed link Google Maps Unesa -->
+              <iframe
+                class="map-container"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.545812903173!2d112.67069151525042!3d-7.292376994736341!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fc2ec5303ec1%3A0x63351980af459275!2sUniversitas%20Negeri%20Surabaya!5e0!3m2!1sid!2sid!4v1684824314112!5m2!1sid!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="quotes" class="mt-5">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="row justify-content-center align-items-center">
-              <div class="col-lg-8">
-                <div class="quote-description">
-                  <p>- Ki Hajar Dewantara</p>
-                  <p class="fw-semibold">
-                    "Ing ngarso sung tulodo, ing madya mangun karso, tut wuri
-                    handayani."
-                  </p>
-                  <p>
-                    Di depan memberi teladan, di tengah membangun semangat, dan
-                    di belakang memberikan dorongan.
-                  </p>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <img
-                  src="/images/kihajardewantara.png"
-                  alt="Fauzidleware - Ki Hajar Dewantara"
-                />
-              </div>
+          <!-- PPL -->
+          <div class="col-md-6">
+            <div class="bg-white-brutal brutal-border brutal-shadow p-4 h-100">
+              <h3 class="mb-1">Sekolah PPL</h3>
+              <h4 class="text-muted mb-3">SMK Negeri 1 Surabaya</h4>
+              <!-- Ganti src di bawah dengan embed link Google Maps SMKN 1 SBY -->
+              <iframe
+                class="map-container"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.387900889246!2d112.72314541525055!3d-7.309675294724495!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf32d96c88f%3A0xb334005b76c8c93b!2sSMK%20Negeri%201%20Surabaya!5e0!3m2!1sid!2sid!4v1684824367980!5m2!1sid!2sid"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <div class="after-hero">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <a href="/lampiran.html">LAMPIRAN</a>
-          </div>
-          <div class="col-lg-6">
-            <a href="/dokumentasi.html">DOKUMENTASI</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!-- FOOTER -->
+    <footer class="footer"></footer>
 
-    <section id="location">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-6">
-            <h2>LPTK</h2>
-            <h4 class="mb-3">Universitas Negeri Surabaya</h4>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.2691173517333!2d112.67009457418176!3d-7.300860471769928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb7a806b1ce1%3A0x571f4546e898d79a!2sUniversitas%20Negeri%20Surabaya!5e1!3m2!1sen!2sid!4v1780819037806!5m2!1sen!2sid"
-              height="450"
-              style="border: 0; width: 100%"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-          <div class="col-lg-6">
-            <h2>PPL</h2>
-            <h4 class="mb-3">SMK Negeri 1 Surabaya</h4>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.2367883699353!2d112.73140327418186!3d-7.305182371817174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fb9ef4d7d9ed%3A0x5959ad479fd46d02!2sSMK%20Negeri%201%20Surabaya!5e1!3m2!1sen!2sid!4v1780819115547!5m2!1sen!2sid"
-              height="450"
-              style="border: 0; width: 100%"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- Bootstrap Bundle with Popper & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <footer></footer>
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
-      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
-      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script src="js/script.js"></script>
-    <script src="js/home.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="/js/script.js"></script>
   </body>
 </html>

@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fauzidleware | Proyek Kepemimpinan</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts: Space Grotesk -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Memanggil Global CSS milik Anda -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <style>
+      /* --- STYLES KHUSUS COMING SOON --- */
+      .coming-soon-wrapper {
+        min-height: calc(100vh - 250px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 20px;
+        /* Motif kotak-kotak catur / Grid khas Brutalism */
+        background-color: var(--accent-blue);
+        background-image:
+          linear-gradient(
+            45deg,
+            #111 25%,
+            transparent 25%,
+            transparent 75%,
+            #111 75%,
+            #111
+          ),
+          linear-gradient(
+            45deg,
+            #111 25%,
+            transparent 25%,
+            transparent 75%,
+            #111 75%,
+            #111
+          );
+        background-size: 40px 40px;
+        background-position:
+          0 0,
+          20px 20px;
+      }
+
+      .cs-card {
+        background-color: #fff;
+        border: var(--border-thick);
+        padding: 4rem;
+        text-align: center;
+        box-shadow: -15px 15px 0 #111; /* Shadow ke kiri bawah */
+        max-width: 800px;
+        width: 100%;
+        position: relative;
+      }
+
+      .cs-stamp {
+        position: absolute;
+        top: -20px;
+        right: -20px;
+        background-color: var(--bg-color);
+        color: #111;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 10px 20px;
+        border: 3px solid #111;
+        transform: rotate(10deg);
+        box-shadow: -4px 4px 0 #111;
+      }
+
+      .cs-title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        line-height: 1.1;
+        text-transform: uppercase;
+        margin-bottom: 2rem;
+        border-bottom: 4px solid #111;
+        padding-bottom: 1rem;
+        display: inline-block;
+      }
+
+      .cs-desc {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        background-color: var(--accent-green);
+        padding: 1rem;
+        border: 2px solid #111;
+      }
+
+      .btn-back {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        background-color: var(--accent-yellow);
+        color: #111;
+        border: 3px solid #111;
+        box-shadow: 6px 6px 0px #111;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .btn-back:hover {
+        transform: translate(3px, 3px);
+        box-shadow: 3px 3px 0px #111;
+        background-color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top"></nav>
+
+    <!-- COMING SOON CONTENT -->
+    <div class="coming-soon-wrapper">
+      <div class="cs-card">
+        <div class="cs-stamp">STATUS: PERENCANAAN 📅</div>
+
+        <h1 class="cs-title">Proyek Kepemimpinan</h1>
+
+        <p class="cs-desc fw-bold text-dark">
+          Rencana aksi dan implementasi inisiatif kepemimpinan di lingkungan
+          pendidikan sedang dalam tahap penyusunan (Semester 2).
+        </p>
+
+        <h2
+          class="display-5 fw-bold mb-4 bg-white d-inline-block px-3 py-1 border border-dark"
+        >
+          COMING SOON
+        </h2>
+        <br />
+
+        <a href="index.html" class="btn-back mt-3">&larr; Kembali ke Beranda</a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer"></footer>
+
+    <!-- Bootstrap Bundle & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Memanggil Script JS milik Anda -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>

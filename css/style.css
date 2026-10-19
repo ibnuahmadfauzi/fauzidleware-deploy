@@ -1,739 +1,103 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
-/* ================================================================== */
-/* General Styles */
-/* ================================================================== */
-* {
-  font-family: "Poppins", sans-serif;
+/* NEOBRUTALISM CORE VARIABLES */
+:root {
+  --bg-color: #e98278; /* Salmon base */
+  --text-color: #111111;
+  --accent-yellow: #fbea69;
+  --accent-blue: #93c5fd;
+  --accent-green: #86efac;
+  --border-thick: 4px solid #111111;
+  --shadow-hard: 6px 6px 0px #111111;
+  --shadow-hard-hover: 2px 2px 0px #111111;
 }
+
 body {
-  color: #292727;
+  font-family: "Space Grotesk", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
 }
-.after-hero {
-  background-color: #e98278;
-  padding: 5px 0;
-}
-.after-hero a {
-  text-align: center;
-  display: block;
-  color: #faf8f7;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 500;
 
-  /* Mengatur kecepatan animasi */
-  transition:
-    color 0.5s ease,
-    background-color 0.5s ease,
-    border-radius 0.5s ease,
-    box-shadow 0.5s ease,
-    transform 0.5s ease;
+/* --- TYPOGRAPHY & UTILITIES --- */
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  text-transform: uppercase;
 }
-.after-hero a:hover {
-  color: #e98278;
-  background-color: #faf8f7;
-  border-radius: 0;
-  box-shadow: 3px 3px #292727;
-  transform: translate(-2px, -2px);
+.brutal-border {
+  border: var(--border-thick);
 }
-.box-code {
-  background-color: #292727;
-  color: #faf8f7;
-  padding: 20px;
-  font-family: monospace;
-  font-weight: 200;
-  font-size: 0.8rem;
-  letter-spacing: 0.6px;
-  overflow-x: scroll;
-  white-space: nowrap;
+.brutal-shadow {
+  box-shadow: var(--shadow-hard);
+  transition: all 0.2s ease-in-out;
 }
-.box-folder {
-  background-color: #e4e0e0;
-  color: #292727;
-  padding: 20px;
-  font-family: monospace;
+.brutal-shadow:hover {
+  transform: translate(4px, 4px);
+  box-shadow: var(--shadow-hard-hover);
+}
+.bg-white-brutal {
+  background-color: #ffffff;
+}
+.bg-yellow-brutal {
+  background-color: var(--accent-yellow);
+}
+.bg-blue-brutal {
+  background-color: var(--accent-blue);
+}
+.bg-green-brutal {
+  background-color: var(--accent-green);
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+  background-color: var(--bg-color);
+  border-bottom: var(--border-thick);
+  padding: 1rem 0;
+}
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.8rem;
+  background-color: #fff;
+  padding: 0.2rem 1rem;
+  border: var(--border-thick);
+  box-shadow: 4px 4px 0px #111111;
+  color: var(--text-color) !important;
+}
+.nav-link {
   font-weight: 600;
-  font-size: 0.8rem;
-  letter-spacing: 0.6px;
-  white-space: nowrap;
+  color: var(--text-color) !important;
+  margin: 0 0.5rem;
+  border: 2px solid transparent;
+  transition: all 0.2s;
 }
-/* ================================================================== */
-
-/* ================================================================== */
-/* Bootstrap Reset */
-/* ================================================================== */
-.bg-primary {
-  background-color: #e98278 !important;
+.nav-link:hover {
+  background-color: var(--accent-yellow);
+  border: 2px solid #111;
 }
-.text-light {
-  color: #faf8f7 !important;
-}
-.btn-primary {
-  background-color: #e98278;
-  color: #faf8f7;
-  border: none;
+.dropdown-menu {
+  background-color: var(--bg-color);
+  border: var(--border-thick);
+  box-shadow: var(--shadow-hard);
   border-radius: 0;
-  box-shadow: 3px 3px #292727;
-
-  transition:
-    background-color 0.5s ease,
-    color 0.5s ease,
-    box-shadow 0.5s ease,
-    transform 0.5s ease;
+  margin-top: 10px;
+}
+.dropdown-item {
+  font-weight: 600;
+  border-bottom: 2px solid #111;
+}
+.dropdown-item:last-child {
+  border-bottom: none;
+}
+.dropdown-item:hover {
+  background-color: var(--accent-yellow);
+  color: #111;
 }
 
-.btn-primary:hover {
-  background-color: #292727;
-  color: #faf8f7;
-  box-shadow: none;
-  transform: translate(3px, 3px);
-}
-.btn-secondary {
-  background-color: #6c757d;
-  border: none;
-  box-shadow: 3px 3px #292727;
-  border-radius: 0px;
-}
-.btn-secondary:hover {
-  background-color: #292727;
-  color: #faf8f7;
-  box-shadow: none;
-}
-nav .active {
-  background-color: #faf8f7;
-  box-shadow: 3px 3px #292727;
-  border-radius: 0px;
-  color: #e98278 !important;
-  padding-left: 20px !important;
-  padding-right: 20px !important;
-}
-.list-group-item.active,
-.list-group-item.active:hover,
-.list-group-item.active:focus {
-  background-color: #6c757d;
-  border-color: #6c757d;
+/* --- FOOTER --- */
+.footer {
+  background-color: #111;
   color: #fff;
-}
-
-/* ================================================================== */
-
-/* ================================================================== */
-/* Footer Section */
-/* ================================================================== */
-footer {
-  background-color: #e98278;
-  color: #faf8f7;
-  padding: 20px 0;
-}
-footer p {
-  text-align: center;
-  margin: 0;
-  font-size: 1rem;
-}
-/* ================================================================== */
-
-/* ================================================================== */
-/* Home Page */
-/* ================================================================== */
-#hero {
-  background-image: url("../images/hero.png");
-  background-size: cover;
-  background-position: center;
-}
-#hero .hero-description {
-  padding: 100px 0;
-}
-#hero .hero-description h1 {
-  font-size: 4rem;
-  font-weight: 900;
-}
-#hero .hero-description h3 {
-  font-size: 2rem;
-  font-weight: 300;
-}
-#hero .hero-description h4 {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-#hero .hero-description p {
-  font-size: 1rem;
-  font-weight: 300;
-  font-style: italic;
-  margin-top: 20px;
-}
-#welcome .welcome-description {
-  padding: 100px 0;
-}
-#welcome .welcome-description h5 {
-  font-size: 2rem;
-  font-weight: 400;
+  padding: 2rem 0;
   text-align: center;
 }
-#welcome .welcome-description p {
-  font-size: 1.25rem;
-  font-weight: 300;
-  text-align: justify;
-  margin-top: 20px;
-}
-#welcome img {
-  border-radius: 10px 50px 10px 50px;
-}
-#quotes {
-  margin-bottom: 100px;
-}
-#quotes img {
-  width: 200px;
-}
-#quotes .quote-description {
-  font-size: 1.25rem;
-  text-align: center;
-  font-style: italic;
-  font-weight: 300;
-}
-#location {
-  padding: 100px 0;
-  background-image: url("../images/bg.png");
-  background-size: cover;
-  background-position: center;
-}
-#location h2 {
-  text-align: center;
-  font-size: 2rem;
-  font-weight: 500;
-}
-#location h4 {
-  text-align: center;
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-/* ================================================================== */
-
-/* ================================================================== */
-/* Profil Mahasiswa Page */
-/* ================================================================== */
-#profil {
-  padding: 100px 0;
-  background-image: url("../images/bg-profil.png");
-  background-size: cover;
-  background-position: center;
-}
-#profil h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  font-variant: small-caps;
-}
-#profil table span {
-  background-color: #e98278;
-  color: #faf8f7;
-  padding: 10px 13px;
-  font-size: 0.9rem;
-}
-#profil table p {
-  margin: 0;
-  padding: 0;
-}
-#tentang-saya {
-  padding: 100px 0;
-  background-image: url("../images/bg-2.png");
-  background-size: cover;
-  background-position: center;
-}
-#tentang-saya h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  font-variant: small-caps;
-  text-align: center;
-}
-#tentang-saya p {
-  font-size: 1.25rem;
-  font-weight: 300;
-  text-align: justify;
-  margin-top: 20px;
-}
-#keunikan-daerah {
-  padding: 100px 0;
-  background-image: url("../images/bg-2.png");
-  background-size: cover;
-  background-position: center;
-}
-#keunikan-daerah h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  font-variant: small-caps;
-  text-align: center;
-}
-#pendidikan {
-  padding: 100px 0;
-  background-image: url("../images/bg.png");
-  background-size: cover;
-  background-position: center;
-}
-#pendidikan h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  font-variant: small-caps;
-  text-align: center;
-}
-/* ================================================================== */
-
-/* ================================================================== */
-/* Analisis Artefak Page */
-/* ================================================================== */
-#analisis-artefak {
-  padding: 100px 0;
-  background-image: url("../images/bg-2.png");
-  background-size: cover;
-  background-position: center;
-}
-#analisis-artefak h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  font-variant: small-caps;
-  text-align: center;
-}
-#analisis-artefak .card p {
-  font-size: 0.9rem;
-  font-weight: 300;
-  text-align: justify;
-}
-#analisis-artefak .card h5 {
-  font-size: 1.25rem;
-  font-weight: 500;
-}
-#analisis-artefak .card h6 {
-  font-size: 1rem;
-  font-weight: 400;
-  color: #e98278;
-}
-/* ================================================================== */
-
-/* ================================================================== */
-/* Penilaian Siklus Page */
-/* ================================================================== */
-#penilaian-guru-pamong {
-  padding: 100px 0;
-  background-image: url("../images/bg-2.png");
-  background-size: cover;
-  background-position: center;
-}
-#penilaian-guru-pamong h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  font-variant: small-caps;
-  text-align: center;
-}
-#penilaian-guru-pamong h3 {
-  font-size: 1.5rem;
-  font-weight: 300;
-  text-align: center;
-}
-/* ================================================================== */
-
-/* ================================================================== */
-/* Blog Page */
-/* ================================================================== */
-#blog-list {
-  padding: 100px 0;
-}
-#blog-list h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  font-variant: small-caps;
-  text-align: center;
-  margin-bottom: 50px;
-}
-#blog-list h5 {
-  font-size: 1rem;
-  font-weight: 700;
-}
-#blog-list p {
-  font-size: 0.8rem;
-  font-weight: 300;
-}
-.sidebar {
-  position: sticky;
-  top: 100px;
-}
-.blog-pagination-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 30px;
-}
-.blog-detail #blog-detail-title {
-  font-weight: 500;
-}
-.blog-detail #blog-detail-body,
-.blog-detail #blog-detail-body * {
-  font-size: 18px;
-}
-.blog-page-btn {
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  background: #f1f1f1;
-  cursor: pointer;
-  transition: 0.3s;
-}
-.blog-page-btn:hover {
-  background: #ddd;
-}
-
-.blog-page-btn.active {
-  background: #0d6efd;
-  color: white;
-}
-/* ================================================================== */
-
-/* ================================================================== */
-/* Mata Kuliah Page */
-/* ================================================================== */
-#matakuliah h2 {
-  font-weight: 700;
-  font-size: 3rem;
-  margin-top: 50px;
-  font-variant: small-caps;
-  text-align: center;
-}
-/* #matakuliah .card p {
-  font-weight: 300;
-  text-align: justify;
-}
-#matakuliah .card h5 {
-  font-size: 1.5rem;
-  font-weight: 500;
-}
-#matakuliah .card .card-body {
-  padding: 50px 30px;
-} */
-/* ================================================================== */
-
-/* ================================================================== */
-/* Tutorial Page */
-/* ================================================================== */
-#tutorial .card-box-tutorial {
-  transition:
-    transform 0.5s ease,
-    box-shadow 0.5s ease;
-  cursor: pointer;
-}
-#tutorial .card-box-tutorial:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
-.tutorial-detail-modal {
-  padding: 30px;
-}
-#bacaan-tutorial {
-  margin: 50px 0;
-}
-.box-image-tutorial {
-  display: flex;
-  justify-content: center;
-}
-.box-image-tutorial img {
-  max-width: 500px;
-}
-span.tag {
-  background-color: #f5f5f5;
-  color: #e1143c;
-  padding: 0 5px;
-  font-family: monospace;
-  border-radius: 5px;
-}
-/* ================================================================== */
-@media (min-width: 1367px) {
-  #hero .hero-description {
-    padding: 200px 0;
-  }
-  #welcome .welcome-description {
-    padding: 200px 0;
-  }
-}
-
-/* ================================================================== */
-/* Stye for Mobile Responsive */
-/* ================================================================== */
-@media (max-width: 991px) {
-  /* ================================================================== */
-  /* Stye for Mobile Responsive NavBar */
-  /* ================================================================== */
-  .navbar-collapse {
-    background: #b63d3d;
-    padding: 20px;
-    margin-top: 15px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  }
-
-  .navbar-nav {
-    gap: 12px;
-  }
-
-  .navbar-nav .nav-link {
-    padding: 12px 15px !important;
-    border-radius: 10px;
-    transition: 0.3s;
-  }
-
-  .navbar-nav .nav-link:hover {
-    background: rgba(255, 255, 255, 0.15);
-    padding-left: 20px !important;
-  }
-
-  .dropdown-menu {
-    background: rgba(255, 255, 255, 0.08);
-    border: none;
-    position: static !important;
-  }
-  /* ================================================================== */
-
-  /* ================================================================== */
-  /* Stye for Mobile Responsive HomePage */
-  /* ================================================================== */
-  #hero {
-    background-image: url("../images/bg.png");
-  }
-  #hero .hero-description {
-    padding: 50px 0;
-  }
-  #hero .hero-description h1 {
-    font-size: 3rem;
-    font-weight: 700;
-  }
-  #hero .hero-description h3 {
-    font-size: 1.5rem;
-    font-weight: 500;
-  }
-  #hero .hero-description h4 {
-    font-size: 1.5rem;
-    font-weight: 400;
-  }
-  #hero .hero-description p {
-    font-size: 1rem;
-    font-weight: 300;
-    font-style: italic;
-    margin-top: 20px;
-  }
-  .after-hero {
-    display: none;
-  }
-  #welcome .welcome-description {
-    padding: 50px 0;
-  }
-  #welcome .welcome-description h5 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-align: center;
-  }
-  #welcome .welcome-description p {
-    font-size: 1rem;
-    font-weight: 300;
-    text-align: justify;
-    margin-top: 20px;
-  }
-  #welcome img {
-    border-radius: 5px;
-  }
-  #quotes {
-    margin-bottom: 50px;
-  }
-  #quotes .col-lg-4 {
-    display: flex;
-    justify-content: center;
-  }
-  #quotes .quote-description {
-    font-size: 1rem;
-    text-align: center;
-    font-style: italic;
-    font-weight: 300;
-  }
-  #location {
-    padding: 50px 0;
-  }
-  #location h2 {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-  #location h4 {
-    font-size: 1rem;
-    font-weight: 300;
-  }
-  #location iframe {
-    margin-bottom: 40px;
-    height: 300px;
-  }
-  /* ================================================================== */
-
-  /* ================================================================== */
-  /* Stye for Mobile Responsive Profil Page */
-  /* ================================================================== */
-  #profil {
-    padding: 50px 0;
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)),
-      url("../images/bg-profil.png");
-    background-position-x: -200px;
-  }
-  #profil h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    font-variant: small-caps;
-  }
-  #profil table td,
-  #profil table th {
-    padding: 7px;
-  }
-  #profil table {
-    border-collapse: separate;
-    border-spacing: 7px;
-  }
-  #profil table span {
-    background-color: #e98278;
-    color: #faf8f7;
-    padding: 5px 7px;
-    font-size: 0.9rem;
-  }
-  #profil table p {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-  }
-  #tentang-saya {
-    padding: 50px 0;
-  }
-  #tentang-saya h1 {
-    font-size: 3rem;
-    font-weight: 600;
-    font-variant: small-caps;
-    text-align: left;
-  }
-  #tentang-saya span {
-    display: block;
-  }
-  #tentang-saya p {
-    font-size: 1rem;
-    font-weight: 300;
-    text-align: justify;
-    margin-top: 10px;
-  }
-  #keunikan-daerah {
-    padding: 50px 0;
-  }
-  #keunikan-daerah h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: left;
-  }
-  #keunikan-daerah span {
-    display: block;
-  }
-  #keunikan-daerah p {
-    font-size: 1rem;
-    font-weight: 300;
-    text-align: justify;
-    margin-top: 10px;
-  }
-  #pendidikan {
-    padding: 50px 0;
-  }
-  #pendidikan h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: left;
-  }
-  #pendidikan span {
-    display: block;
-  }
-  /* ================================================================== */
-
-  /* ================================================================== */
-  /* Stye for Mobile Responsive Artefak Page */
-  /* ================================================================== */
-  #analisis-artefak {
-    padding: 50px 0;
-  }
-  #analisis-artefak h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: left;
-  }
-  #analisis-artefak span {
-    display: block;
-  }
-  #analisis-artefak .card p {
-    font-size: 0.9rem;
-    font-weight: 300;
-    text-align: justify;
-  }
-  #analisis-artefak .card h5 {
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
-  #analisis-artefak .card h6 {
-    font-size: 1rem;
-    font-weight: 400;
-    color: #e98278;
-  }
-  #analisis-artefak btn {
-    margin-top: 10px;
-  }
-  /* ================================================================== */
-
-  /* ================================================================== */
-  /* Stye for Mobile Responsive Penilaian Siklus Page */
-  /* ================================================================== */
-  #penilaian-guru-pamong {
-    padding: 50px 0;
-    background-image: url("../images/bg-2.png");
-    background-size: cover;
-    background-position: center;
-  }
-  #penilaian-guru-pamong h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    text-align: left;
-  }
-  #penilaian-guru-pamong h3 {
-    text-align: left;
-  }
-  #penilaian-guru-pamong .card {
-    margin-bottom: 20px;
-  }
-  #penilaian-guru-pamong .card h1 {
-    text-align: center;
-  }
-  /* ================================================================== */
-
-  /* ================================================================== */
-  /* Stye for Mobile Responsive Mata Kuliah Page */
-  /* ================================================================== */
-  #matakuliah h2 {
-    font-size: 2rem;
-  }
-  #matakuliah .card p {
-    font-size: 0.9rem;
-  }
-  #matakuliah .card h5 {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-  /* ================================================================== */
-
-  /* ================================================================== */
-  /* Stye for Mobile Responsive tutorial Page */
-  /* ================================================================== */
-  .box-image-tutorial img {
-    max-width: 95%;
-  }
-  /* ================================================================== */
-
-  .tutorial-detail-modal {
-    padding: 5px;
-  }
-  .tutorial-detail-modal img {
-    margin-bottom: 50px;
-  }
-}
-/* ================================================================== */

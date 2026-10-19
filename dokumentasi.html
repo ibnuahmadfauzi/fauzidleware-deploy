@@ -1,69 +1,143 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Fauzidleware | Dokumentasi</title>
 
+    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
+    />
+    <!-- Google Fonts: Space Grotesk -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!-- Memanggil Global CSS milik Anda -->
+    <link rel="stylesheet" href="/css/style.css" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* --- STYLES KHUSUS COMING SOON --- */
+      .coming-soon-wrapper {
+        min-height: calc(100vh - 250px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 80px 20px;
+        /* Motif Polka Dots Brutalism */
+        background-color: var(--accent-green);
+        background-image:
+          radial-gradient(#111 15%, transparent 16%),
+          radial-gradient(#111 15%, transparent 16%);
+        background-size: 60px 60px;
+        background-position:
+          0 0,
+          30px 30px;
+      }
+
+      .cs-card {
+        background-color: #fff;
+        border: var(--border-thick);
+        padding: 4rem;
+        text-align: center;
+        box-shadow: 15px 15px 0 #111;
+        max-width: 800px;
+        width: 100%;
+        position: relative;
+      }
+
+      .cs-stamp {
+        position: absolute;
+        top: -20px;
+        left: 50%;
+        transform: translateX(-50%) rotate(2deg);
+        background-color: var(--bg-color); /* Salmon */
+        color: #111;
+        font-size: 1.5rem;
+        font-weight: 700;
+        padding: 10px 30px;
+        border: 3px solid #111;
+        box-shadow: 4px 4px 0 #111;
+      }
+
+      .cs-title {
+        font-size: 4rem;
+        font-weight: 700;
+        line-height: 1.1;
+        text-transform: uppercase;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 4px solid #111;
+        padding-bottom: 1rem;
+        display: inline-block;
+      }
+
+      .cs-desc {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+        background-color: var(--accent-yellow);
+        padding: 1.5rem;
+        border: 2px solid #111;
+      }
+
+      .btn-back {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        padding: 1rem 2rem;
+        background-color: var(--accent-blue);
+        color: #111;
+        border: 3px solid #111;
+        box-shadow: 6px 6px 0px #111;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .btn-back:hover {
+        transform: translate(3px, 3px);
+        box-shadow: 3px 3px 0px #111;
+        background-color: #fff;
+      }
+    </style>
   </head>
   <body>
-    <nav></nav>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top"></nav>
 
-    <!-- <div id="dokumentasi">
-      <div class="container">
-        <div class="mb-4">
-          <h1>Dokumentasi Kegiatan PPG Prajabatan</h1>
-        </div>
+    <!-- COMING SOON CONTENT -->
+    <div class="coming-soon-wrapper">
+      <div class="cs-card">
+        <div class="cs-stamp">STATUS: MENGUMPULKAN BERKAS 📸</div>
+
+        <h1 class="cs-title">Dokumentasi</h1>
+
+        <p class="cs-desc fw-bold text-dark">
+          Galeri foto dan rekaman kegiatan PPL di SMK Negeri 1 Surabaya sedang
+          dalam tahap kurasi dan penyusunan.
+        </p>
+
+        <h2
+          class="display-5 fw-bold mb-4 bg-white d-inline-block px-3 py-1 border border-dark"
+        >
+          COMING SOON
+        </h2>
+        <br />
+
+        <a href="index.html" class="btn-back mt-3">&larr; Kembali ke Beranda</a>
       </div>
-    </div> -->
-
-    <div class="d-flex justify-content-center">
-      <img
-        src="https://cdn.dribbble.com/userupload/22068510/file/original-4ed5b4b51085194be25fd26108edb7e2.gif"
-        class="img-fluid"
-        alt=""
-      />
     </div>
 
-    <footer></footer>
+    <!-- FOOTER -->
+    <footer class="footer"></footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Bootstrap Bundle & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
-      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
-      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-
-    <script src="js/script.js"></script>
-    <script src="js/dokumentasi.js"></script>
+    <!-- Memanggil Script JS milik Anda -->
+    <script src="/js/script.js"></script>
   </body>
 </html>

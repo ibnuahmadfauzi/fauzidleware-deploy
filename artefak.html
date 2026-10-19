@@ -1,154 +1,392 @@
 <!doctype html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
+    <title>Fauzidleware | Analisis Artefak</title>
 
+    <!-- Bootstrap CSS -->
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-      crossorigin="anonymous"
+    />
+    <!-- Google Fonts: Space Grotesk -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
     />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <!-- Memanggil Global CSS milik Anda -->
+    <link rel="stylesheet" href="/css/style.css" />
 
-    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      /* --- STYLES KHUSUS HALAMAN ANALISIS ARTEFAK --- */
+      .page-header {
+        padding: 60px 0;
+        background-image: url('data:image/svg+xml;utf8,<svg width="20" height="20" xmlns="http://www.w3.org/2000/svg"><circle cx="2" cy="2" r="2" fill="%23111111"/></svg>');
+      }
+      .page-title-box {
+        display: inline-block;
+        transform: rotate(-2deg);
+      }
+
+      .artefak-section {
+        padding: 40px 0 80px;
+      }
+
+      .artefak-card {
+        height: 100%;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+      }
+
+      .artefak-badge-main {
+        display: inline-block;
+        background-color: #111;
+        color: #fff;
+        padding: 4px 12px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        border: 2px solid #111;
+        margin-bottom: 5px;
+        align-self: flex-start;
+      }
+
+      .artefak-badge-sub {
+        display: inline-block;
+        background-color: #fff;
+        color: #111;
+        padding: 4px 12px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        border: 2px solid #111;
+        margin-bottom: 1.5rem;
+        align-self: flex-start;
+        box-shadow: 2px 2px 0 #111;
+      }
+
+      .artefak-desc {
+        flex-grow: 1;
+      }
+
+      /* Karena sekarang memicu modal, kita ubah elemen <a> menjadi <button> secara semantik, namun stylenya tetap */
+      .btn-brutal-sm {
+        display: inline-block;
+        font-weight: 600;
+        padding: 0.5rem;
+        background-color: #fff;
+        color: var(--text-color);
+        border: 2px solid #111;
+        box-shadow: 3px 3px 0px #111;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        text-align: center;
+        font-size: 0.9rem;
+        flex: 1 1 calc(50% - 0.5rem);
+        cursor: pointer; /* Memastikan kursor tangan muncul */
+      }
+
+      .btn-brutal-sm:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0px #111;
+        background-color: var(--accent-yellow);
+        color: #111;
+      }
+
+      /* --- STYLES KHUSUS MODAL NEOBRUTALISM --- */
+      .modal-content.brutal-modal {
+        border: var(--border-thick);
+        border-radius: 0; /* Menghilangkan sudut melengkung */
+        box-shadow: 10px 10px 0 #111;
+        background-color: var(--bg-color); /* Warna Salmon */
+      }
+      .modal-header.brutal-header {
+        background-color: var(--accent-yellow);
+        border-bottom: var(--border-thick);
+        border-radius: 0;
+        padding: 1rem 1.5rem;
+      }
+      .modal-title {
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .btn-close-brutal {
+        background-color: #fff;
+        border: 2px solid #111;
+        opacity: 1;
+        box-shadow: 2px 2px 0 #111;
+        transition: all 0.2s;
+      }
+      .btn-close-brutal:hover {
+        background-color: #ff4d4d;
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px 0 #111;
+      }
+      .modal-body.brutal-body {
+        background-color: #fff;
+        padding: 0;
+        height: 70vh; /* Tinggi iframe */
+        border-bottom: var(--border-thick);
+      }
+      .modal-footer.brutal-footer {
+        background-color: #fff;
+        border-top: none;
+        padding: 1rem;
+      }
+      .btn-tutup {
+        background-color: var(--accent-blue);
+        color: #111;
+        font-weight: 700;
+        border: 2px solid #111;
+        padding: 8px 20px;
+        box-shadow: 3px 3px 0 #111;
+        transition: all 0.2s;
+      }
+      .btn-tutup:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0 #111;
+        background-color: #fff;
+      }
+    </style>
   </head>
   <body>
-    <nav></nav>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top"></nav>
 
-    <section id="analisis-artefak">
+    <!-- PAGE HEADER -->
+    <section class="page-header text-center">
       <div class="container">
-        <h1>
-          <span>Analisis</span> <span>Artefak</span> <span>Produk</span>
-          <span>Pembelajaran</span>
-        </h1>
-        <div class="row mt-5 justify-content-center">
-          <div class="col-lg-4">
-            <div class="card border-0 rounded-0 shadow mb-4" style="width: 100%">
-              <div class="card-body">
-                <div>
-                  <sup class="bg-success text-light px-2 rounded-2"
-                    >PPG - Semester 1</
-                  >
-                </div>
-                <h5>Rencana Pembelajaran Siklus 1</h5>
-                <h6 class="mb-2">
-                  Variabel, Tipe Data, dan Operator (JavaScript)
-                </h6>
-                <hr />
-                <p class="card-text">
-                  Artefak ini membahas materi
-                  <b>Variabel, Tipe Data, dan Operator dalam JavaScript</b>
-                  sebagai dasar pemahaman pemrograman bagi peserta didik kelas X
-                  Rekayasa Perangkat Lunak (RPL) di SMKN 1 Surabaya.
-                </p>
-                <div class="mt-4 text-center">
-                  <btn class="btn btn-sm btn-primary mb-2 me-2 btn-rpp-siklus-1"
-                    ><i class="fa-solid fa-file-pdf"></i> RPP</btn
-                  >
-                  <btn
-                    class="btn btn-sm btn-primary mb-2 me-2 btn-asesmen-siklus-1"
-                    ><i class="fa-solid fa-file-pdf"></i> Asesmen</btn
-                  >
-                  <btn
-                    class="btn btn-sm btn-primary mb-2 me-2 btn-bahanajar-siklus-1"
-                    ><i class="fa-solid fa-file-pdf"></i> Bahan Ajar</btn
-                  >
-                  <btn
-                    class="btn btn-sm btn-primary mb-2 me-2 btn-lkpd-siklus-1"
-                    ><i class="fa-solid fa-file-pdf"></i> LKPD</btn
-                  >
-                </div>
+        <div
+          class="page-title-box bg-white-brutal p-3 brutal-border brutal-shadow"
+        >
+          <h1
+            class="m-0 text-decoration-underline"
+            style="text-decoration-thickness: 6px"
+          >
+            ANALISIS ARTEFAK
+          </h1>
+        </div>
+        <p
+          class="mt-4 fs-5 fw-bold bg-yellow-brutal d-inline-block px-3 py-1 brutal-border"
+        >
+          Produk Pembelajaran
+        </p>
+      </div>
+    </section>
+
+    <!-- ARTEFAK SECTION -->
+    <section class="artefak-section">
+      <div class="container">
+        <div class="row g-5">
+          <!-- SIKLUS 1 -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="artefak-card bg-blue-brutal brutal-border brutal-shadow"
+            >
+              <span class="artefak-badge-main">PPG - Semester 1</span>
+              <span class="artefak-badge-sub"
+                >Rencana Pembelajaran Siklus 1</span
+              >
+
+              <h3 class="mb-3 border-bottom border-dark border-2 pb-2">
+                Variabel, Tipe Data, & Operator (JavaScript)
+              </h3>
+
+              <p class="artefak-desc fs-6">
+                Artefak ini membahas materi Variabel, Tipe Data, dan Operator
+                dalam JavaScript...
+              </p>
+
+              <!-- TOMBOL SIKLUS 1 -->
+              <!-- Perhatikan tambahan atribut data-bs-toggle, data-bs-target, data-materi, data-jenis, dan data-url -->
+              <div class="d-flex flex-wrap gap-2 mt-4">
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 1: Variabel, Tipe Data"
+                  data-jenis="RPP"
+                  data-url="https://drive.google.com/file/d/1TPQhVaLp1GNpoUSx52-LreCbRXZIfReD/preview"
+                >
+                  RPP
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 1: Variabel, Tipe Data"
+                  data-jenis="Asesmen"
+                  data-url="https://drive.google.com/file/d/1h4oGWqmUPOh4zGsxpKnmhE1V32B8l7EO/preview"
+                >
+                  Asesmen
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 1: Variabel, Tipe Data"
+                  data-jenis="Bahan Ajar"
+                  data-url="https://drive.google.com/file/d/1quOB3zIkkHcNHPdBXTL-yPmkWDydfthB/preview"
+                >
+                  Bahan Ajar
+                </button>
+
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 1: Variabel, Tipe Data"
+                  data-jenis="LKPD"
+                  data-url="https://drive.google.com/file/d/1pMG57lrk82oaDWenry9peYGHbP71lfsm/preview"
+                >
+                  LKPD
+                </button>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="card border-0 rounded-0 shadow mb-4" style="width: 100%">
-              <div class="card-body">
-                <div>
-                  <sup class="bg-success text-light px-2 rounded-2"
-                    >PPG - Semester 1</
-                  >
-                </div>
-                <h5>Rencana Pembelajaran Siklus 2</h5>
-                <h6 class="mb-2">
-                  Percabangan, Perulangan, dan Function (JavaScript)
-                </h6>
-                <hr />
-                <p class="card-text">
-                  Artefak ini membahas materi
-                  <b>Percabangan, Perulangan, dan Function dalam JavaScript</b>
-                  sebagai bagian dari pembelajaran dasar pemrograman bagi
-                  peserta didik kelas X Rekayasa Perangkat Lunak (RPL) di SMKN 1
-                  Surabaya.
-                </p>
-                <div class="mt-4 text-center">
-                  <btn class="btn btn-sm btn-primary mb-2 me-2 btn-rpp-siklus-2"
-                    ><i class="fa-solid fa-file-pdf"></i> RPP</btn
-                  >
-                  <btn
-                    class="btn btn-sm btn-primary mb-2 me-2 btn-asesmen-siklus-2"
-                    ><i class="fa-solid fa-file-pdf"></i> Asesmen</btn
-                  >
-                  <btn
-                    class="btn btn-sm btn-primary mb-2 me-2 btn-bahanajar-siklus-2"
-                    ><i class="fa-solid fa-file-pdf"></i> Bahan Ajar</btn
-                  >
-                  <btn
-                    class="btn btn-sm btn-primary mb-2 me-2 btn-lkpd-siklus-2"
-                    ><i class="fa-solid fa-file-pdf"></i> LKPD</btn
-                  >
-                </div>
+
+          <!-- SIKLUS 2 -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="artefak-card bg-green-brutal brutal-border brutal-shadow"
+            >
+              <span class="artefak-badge-main">PPG - Semester 1</span>
+              <span class="artefak-badge-sub"
+                >Rencana Pembelajaran Siklus 2</span
+              >
+
+              <h3 class="mb-3 border-bottom border-dark border-2 pb-2">
+                Percabangan, Perulangan, & Function (JS)
+              </h3>
+
+              <p class="artefak-desc fs-6">
+                Artefak ini membahas materi Percabangan, Perulangan, dan
+                Function dalam JavaScript...
+              </p>
+
+              <!-- TOMBOL SIKLUS 2 -->
+              <div class="d-flex flex-wrap gap-2 mt-4">
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 2: Percabangan & Perulangan"
+                  data-jenis="RPP"
+                  data-url="https://drive.google.com/file/d/1ZnyfUjMpe5kugz-0uvvKjWkzPRsNJXDc/preview"
+                >
+                  RPP
+                </button>
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 2: Percabangan & Perulangan"
+                  data-jenis="Asesmen"
+                  data-url="https://drive.google.com/file/d/1e89vXey19Ys4jIq8eRzTbGf0ZFHwY54Q/preview"
+                >
+                  Asesmen
+                </button>
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 2: Percabangan & Perulangan"
+                  data-jenis="Bahan Ajar"
+                  data-url="https://drive.google.com/file/d/15_0iKMmH2ZnF9cQf8CVhMHDMxtxMKKY9/preview"
+                >
+                  Bahan Ajar
+                </button>
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 2: Percabangan & Perulangan"
+                  data-jenis="LKPD"
+                  data-url="https://drive.google.com/file/d/1T4b4CeHa8bxAKhBITw7T48cDaGQJSKXx/preview"
+                >
+                  LKPD
+                </button>
               </div>
             </div>
           </div>
-          <div class="col-lg-4">
-            <div class="card border-0 rounded-0 shadow mb-4" style="width: 100%">
-              <div class="card-body">
-                <div>
-                  <sup class="bg-success text-light px-2 rounded-2"
-                    >PPG - Semester 1</
-                  >
-                </div>
-                <h5>Rencana Pembelajaran Siklus 3</h5>
-                <h6 class="mb-2">Array, Object, dan DOM (JavaScript)</h6>
-                <hr />
-                <p class="card-text">
-                  Artefak ini membahas materi
-                  <b
-                    >Array, Object, dan Document Object Model (DOM) dalam
-                    JavaScript</b
-                  >
-                  sebagai bagian dari pembelajaran pemrograman bagi peserta
-                  didik kelas X Rekayasa Perangkat Lunak (RPL) di SMKN 1
-                  Surabaya.
-                </p>
-                <div class="mt-4 text-center">
-                  <btn class="btn btn-sm btn-primary mb-2 me-2 btn-rpp-siklus-3"
-                    ><i class="fa-solid fa-file-pdf"></i> RPP</btn
-                  >
-                  <btn
-                    class="btn btn-sm btn-primary mb-2 me-2 btn-asesmen-siklus-3"
-                    ><i class="fa-solid fa-file-pdf"></i> Asesmen</btn
-                  >
-                  <btn
-                    class="btn btn-sm btn-primary mb-2 me-2 btn-bahanajar-siklus-3"
-                    ><i class="fa-solid fa-file-pdf"></i> Bahan Ajar</btn
-                  >
-                  <btn
-                    class="btn btn-sm btn-primary mb-2 me-2 btn-lkpd-siklus-3"
-                    ><i class="fa-solid fa-file-pdf"></i> LKPD</btn
-                  >
-                </div>
+
+          <!-- SIKLUS 3 -->
+          <div class="col-lg-4 col-md-6">
+            <div
+              class="artefak-card bg-yellow-brutal brutal-border brutal-shadow"
+            >
+              <span class="artefak-badge-main">PPG - Semester 1</span>
+              <span class="artefak-badge-sub"
+                >Rencana Pembelajaran Siklus 3</span
+              >
+
+              <h3 class="mb-3 border-bottom border-dark border-2 pb-2">
+                Array, Object, dan DOM (JavaScript)
+              </h3>
+
+              <p class="artefak-desc fs-6">
+                Artefak ini membahas materi Array, Object, dan Document Object
+                Model (DOM)...
+              </p>
+
+              <!-- TOMBOL SIKLUS 3 -->
+              <div class="d-flex flex-wrap gap-2 mt-4">
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 3: Array & DOM"
+                  data-jenis="RPP"
+                  data-url="https://drive.google.com/file/d/1RU0EuSZnn2CEY3vSpmRaiXs75nUfyQhD/preview"
+                >
+                  RPP
+                </button>
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 3: Array & DOM"
+                  data-jenis="Asesmen"
+                  data-url="https://drive.google.com/file/d/1hxKTQ13wFha7BrOn_L6CAstpJZccUHDC/preview"
+                >
+                  Asesmen
+                </button>
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 3: Array & DOM"
+                  data-jenis="Bahan Ajar"
+                  data-url="https://drive.google.com/file/d/1Ce15ZmVB5_F5znwXCE8yQwJLUkLrgRKV/preview"
+                >
+                  Bahan Ajar
+                </button>
+                <button
+                  type="button"
+                  class="btn-brutal-sm"
+                  data-bs-toggle="modal"
+                  data-bs-target="#modalDokumen"
+                  data-materi="Siklus 3: Array & DOM"
+                  data-jenis="LKPD"
+                  data-url="https://drive.google.com/file/d/1RwQn4Q6qjTyovk2k-jC_T8EbrpOxn_QL/preview"
+                >
+                  LKPD
+                </button>
               </div>
             </div>
           </div>
@@ -156,58 +394,103 @@
       </div>
     </section>
 
+    <!-- ============================================== -->
+    <!-- MODAL DINAMIS NEOBRUTALISM (Hanya butuh 1 ini) -->
+    <!-- ============================================== -->
     <div
       class="modal fade"
-      id="artefakModal"
+      id="modalDokumen"
       tabindex="-1"
-      aria-labelledby="artefakModalLabel"
+      aria-labelledby="judulModal"
       aria-hidden="true"
     >
-      <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="artefakModalLabel">Modal title</h1>
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <!-- modal-xl agar dokumen lebar -->
+        <div class="modal-content brutal-modal">
+          <div class="modal-header brutal-header">
+            <div>
+              <span
+                id="labelJenisDokumen"
+                class="bg-white px-2 py-1 border border-dark fw-bold me-2 shadow-sm"
+                >JENIS</span
+              >
+              <h5
+                class="modal-title d-inline-block align-middle m-0"
+                id="judulModal"
+              >
+                Judul Materi
+              </h5>
+            </div>
             <button
               type="button"
-              class="btn-close"
+              class="btn-close btn-close-brutal"
               data-bs-dismiss="modal"
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">
+
+          <div class="modal-body brutal-body">
+            <!-- Iframe tempat menampilkan PDF/Dokumen Google Drive -->
             <iframe
-              id="artefakModalIframe"
+              id="iframeDokumen"
               src=""
-              style="width: 100%; height: 80vh"
+              width="100%"
+              height="100%"
+              style="border: none"
             ></iframe>
+          </div>
+
+          <div class="modal-footer brutal-footer justify-content-between">
+            <p class="mb-0 text-muted fs-6 fst-italic">
+              *Jika dokumen tidak muncul, pastikan akses file Google Drive sudah
+              diatur ke "Siapa saja yang memiliki link".
+            </p>
+            <button type="button" class="btn btn-tutup" data-bs-dismiss="modal">
+              Tutup Dokumen
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <footer></footer>
+    <!-- FOOTER -->
+    <footer class="footer"></footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-      crossorigin="anonymous"
-    ></script>
+    <!-- Bootstrap Bundle & jQuery (Dibutuhkan untuk DOM Manipulation dinamis) -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"
-      integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!-- Memanggil Script JS milik Anda -->
+    <script src="/js/script.js"></script>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/js/all.min.js"
-      integrity="sha512-6BTOlkauINO65nLhXhthZMtepgJSghyimIalb+crKRPhvhmsCdnIuGcVbR5/aQY2A+260iC1OPy1oCdB6pSSwQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
+    <!-- SCRIPT LOGIKA MODAL DINAMIS -->
+    <script>
+      $(document).ready(function () {
+        // Ketika Modal akan ditampilkan (trigger oleh tombol)
+        $("#modalDokumen").on("show.bs.modal", function (event) {
+          // Tombol mana yang baru saja diklik
+          var button = $(event.relatedTarget);
 
-    <script src="js/script.js"></script>
-    <script src="js/artefak.js"></script>
+          // Ambil data dari atribut data-* tombol tersebut
+          var namaMateri = button.data("materi");
+          var jenisDokumen = button.data("jenis");
+          var urlDokumen = button.data("url");
+
+          // Update elemen-elemen di dalam Modal
+          var modal = $(this);
+          modal.find(".modal-title").text(namaMateri);
+          modal.find("#labelJenisDokumen").text(jenisDokumen);
+
+          // Ganti source Iframe dengan URL dokumen yang sesuai
+          modal.find("#iframeDokumen").attr("src", urlDokumen);
+        });
+
+        // Opsional & Penting: Bersihkan iframe saat modal ditutup
+        // agar memori browser lega dan dokumen tidak terus dimuat di background
+        $("#modalDokumen").on("hidden.bs.modal", function () {
+          $(this).find("#iframeDokumen").attr("src", "");
+        });
+      });
+    </script>
   </body>
 </html>
