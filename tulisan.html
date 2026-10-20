@@ -287,6 +287,49 @@
         font-size: 1.5rem;
         color: #aaa;
       }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 15px;
+        color: #333;
+        text-align: left;
+      }
+
+      th,
+      td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+
+      th {
+        background-color: #f8f9fa;
+        font-weight: 600;
+        color: #111;
+        text-transform: uppercase;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+      }
+
+      tbody tr {
+        transition: background-color 0.2s ease;
+      }
+
+      tbody tr:hover {
+        background-color: #f1f3f5;
+      }
+
+      tbody tr:last-of-type td {
+        border-bottom: 2px solid #e0e0e0;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+      }
     </style>
   </head>
   <body>
@@ -314,197 +357,85 @@
     <section class="blog-section">
       <div class="container">
         <div class="row g-5">
-          <!-- KOLOM KIRI: DAFTAR ARTIKEL (8 Kolom) -->
+          <!-- KOLOM KIRI: DAFTAR ARTIKEL & DETAIL (8 Kolom) -->
           <div class="col-lg-8">
-            <!-- Grid 2 Card per Baris -->
-            <div class="row g-4">
-              <!-- ARTIKEL 1 -->
-              <div class="col-md-6">
-                <article class="blog-card">
-                  <img
-                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&auto=format&fit=crop&q=60"
-                    alt="Coding"
-                    class="blog-thumbnail"
-                  />
-                  <div class="blog-content">
-                    <span class="blog-category cat-refleksi">Refleksi PPL</span>
-                    <h2 class="blog-title">
-                      <a href="#"
-                        >Mengatasi "Ketakutan Error" pada Siswa Saat Belajar
-                        Pemrograman</a
-                      >
-                    </h2>
-                    <p class="blog-excerpt">
-                      Siswa sering takut mencoba karena takut programnya
-                      "error". Bagaimana mengubah paradigma error menjadi bagian
-                      dari belajar?
-                    </p>
-                    <div class="blog-meta">
-                      <span>📅 19 Okt 2026</span>
-                      <a href="#" class="btn-read">Baca &rarr;</a>
-                    </div>
-                  </div>
-                </article>
-              </div>
+            <!-- === WADAH 1: DAFTAR ARTIKEL (Default) === -->
+            <div id="blog-list-container">
+              <!-- Grid 2 Card per Baris -->
+              <div class="row g-4" id="blog-list"></div>
 
-              <!-- ARTIKEL 2 -->
-              <div class="col-md-6">
-                <article class="blog-card">
-                  <img
-                    src="https://images.unsplash.com/photo-1627398240309-08a9a216e5c5?w=500&auto=format&fit=crop&q=60"
-                    alt="JS"
-                    class="blog-thumbnail"
-                  />
-                  <div class="blog-content">
-                    <span class="blog-category cat-tech">Teknologi Web</span>
-                    <h2 class="blog-title">
-                      <a href="#"
-                        >Mengapa Vanilla JS Masih Relevan di Era Framework?</a
-                      >
-                    </h2>
-                    <p class="blog-excerpt">
-                      Pemahaman Vanilla JS adalah fondasi krusial yang tidak
-                      boleh dilewatkan oleh calon programmer muda sebelum
-                      belajar React.
-                    </p>
-                    <div class="blog-meta">
-                      <span>📅 12 Okt 2026</span>
-                      <a href="#" class="btn-read">Baca &rarr;</a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- ARTIKEL 3 -->
-              <div class="col-md-6">
-                <article class="blog-card">
-                  <img
-                    src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&auto=format&fit=crop&q=60"
-                    alt="Edu"
-                    class="blog-thumbnail"
-                  />
-                  <div class="blog-content">
-                    <span class="blog-category cat-opini"
-                      >Opini Pendidikan</span
-                    >
-                    <h2 class="blog-title">
-                      <a href="#"
-                        >Pentingnya Olah Rasa di Kelas IT untuk Generasi Z</a
-                      >
-                    </h2>
-                    <p class="blog-excerpt">
-                      Menghadapi Gen Z di lab komputer membutuhkan lebih dari
-                      sekadar materi teknis. Kita butuh pendidikan nilai
-                      kemanusiaan.
-                    </p>
-                    <div class="blog-meta">
-                      <span>📅 05 Okt 2026</span>
-                      <a href="#" class="btn-read">Baca &rarr;</a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- ARTIKEL 4 -->
-              <div class="col-md-6">
-                <article class="blog-card">
-                  <img
-                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60"
-                    alt="Review"
-                    class="blog-thumbnail"
-                  />
-                  <div class="blog-content">
-                    <span class="blog-category cat-refleksi"
-                      >Jurnal Harian</span
-                    >
-                    <h2 class="blog-title">
-                      <a href="#"
-                        >Tantangan Menyusun Perangkat Ajar Pembelajaran
-                        Mendalam</a
-                      >
-                    </h2>
-                    <p class="blog-excerpt">
-                      Pengalaman saya menyusun Modul Ajar (Siklus 1) agar
-                      selaras dengan prinsip berkesadaran dan bermakna.
-                    </p>
-                    <div class="blog-meta">
-                      <span>📅 28 Sep 2026</span>
-                      <a href="#" class="btn-read">Baca &rarr;</a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- ARTIKEL 5 -->
-              <div class="col-md-6">
-                <article class="blog-card">
-                  <img
-                    src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=500&auto=format&fit=crop&q=60"
-                    alt="Dev"
-                    class="blog-thumbnail"
-                  />
-                  <div class="blog-content">
-                    <span class="blog-category cat-tech">Tutorial</span>
-                    <h2 class="blog-title">
-                      <a href="#"
-                        >Membuat Layout Neobrutalism Sederhana dengan CSS</a
-                      >
-                    </h2>
-                    <p class="blog-excerpt">
-                      Langkah demi langkah mendesain elemen web bergaya
-                      brutalism yang edgy dan menarik perhatian audiens.
-                    </p>
-                    <div class="blog-meta">
-                      <span>📅 15 Sep 2026</span>
-                      <a href="#" class="btn-read">Baca &rarr;</a>
-                    </div>
-                  </div>
-                </article>
-              </div>
-
-              <!-- ARTIKEL 6 -->
-              <div class="col-md-6">
-                <article class="blog-card">
-                  <img
-                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500&auto=format&fit=crop&q=60"
-                    alt="Class"
-                    class="blog-thumbnail"
-                  />
-                  <div class="blog-content">
-                    <span class="blog-category cat-opini"
-                      >Opini Pendidikan</span
-                    >
-                    <h2 class="blog-title">
-                      <a href="#"
-                        >Guru vs AI: Siapa yang Menang di Ruang Kelas Masa
-                        Depan?</a
-                      >
-                    </h2>
-                    <p class="blog-excerpt">
-                      Kecerdasan buatan semakin pintar, namun sentuhan empatik
-                      seorang guru tidak akan pernah bisa tergantikan
-                      sepenuhnya.
-                    </p>
-                    <div class="blog-meta">
-                      <span>📅 01 Sep 2026</span>
-                      <a href="#" class="btn-read">Baca &rarr;</a>
-                    </div>
-                  </div>
-                </article>
-              </div>
+              <!-- PAGINATION -->
+              <ul class="pagination-brutal" id="pagination-list"></ul>
             </div>
-            <!-- End Row Grid Artikel -->
 
-            <!-- PAGINATION -->
-            <ul class="pagination-brutal">
-              <li><a href="#">&laquo;</a></li>
-              <li class="active"><span>1</span></li>
-              <li><a href="#">2</a></li>
-              <li><a href="#">3</a></li>
-              <li><a href="#">&raquo;</a></li>
-            </ul>
+            <!-- === WADAH 2: DETAIL ARTIKEL (Disembunyikan secara default) === -->
+            <div id="blog-detail-container" style="display: none">
+              <a
+                href="tulisan.html"
+                class="d-inline-block bg-white border border-dark border-2 px-3 py-2 fw-bold text-dark text-decoration-none mb-4"
+                style="box-shadow: 4px 4px 0 #111; transition: all 0.2s"
+                onmouseover="
+                  this.style.transform = 'translate(2px, 2px)';
+                  this.style.boxShadow = '2px 2px 0 #111';
+                "
+                onmouseout="
+                  this.style.transform = 'none';
+                  this.style.boxShadow = '4px 4px 0 #111';
+                "
+              >
+                &larr; Kembali ke Daftar Tulisan
+              </a>
+
+              <article
+                class="bg-white border border-dark border-4"
+                style="box-shadow: 8px 8px 0 #111"
+              >
+                <!-- Header Artikel -->
+                <div
+                  class="p-4 border-bottom border-dark border-4 position-relative"
+                >
+                  <span
+                    class="blog-category"
+                    id="detail-category"
+                    style="position: absolute; top: -15px; left: 30px"
+                    >Kategori</span
+                  >
+                  <h1 class="fw-bold mt-3 mb-3" id="detail-title">
+                    Judul Artikel
+                  </h1>
+                  <div
+                    class="d-flex gap-4 font-monospace fw-bold text-muted border-top border-dark border-2 pt-3"
+                  >
+                    <span id="detail-author">👤 Penulis</span>
+                    <span id="detail-date">📅 Tanggal</span>
+                  </div>
+                </div>
+
+                <!-- Thumbnail -->
+                <img
+                  src=""
+                  alt="Thumbnail"
+                  id="detail-thumbnail"
+                  class="w-100 border-bottom border-dark border-4"
+                  style="
+                    max-height: 450px;
+                    object-fit: cover;
+                    filter: grayscale(10%);
+                  "
+                />
+
+                <!-- Isi Artikel -->
+                <div
+                  class="p-4"
+                  id="detail-content"
+                  style="font-size: 1.15rem; line-height: 1.8; color: #222"
+                >
+                  <!-- Konten di-inject dari JS -->
+                </div>
+              </article>
+            </div>
           </div>
-          <!-- END KOLOM KIRI (ARTIKEL) -->
+          <!-- END KOLOM KIRI -->
 
           <!-- KOLOM KANAN: SIDEBAR (4 Kolom) -->
           <div class="col-lg-4">
@@ -570,7 +501,11 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- Memanggil data utils -->
+    <script src="/utils/data-tulisan.js"></script>
+
     <!-- Memanggil Script JS milik Anda -->
     <script src="/js/script.js"></script>
+    <script src="/js/tulisan.js"></script>
   </body>
 </html>
