@@ -47,7 +47,7 @@
         background-color: var(--accent-blue);
       }
 
-      /* Brutal Blog Card */
+      /* --- BRUTAL BLOG CARD (Disesuaikan untuk grid 2 kolom) --- */
       .blog-card {
         background-color: #fff;
         border: var(--border-thick);
@@ -70,7 +70,7 @@
         height: 200px;
         object-fit: cover;
         border-bottom: var(--border-thick);
-        filter: grayscale(20%); /* Sedikit efek vintage/raw */
+        filter: grayscale(20%);
         transition: filter 0.3s;
       }
 
@@ -87,7 +87,6 @@
 
       .blog-category {
         display: inline-block;
-        background-color: var(--accent-green);
         color: #111;
         font-weight: 700;
         font-size: 0.8rem;
@@ -110,11 +109,11 @@
       }
 
       .blog-title {
-        font-size: 1.5rem;
+        font-size: 1.25rem; /* Sedikit dikecilkan agar pas 2 per baris */
         font-weight: 700;
         margin-bottom: 1rem;
-        line-height: 1.2;
-        text-transform: none; /* Override uppercase dari global css */
+        line-height: 1.3;
+        text-transform: none;
       }
 
       .blog-title a {
@@ -128,13 +127,13 @@
       }
 
       .blog-excerpt {
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin-bottom: 1.5rem;
         flex-grow: 1;
       }
 
       .blog-meta {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         font-weight: 600;
         border-top: 2px solid #111;
         padding-top: 1rem;
@@ -146,7 +145,7 @@
       .btn-read {
         background-color: #111;
         color: #fff;
-        padding: 5px 15px;
+        padding: 5px 12px;
         font-weight: 700;
         border: 2px solid #111;
         text-decoration: none;
@@ -157,14 +156,136 @@
         color: #111;
       }
 
-      /* Variasi ukuran card untuk layout asimetris */
-      .card-featured {
-        grid-column: span 2;
+      /* --- PAGINATION BRUTALISM --- */
+      .pagination-brutal {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 3rem;
+        list-style: none;
+        padding: 0;
       }
-      @media (max-width: 991px) {
-        .card-featured {
-          grid-column: span 1;
-        }
+      .pagination-brutal li a,
+      .pagination-brutal li span {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #fff;
+        color: #111;
+        font-weight: 700;
+        border: 2px solid #111;
+        box-shadow: 3px 3px 0 #111;
+        text-decoration: none;
+        transition: all 0.2s;
+      }
+      .pagination-brutal li a:hover {
+        background-color: var(--accent-yellow);
+        transform: translate(2px, 2px);
+        box-shadow: 1px 1px 0 #111;
+      }
+      .pagination-brutal li.active span {
+        background-color: #111;
+        color: #fff;
+        box-shadow: 1px 1px 0 #111;
+        transform: translate(2px, 2px);
+      }
+
+      /* --- SIDEBAR STYLING --- */
+      .sidebar-widget {
+        background-color: #fff;
+        border: var(--border-thick);
+        box-shadow: var(--shadow-hard);
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      .widget-title {
+        font-size: 1.2rem;
+        font-weight: 700;
+        border-bottom: 3px solid #111;
+        padding-bottom: 0.5rem;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+      }
+
+      /* Widget Pencarian */
+      .search-form {
+        display: flex;
+        gap: 10px;
+      }
+      .search-input {
+        width: 100%;
+        padding: 10px;
+        border: 2px solid #111;
+        font-family: "Space Grotesk", sans-serif;
+        font-weight: 600;
+      }
+      .search-input:focus {
+        outline: none;
+        background-color: #f8f9fa;
+      }
+      .search-btn {
+        background-color: var(--accent-yellow);
+        border: 2px solid #111;
+        padding: 10px 15px;
+        font-weight: 700;
+        cursor: pointer;
+        box-shadow: 2px 2px 0 #111;
+        transition: all 0.2s;
+      }
+      .search-btn:hover {
+        transform: translate(2px, 2px);
+        box-shadow: 0 0 0 #111;
+      }
+
+      /* Widget Artikel Populer */
+      .popular-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .popular-item {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 2px dashed #111;
+      }
+      .popular-item:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+      .popular-item a {
+        color: #111;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1rem;
+        line-height: 1.2;
+        display: block;
+      }
+      .popular-item a:hover {
+        color: var(--bg-color); /* Salmon */
+        text-decoration: underline;
+      }
+      .popular-meta {
+        font-size: 0.8rem;
+        color: #555;
+        font-weight: 600;
+        margin-top: 5px;
+      }
+
+      /* Widget Iklan (Placeholder) */
+      .ad-space {
+        background-color: #e9ecef;
+        border: 2px dashed #111;
+        height: 250px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+      }
+      .ad-space span {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: #aaa;
       }
     </style>
   </head>
@@ -189,150 +310,256 @@
       </div>
     </header>
 
-    <!-- BLOG FEED SECTION -->
+    <!-- BLOG SECTION (2 Kolom Layout) -->
     <section class="blog-section">
       <div class="container">
-        <!-- Grid System for Blog Posts -->
-        <div class="row g-4">
-          <!-- ARTIKEL 1 (FEATURED - Lebih Lebar) -->
-          <div class="col-lg-8 col-md-12">
-            <article class="blog-card">
-              <!-- Gunakan placeholder atau gambar asli Anda -->
-              <img
-                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&auto=format&fit=crop&q=60"
-                alt="Coding Setup"
-                class="blog-thumbnail"
-                style="height: 300px"
-              />
-              <div class="blog-content">
-                <span class="blog-category cat-refleksi">Refleksi PPL</span>
-                <h2 class="blog-title">
-                  <a href="#"
-                    >Mengatasi "Ketakutan Error" pada Siswa Saat Belajar
-                    Pemrograman</a
-                  >
-                </h2>
-                <p class="blog-excerpt">
-                  Saat mengajar dasar pemrograman JavaScript di kelas X RPL,
-                  saya menyadari satu hal: siswa sering kali takut mencoba
-                  karena takut programnya "error". Dalam tulisan ini, saya
-                  merenungkan bagaimana mengubah paradigma error dari sebuah
-                  kegagalan menjadi bagian integral dari proses belajar.
-                </p>
-                <div class="blog-meta">
-                  <span>📅 19 Okt 2026</span>
-                  <a href="#" class="btn-read">Baca Selengkapnya &rarr;</a>
-                </div>
+        <div class="row g-5">
+          <!-- KOLOM KIRI: DAFTAR ARTIKEL (8 Kolom) -->
+          <div class="col-lg-8">
+            <!-- Grid 2 Card per Baris -->
+            <div class="row g-4">
+              <!-- ARTIKEL 1 -->
+              <div class="col-md-6">
+                <article class="blog-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&auto=format&fit=crop&q=60"
+                    alt="Coding"
+                    class="blog-thumbnail"
+                  />
+                  <div class="blog-content">
+                    <span class="blog-category cat-refleksi">Refleksi PPL</span>
+                    <h2 class="blog-title">
+                      <a href="#"
+                        >Mengatasi "Ketakutan Error" pada Siswa Saat Belajar
+                        Pemrograman</a
+                      >
+                    </h2>
+                    <p class="blog-excerpt">
+                      Siswa sering takut mencoba karena takut programnya
+                      "error". Bagaimana mengubah paradigma error menjadi bagian
+                      dari belajar?
+                    </p>
+                    <div class="blog-meta">
+                      <span>📅 19 Okt 2026</span>
+                      <a href="#" class="btn-read">Baca &rarr;</a>
+                    </div>
+                  </div>
+                </article>
               </div>
-            </article>
-          </div>
 
-          <!-- ARTIKEL 2 -->
-          <div class="col-lg-4 col-md-6">
-            <article class="blog-card">
-              <img
-                src="https://images.unsplash.com/photo-1627398240309-08a9a216e5c5?w=500&auto=format&fit=crop&q=60"
-                alt="JavaScript Code"
-                class="blog-thumbnail"
-              />
-              <div class="blog-content">
-                <span class="blog-category cat-tech">Teknologi Web</span>
-                <h2 class="blog-title">
-                  <a href="#"
-                    >Mengapa Vanilla JS Masih Relevan di Era Framework?</a
-                  >
-                </h2>
-                <p class="blog-excerpt">
-                  Sebelum melompat ke React atau Vue, pemahaman kuat tentang
-                  Vanilla JS dan DOM Manipulation adalah fondasi yang tidak
-                  boleh dilewatkan oleh calon programmer muda.
-                </p>
-                <div class="blog-meta">
-                  <span>📅 12 Okt 2026</span>
-                  <a href="#" class="btn-read">Baca &rarr;</a>
-                </div>
+              <!-- ARTIKEL 2 -->
+              <div class="col-md-6">
+                <article class="blog-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1627398240309-08a9a216e5c5?w=500&auto=format&fit=crop&q=60"
+                    alt="JS"
+                    class="blog-thumbnail"
+                  />
+                  <div class="blog-content">
+                    <span class="blog-category cat-tech">Teknologi Web</span>
+                    <h2 class="blog-title">
+                      <a href="#"
+                        >Mengapa Vanilla JS Masih Relevan di Era Framework?</a
+                      >
+                    </h2>
+                    <p class="blog-excerpt">
+                      Pemahaman Vanilla JS adalah fondasi krusial yang tidak
+                      boleh dilewatkan oleh calon programmer muda sebelum
+                      belajar React.
+                    </p>
+                    <div class="blog-meta">
+                      <span>📅 12 Okt 2026</span>
+                      <a href="#" class="btn-read">Baca &rarr;</a>
+                    </div>
+                  </div>
+                </article>
               </div>
-            </article>
-          </div>
 
-          <!-- ARTIKEL 3 -->
-          <div class="col-lg-4 col-md-6">
-            <article class="blog-card">
-              <img
-                src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&auto=format&fit=crop&q=60"
-                alt="Education"
-                class="blog-thumbnail"
-              />
-              <div class="blog-content">
-                <span class="blog-category cat-opini">Opini Pendidikan</span>
-                <h2 class="blog-title">
-                  <a href="#"
-                    >Teknologi Saja Tidak Cukup: Pentingnya Olah Rasa di Kelas
-                    IT</a
-                  >
-                </h2>
-                <p class="blog-excerpt">
-                  Menghadapi Gen Z di lab komputer membutuhkan lebih dari
-                  sekadar materi teknis. Bagaimana kita mengintegrasikan
-                  pendidikan nilai saat belajar coding?
-                </p>
-                <div class="blog-meta">
-                  <span>📅 05 Okt 2026</span>
-                  <a href="#" class="btn-read">Baca &rarr;</a>
-                </div>
+              <!-- ARTIKEL 3 -->
+              <div class="col-md-6">
+                <article class="blog-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&auto=format&fit=crop&q=60"
+                    alt="Edu"
+                    class="blog-thumbnail"
+                  />
+                  <div class="blog-content">
+                    <span class="blog-category cat-opini"
+                      >Opini Pendidikan</span
+                    >
+                    <h2 class="blog-title">
+                      <a href="#"
+                        >Pentingnya Olah Rasa di Kelas IT untuk Generasi Z</a
+                      >
+                    </h2>
+                    <p class="blog-excerpt">
+                      Menghadapi Gen Z di lab komputer membutuhkan lebih dari
+                      sekadar materi teknis. Kita butuh pendidikan nilai
+                      kemanusiaan.
+                    </p>
+                    <div class="blog-meta">
+                      <span>📅 05 Okt 2026</span>
+                      <a href="#" class="btn-read">Baca &rarr;</a>
+                    </div>
+                  </div>
+                </article>
               </div>
-            </article>
-          </div>
 
-          <!-- ARTIKEL 4 -->
-          <div class="col-lg-4 col-md-6">
-            <article class="blog-card">
-              <img
-                src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60"
-                alt="Code Review"
-                class="blog-thumbnail"
-              />
-              <div class="blog-content">
-                <span class="blog-category cat-refleksi">Jurnal Harian</span>
-                <h2 class="blog-title">
-                  <a href="#"
-                    >Menyusun Modul Ajar: Menyeimbangkan Teori dan Praktik</a
-                  >
-                </h2>
-                <p class="blog-excerpt">
-                  Pengalaman dan tantangan yang saya hadapi saat menyusun
-                  perangkat pembelajaran (Siklus 1) agar selaras dengan prinsip
-                  Pembelajaran Mendalam.
-                </p>
-                <div class="blog-meta">
-                  <span>📅 28 Sep 2026</span>
-                  <a href="#" class="btn-read">Baca &rarr;</a>
-                </div>
+              <!-- ARTIKEL 4 -->
+              <div class="col-md-6">
+                <article class="blog-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=500&auto=format&fit=crop&q=60"
+                    alt="Review"
+                    class="blog-thumbnail"
+                  />
+                  <div class="blog-content">
+                    <span class="blog-category cat-refleksi"
+                      >Jurnal Harian</span
+                    >
+                    <h2 class="blog-title">
+                      <a href="#"
+                        >Tantangan Menyusun Perangkat Ajar Pembelajaran
+                        Mendalam</a
+                      >
+                    </h2>
+                    <p class="blog-excerpt">
+                      Pengalaman saya menyusun Modul Ajar (Siklus 1) agar
+                      selaras dengan prinsip berkesadaran dan bermakna.
+                    </p>
+                    <div class="blog-meta">
+                      <span>📅 28 Sep 2026</span>
+                      <a href="#" class="btn-read">Baca &rarr;</a>
+                    </div>
+                  </div>
+                </article>
               </div>
-            </article>
-          </div>
 
-          <!-- ARTIKEL 5 -->
-          <div class="col-lg-4 col-md-6">
-            <article
-              class="blog-card"
-              style="background-color: var(--accent-yellow)"
+              <!-- ARTIKEL 5 -->
+              <div class="col-md-6">
+                <article class="blog-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=500&auto=format&fit=crop&q=60"
+                    alt="Dev"
+                    class="blog-thumbnail"
+                  />
+                  <div class="blog-content">
+                    <span class="blog-category cat-tech">Tutorial</span>
+                    <h2 class="blog-title">
+                      <a href="#"
+                        >Membuat Layout Neobrutalism Sederhana dengan CSS</a
+                      >
+                    </h2>
+                    <p class="blog-excerpt">
+                      Langkah demi langkah mendesain elemen web bergaya
+                      brutalism yang edgy dan menarik perhatian audiens.
+                    </p>
+                    <div class="blog-meta">
+                      <span>📅 15 Sep 2026</span>
+                      <a href="#" class="btn-read">Baca &rarr;</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <!-- ARTIKEL 6 -->
+              <div class="col-md-6">
+                <article class="blog-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=500&auto=format&fit=crop&q=60"
+                    alt="Class"
+                    class="blog-thumbnail"
+                  />
+                  <div class="blog-content">
+                    <span class="blog-category cat-opini"
+                      >Opini Pendidikan</span
+                    >
+                    <h2 class="blog-title">
+                      <a href="#"
+                        >Guru vs AI: Siapa yang Menang di Ruang Kelas Masa
+                        Depan?</a
+                      >
+                    </h2>
+                    <p class="blog-excerpt">
+                      Kecerdasan buatan semakin pintar, namun sentuhan empatik
+                      seorang guru tidak akan pernah bisa tergantikan
+                      sepenuhnya.
+                    </p>
+                    <div class="blog-meta">
+                      <span>📅 01 Sep 2026</span>
+                      <a href="#" class="btn-read">Baca &rarr;</a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!-- End Row Grid Artikel -->
+
+            <!-- PAGINATION -->
+            <ul class="pagination-brutal">
+              <li><a href="#">&laquo;</a></li>
+              <li class="active"><span>1</span></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">&raquo;</a></li>
+            </ul>
+          </div>
+          <!-- END KOLOM KIRI (ARTIKEL) -->
+
+          <!-- KOLOM KANAN: SIDEBAR (4 Kolom) -->
+          <div class="col-lg-4">
+            <!-- WIDGET 1: PENCARIAN -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Cari Artikel</h4>
+              <form class="search-form">
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="Ketik kata kunci..."
+                />
+                <button type="submit" class="search-btn">🔍</button>
+              </form>
+            </div>
+
+            <!-- WIDGET 2: ARTIKEL POPULER -->
+            <div class="sidebar-widget">
+              <h4 class="widget-title">Terpopuler</h4>
+              <ul class="popular-list">
+                <li class="popular-item">
+                  <a href="#"
+                    >Pentingnya Olah Rasa di Kelas IT untuk Generasi Z</a
+                  >
+                  <div class="popular-meta">💬 12 Komentar</div>
+                </li>
+                <li class="popular-item">
+                  <a href="#"
+                    >Mengatasi "Ketakutan Error" pada Siswa Saat Belajar</a
+                  >
+                  <div class="popular-meta">💬 8 Komentar</div>
+                </li>
+                <li class="popular-item">
+                  <a href="#"
+                    >Membuat Layout Neobrutalism Sederhana dengan CSS</a
+                  >
+                  <div class="popular-meta">💬 5 Komentar</div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- WIDGET 3: IKLAN / BANNER -->
+            <div
+              class="sidebar-widget p-0 border-0 bg-transparent box-shadow-none"
             >
-              <div class="blog-content justify-content-center text-center">
-                <h2 class="display-1">🚀</h2>
-                <h3 class="fw-bold mt-3">Ide Tulisan Berikutnya?</h3>
-                <p class="fs-6 mt-2 fw-bold">
-                  Saya sedang merangkum pengalaman implementasi 'Project Based
-                  Learning' untuk materi DOM.
-                </p>
-                <span
-                  class="bg-white border border-dark px-3 py-2 fw-bold mt-3 d-inline-block"
-                  >Coming Soon...</span
-                >
+              <!-- Kotak Iklan -->
+              <div class="ad-space">
+                <span>250 x 250</span>
+                <p class="fs-6 mt-2 text-dark">Space Iklan / Banner</p>
               </div>
-            </article>
+            </div>
           </div>
+          <!-- END KOLOM KANAN (SIDEBAR) -->
         </div>
+        <!-- End Row Utama -->
       </div>
     </section>
 
