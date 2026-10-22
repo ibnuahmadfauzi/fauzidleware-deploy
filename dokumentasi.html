@@ -20,86 +20,88 @@
     <link rel="stylesheet" href="/css/style.css" />
 
     <style>
-      /* --- STYLES KHUSUS COMING SOON --- */
-      .coming-soon-wrapper {
-        min-height: calc(100vh - 250px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 80px 20px;
-        /* Motif Polka Dots Brutalism */
+      /* --- STYLES KHUSUS HALAMAN DOKUMENTASI --- */
+      .page-header {
+        padding: 80px 0 60px;
         background-color: var(--accent-green);
+        border-bottom: var(--border-thick);
         background-image:
           radial-gradient(#111 15%, transparent 16%),
           radial-gradient(#111 15%, transparent 16%);
-        background-size: 60px 60px;
+        background-size: 40px 40px;
         background-position:
           0 0,
-          30px 30px;
+          20px 20px;
       }
 
-      .cs-card {
+      .header-box {
+        background-color: #fff;
+        padding: 2rem;
+        display: inline-block;
+        transform: rotate(2deg);
+        box-shadow: 10px 10px 0 #111;
+      }
+
+      .galeri-section {
+        padding: 60px 0 100px;
+        background-color: #fff;
+      }
+
+      /* Foto Card Neobrutalism */
+      .foto-card {
         background-color: #fff;
         border: var(--border-thick);
-        padding: 4rem;
-        text-align: center;
-        box-shadow: 15px 15px 0 #111;
-        max-width: 800px;
-        width: 100%;
+        box-shadow: 6px 6px 0 #111;
+        transition: all 0.2s ease-in-out;
+        cursor: pointer; /* Memberi tahu user ini bisa diklik */
+        overflow: hidden;
         position: relative;
       }
 
-      .cs-stamp {
-        position: absolute;
-        top: -20px;
-        left: 50%;
-        transform: translateX(-50%) rotate(2deg);
-        background-color: var(--bg-color); /* Salmon */
-        color: #111;
-        font-size: 1.5rem;
-        font-weight: 700;
-        padding: 10px 30px;
-        border: 3px solid #111;
-        box-shadow: 4px 4px 0 #111;
-      }
-
-      .cs-title {
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 1.1;
-        text-transform: uppercase;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        border-bottom: 4px solid #111;
-        padding-bottom: 1rem;
-        display: inline-block;
-      }
-
-      .cs-desc {
-        font-size: 1.25rem;
-        margin-bottom: 2rem;
-        background-color: var(--accent-yellow);
-        padding: 1.5rem;
-        border: 2px solid #111;
-      }
-
-      .btn-back {
-        display: inline-block;
-        font-weight: 700;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        padding: 1rem 2rem;
-        background-color: var(--accent-blue);
-        color: #111;
-        border: 3px solid #111;
-        box-shadow: 6px 6px 0px #111;
-        text-decoration: none;
-        transition: all 0.2s;
-      }
-      .btn-back:hover {
+      .foto-card:hover {
         transform: translate(3px, 3px);
-        box-shadow: 3px 3px 0px #111;
+        box-shadow: 3px 3px 0 #111;
+        border-color: var(--accent-yellow);
+      }
+
+      .foto-img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        filter: grayscale(30%);
+        transition:
+          filter 0.3s,
+          transform 0.3s;
+      }
+
+      .foto-card:hover .foto-img {
+        filter: grayscale(0%);
+        transform: scale(1.05);
+      }
+
+      /* Modal Lightbox Brutalism */
+      .modal-content.brutal-modal {
+        border: var(--border-thick);
+        border-radius: 0;
+        box-shadow: 10px 10px 0 #111;
         background-color: #fff;
+      }
+      .btn-close-brutal {
+        background-color: var(--accent-yellow);
+        border: 2px solid #111;
+        opacity: 1;
+        box-shadow: 2px 2px 0 #111;
+        transition: all 0.2s;
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        z-index: 1050;
+        padding: 10px;
+      }
+      .btn-close-brutal:hover {
+        background-color: #ff4d4d;
+        transform: translate(2px, 2px);
+        box-shadow: 0px 0px 0 #111;
       }
     </style>
   </head>
@@ -107,26 +109,65 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg sticky-top"></nav>
 
-    <!-- COMING SOON CONTENT -->
-    <div class="coming-soon-wrapper">
-      <div class="cs-card">
-        <div class="cs-stamp">STATUS: MENGUMPULKAN BERKAS 📸</div>
+    <!-- PAGE HEADER -->
+    <header class="page-header text-center">
+      <div class="container">
+        <div class="header-box brutal-border">
+          <h1 class="display-4 fw-bold mb-0">DOKUMENTASI</h1>
+        </div>
+        <div class="mt-4">
+          <p
+            class="fs-5 fw-bold bg-white d-inline-block px-4 py-2 brutal-border"
+            style="box-shadow: 4px 4px 0 #111"
+          >
+            Jejak Visual Perjalanan dan Pengalaman
+          </p>
+        </div>
+      </div>
+    </header>
 
-        <h1 class="cs-title">Dokumentasi</h1>
+    <!-- GALERI SECTION -->
+    <section class="galeri-section">
+      <div class="container">
+        <!-- WADAH DINAMIS UNTUK RENDER JAVASCRIPT -->
+        <div id="galeri-container">
+          <!-- Data akan di-inject ke sini oleh script -->
+        </div>
+      </div>
+    </section>
 
-        <p class="cs-desc fw-bold text-dark">
-          Galeri foto dan rekaman kegiatan PPL di SMK Negeri 1 Surabaya sedang
-          dalam tahap kurasi dan penyusunan.
-        </p>
-
-        <h2
-          class="display-5 fw-bold mb-4 bg-white d-inline-block px-3 py-1 border border-dark"
-        >
-          COMING SOON
-        </h2>
-        <br />
-
-        <a href="index.html" class="btn-back mt-3">&larr; Kembali ke Beranda</a>
+    <!-- ============================================== -->
+    <!-- MODAL LIGHTBOX UNTUK PERBESAR FOTO             -->
+    <!-- ============================================== -->
+    <div class="modal fade" id="modalFoto" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content brutal-modal position-relative">
+          <button
+            type="button"
+            class="btn-close btn-close-brutal"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+          <div class="modal-body p-2 bg-dark">
+            <img
+              src=""
+              id="lightbox-img"
+              class="w-100"
+              style="max-height: 80vh; object-fit: contain"
+              alt="Gambar diperbesar"
+            />
+          </div>
+          <div
+            class="modal-footer justify-content-center bg-white border-top border-dark border-3 py-3"
+          >
+            <h5
+              class="mb-0 fw-bold font-monospace text-center"
+              id="lightbox-caption"
+            >
+              Caption Foto
+            </h5>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -137,7 +178,58 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Memanggil Script JS milik Anda -->
+    <!-- Memanggil File Data Dokumentasi Anda -->
+    <script src="/utils/data-dokumentasi.js"></script>
     <script src="/js/script.js"></script>
+
+    <!-- SCRIPT LOGIKA RENDER DOKUMENTASI DINAMIS -->
+    <script>
+      $(document).ready(function () {
+        let containerHTML = "";
+
+        // 1. Looping Kategori/Section (Misal: Kegiatan PPL, Perkuliahan)
+        dataDokumentasi.forEach((section) => {
+          // 2. Looping Foto di dalam setiap kategori
+          let photosHTML = section.photos
+            .map((photo) => {
+              return `
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <!-- Tag ini memicu Modal Bootstrap ketika diklik -->
+                            <div class="foto-card" data-bs-toggle="modal" data-bs-target="#modalFoto" data-src="${photo.src}" data-caption="${photo.caption}">
+                                <img src="${photo.src}" alt="${photo.alt}" class="foto-img">
+                            </div>
+                        </div>
+                    `;
+            })
+            .join("");
+
+          // 3. Gabungkan menjadi satu blok Section HTML
+          containerHTML += `
+                    <div class="mb-5 pb-5 border-bottom border-dark border-4">
+                        <h2 class="mb-3 bg-yellow-brutal d-inline-block px-4 py-2 brutal-border brutal-shadow" style="transform: rotate(-1deg);">${section.title}</h2>
+                        <p class="fs-5 mb-4 text-dark fw-semibold">${section.description}</p>
+                        
+                        <div class="row g-4">
+                            ${photosHTML}
+                        </div>
+                    </div>
+                `;
+        });
+
+        // 4. Suntikkan (Inject) seluruh HTML ke dalam wadah utama
+        $("#galeri-container").html(containerHTML);
+
+        // 5. Logika Modal Lightbox (Menangkap data dari gambar yang diklik)
+        $("#modalFoto").on("show.bs.modal", function (event) {
+          var trigger = $(event.relatedTarget);
+          var srcGambar = trigger.data("src");
+          var captionGambar = trigger.data("caption");
+
+          var modal = $(this);
+          modal.find("#lightbox-img").attr("src", srcGambar);
+          modal.find("#lightbox-caption").text(captionGambar);
+        });
+      });
+    </script>
   </body>
 </html>
