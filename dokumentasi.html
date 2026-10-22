@@ -129,8 +129,8 @@
     <!-- GALERI SECTION -->
     <section class="galeri-section">
       <div class="container">
-        <!-- WADAH DINAMIS UNTUK RENDER JAVASCRIPT -->
-        <div id="galeri-container">
+        <!-- Wadah Accordion agar per section dimuat terpisah -->
+        <div class="accordion brutal-accordion" id="dokumentasiAccordion">
           <!-- Data akan di-inject ke sini oleh script -->
         </div>
       </div>
@@ -182,44 +182,52 @@
     <script src="/utils/data-dokumentasi.js"></script>
     <script src="/js/script.js"></script>
 
-    <!-- SCRIPT LOGIKA RENDER DOKUMENTASI DINAMIS -->
     <script>
       $(document).ready(function () {
-        let containerHTML = "";
+        let accordionHTML = "";
 
-        // 1. Looping Kategori/Section (Misal: Kegiatan PPL, Perkuliahan)
-        dataDokumentasi.forEach((section) => {
-          // 2. Looping Foto di dalam setiap kategori
-          let photosHTML = section.photos
-            .map((photo) => {
-              return `
-                        <div class="col-sm-6 col-md-4 col-lg-3">
-                            <!-- Tag ini memicu Modal Bootstrap ketika diklik -->
-                            <div class="foto-card" data-bs-toggle="modal" data-bs-target="#modalFoto" data-src="${photo.src}" data-caption="${photo.caption}">
-                                <img src="${photo.src}" alt="${photo.alt}" class="foto-img">
+        // 1. Looping Kategori/Section untuk membuat struktur Accordion
+        dataDokumentasi.forEach((section, index) => {
+          let isExpanded = index === 0 ? "true" : "false";
+          let showClass = index === 0 ? "show" : "";
+          let collapsedClass = index === 0 ? "" : "collapsed";
+
+          // Bungkus foto dalam section
+          accordionHTML += `
+                <div class="accordion-item bg-white mb-4 brutal-border brutal-shadow">
+                    <h2 class="accordion-header" id="heading-${section.id}">
+                        <button class="accordion-button ${collapsedClass} fw-bold fs-4 bg-yellow-brutal border-bottom border-dark border-3 py-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-${section.id}" aria-expanded="${isExpanded}" aria-controls="collapse-${section.id}">
+                            📁 ${section.title}
+                        </button>
+                    </h2>
+                    <div id="collapse-${section.id}" class="accordion-collapse collapse ${showClass}" aria-labelledby="heading-${section.id}" data-bs-parent="#dokumentasiAccordion">
+                        <div class="accordion-body p-4">
+                            <p class="fs-5 mb-4 text-dark fw-semibold">${section.description}</p>
+                            
+                            <!-- Grid Foto -->
+                            <div class="row g-4">
+                                ${section.photos
+                                  .map(
+                                    (photo) => `
+                                    <div class="col-sm-6 col-md-4 col-lg-3">
+                                        <div class="foto-card" data-bs-toggle="modal" data-bs-target="#modalFoto" data-src="${photo.src}" data-caption="${photo.caption}">
+                                            <img src="${photo.src}" alt="${photo.alt}" class="foto-img" loading="lazy">
+                                        </div>
+                                    </div>
+                                `,
+                                  )
+                                  .join("")}
                             </div>
                         </div>
-                    `;
-            })
-            .join("");
-
-          // 3. Gabungkan menjadi satu blok Section HTML
-          containerHTML += `
-                    <div class="mb-5 pb-5 border-bottom border-dark border-4">
-                        <h2 class="mb-3 bg-yellow-brutal d-inline-block px-4 py-2 brutal-border brutal-shadow" style="transform: rotate(-1deg);">${section.title}</h2>
-                        <p class="fs-5 mb-4 text-dark fw-semibold">${section.description}</p>
-                        
-                        <div class="row g-4">
-                            ${photosHTML}
-                        </div>
                     </div>
-                `;
+                </div>
+            `;
         });
 
-        // 4. Suntikkan (Inject) seluruh HTML ke dalam wadah utama
-        $("#galeri-container").html(containerHTML);
+        // 2. Suntikkan ke dalam accordion container
+        $("#dokumentasiAccordion").html(accordionHTML);
 
-        // 5. Logika Modal Lightbox (Menangkap data dari gambar yang diklik)
+        // 3. Logika Modal Lightbox
         $("#modalFoto").on("show.bs.modal", function (event) {
           var trigger = $(event.relatedTarget);
           var srcGambar = trigger.data("src");
