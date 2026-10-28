@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fauzidleware | Refleksi PPG - Ibnu Ahmad Fauzi</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts: Space Grotesk -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS Utama Anda -->
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <style>
+      /* --- STYLING KHUSUS HALAMAN REFLEKSI PPG --- */
+      .page-header {
+        padding: 80px 0 60px;
+        background-color: var(--accent-yellow);
+        border-bottom: var(--border-thick);
+        background-image:
+          radial-gradient(#111 15%, transparent 16%),
+          radial-gradient(#111 15%, transparent 16%);
+        background-size: 40px 40px;
+        background-position:
+          0 0,
+          20px 20px;
+      }
+
+      .header-box {
+        background-color: #fff;
+        padding: 2rem;
+        display: inline-block;
+        transform: rotate(-1deg);
+        box-shadow: 10px 10px 0 #111;
+        border: var(--border-thick);
+      }
+
+      /* Sticky Sidebar */
+      .sidebar-nav {
+        position: sticky;
+        top: 100px;
+      }
+
+      .nav-pills .nav-link {
+        color: #111;
+        font-weight: bold;
+        border: 2px solid transparent;
+        border-radius: 0;
+        margin-bottom: 10px;
+        transition: all 0.2s;
+      }
+
+      .nav-pills .nav-link:hover {
+        background-color: #f0f0f0;
+        border: 2px solid #111;
+        transform: translate(-2px, -2px);
+        box-shadow: 4px 4px 0 #111;
+      }
+
+      .nav-pills .nav-link.active {
+        background-color: var(--accent-blue);
+        color: #fff;
+        border: 2px solid #111;
+        box-shadow: 4px 4px 0 #111;
+        transform: translate(-2px, -2px);
+      }
+
+      /* Konten Paragraf */
+      .content-section {
+        padding-top: 40px;
+        margin-bottom: 60px;
+        border-bottom: 4px solid #111;
+        padding-bottom: 60px;
+      }
+
+      .content-section:last-child {
+        border-bottom: none;
+      }
+
+      .section-title {
+        background-color: #111;
+        color: #fff;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-bottom: 30px;
+        box-shadow: 6px 6px 0 var(--accent-yellow);
+      }
+
+      .text-justify {
+        text-align: justify;
+        line-height: 1.8;
+        font-size: 1.1rem;
+      }
+
+      /* Brutal Card / List */
+      .brutal-card {
+        border: var(--border-thick);
+        padding: 20px;
+        height: 100%;
+        box-shadow: 6px 6px 0 #111;
+        background-color: #fff;
+        transition: transform 0.2s;
+      }
+      .brutal-card:hover {
+        transform: translate(-3px, -3px);
+        box-shadow: 9px 9px 0 #111;
+      }
+
+      .quote-box {
+        background-color: var(--accent-green);
+        border: var(--border-thick);
+        padding: 30px;
+        box-shadow: 8px 8px 0 #111;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#refleksi-nav"
+    data-bs-offset="120"
+    tabindex="0"
+  >
+    <!-- NAVBAR (Dinamis di-render oleh script.js) -->
+    <nav class="navbar navbar-expand-lg sticky-top"></nav>
+
+    <!-- HEADER HALAMAN -->
+    <header class="page-header text-center">
+      <div class="container">
+        <div class="header-box">
+          <h4 class="fw-bold mb-2 text-danger">PORTOFOLIO PPG PRAJABATAN</h4>
+          <h1 class="display-4 fw-bold mb-0">Refleksi Diri Guru</h1>
+          <p
+            class="fs-4 mt-3 mb-0 fw-semibold bg-dark text-white d-inline-block px-3 py-1"
+          >
+            Perjalanan Transformasi Pedagogis & Profesional
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row g-5">
+          <!-- KIRI: STICKY SIDEBAR NAVIGATION -->
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="sidebar-nav bg-white p-4 brutal-border brutal-shadow">
+              <h5 class="fw-bold mb-4 border-bottom border-dark pb-2">
+                Navigasi Refleksi
+              </h5>
+              <nav id="refleksi-nav" class="nav nav-pills flex-column">
+                <a class="nav-link" href="#slide-1">1. Sebelum PPG</a>
+                <a class="nav-link" href="#slide-2">2. Sesudah PPG</a>
+                <a class="nav-link" href="#slide-3">3. Perubahan & Komitmen</a>
+                <a class="nav-link" href="#penutup">4. Kalimat Penutup</a>
+              </nav>
+            </div>
+          </div>
+
+          <!-- KANAN: KONTEN REFLEKSI -->
+          <div class="col-lg-9">
+            <!-- SLIDE 1 -->
+            <div id="slide-1" class="content-section pt-0">
+              <h2 class="section-title fw-bold">
+                Refleksi Pengalaman Sebelum PPG
+              </h2>
+              <p class="text-justify text-dark mb-4">
+                Kondisi awal sebelum bergabung dalam program pendidikan profesi
+                guru, merefleksikan bagaimana pola pikir dan pendekatan mengajar
+                yang saya terapkan.
+              </p>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div
+                    class="brutal-card"
+                    style="border-top: 12px solid var(--accent-blue)"
+                  >
+                    <h5 class="fw-bold mb-2">Latar Belakang</h5>
+                    <p class="text-dark mb-0">
+                      Lulusan S1 Teknik Informatika dengan pengalaman praktis
+                      sebagai staf IT dan guru honorer.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="brutal-card"
+                    style="border-top: 12px solid var(--accent-yellow)"
+                  >
+                    <h5 class="fw-bold mb-2">Pandangan tentang Guru</h5>
+                    <p class="text-dark mb-0">
+                      Guru berfokus utama pada penguasaan materi, penyampaian
+                      pelajaran, dan pencapaian hasil belajar kognitif.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="brutal-card"
+                    style="border-top: 12px solid var(--accent-green)"
+                  >
+                    <h5 class="fw-bold mb-2">Pengalaman Mengajar</h5>
+                    <p class="text-dark mb-0">
+                      Mulai memahami berbagai tantangan nyata dalam menyampaikan
+                      materi Informatika yang kompleks kepada siswa.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="brutal-card"
+                    style="border-top: 12px solid var(--accent-salmon)"
+                  >
+                    <h5 class="fw-bold mb-2">Pemahaman Pembelajaran</h5>
+                    <p class="text-dark mb-0">
+                      Lebih menekankan kemampuan teknis penguasaan alat/software
+                      dan penyelesaian tugas akademis siswa.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-4 p-4 border border-dark border-3 bg-light brutal-shadow"
+              >
+                <h5 class="fw-bold text-danger mb-2">
+                  Kesadaran untuk Berkembang
+                </h5>
+                <p class="mb-0 text-dark">
+                  Menyadari perlunya meningkatkan kompetensi pedagogis secara
+                  terstruktur dan memahami karakteristik kebutuhan siswa secara
+                  lebih mendalam.
+                </p>
+              </div>
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div id="slide-2" class="content-section">
+              <h2
+                class="section-title fw-bold"
+                style="box-shadow: 6px 6px 0 var(--accent-green)"
+              >
+                Refleksi Pengalaman Sesudah PPG
+              </h2>
+              <p class="text-justify text-dark mb-4">
+                Transformasi cara pandang dan pengalaman praktis yang diperoleh
+                selama mengikuti program PPG Prajabatan di Universitas Negeri
+                Surabaya.
+              </p>
+
+              <ul class="list-group brutal-border brutal-shadow rounded-0 mb-4">
+                <li class="list-group-item border-dark p-4">
+                  <h5 class="fw-bold mb-1">Perubahan Paradigma</h5>
+                  <p class="mb-0 text-dark">
+                    Memahami peran guru secara utuh sebagai fasilitator,
+                    pembimbing, teladan, dan pembelajar sepanjang hayat.
+                  </p>
+                </li>
+                <li class="list-group-item border-dark p-4">
+                  <h5 class="fw-bold mb-1">
+                    Pengalaman PPL di SMKN 1 Surabaya
+                  </h5>
+                  <p class="mb-0 text-dark">
+                    Memperoleh pengalaman langsung mengajar Dasar Program
+                    Keahlian kelas X RPL dan Administrasi Server Jaringan kelas
+                    XI RPL.
+                  </p>
+                </li>
+                <li class="list-group-item border-dark p-4">
+                  <h5 class="fw-bold mb-1">Pemahaman terhadap Siswa</h5>
+                  <p class="mb-0 text-dark">
+                    Menyadari pentingnya memperhatikan tingkat kemampuan awal,
+                    karakteristik unik, dan kondisi sosial-emosional setiap
+                    siswa.
+                  </p>
+                </li>
+                <li class="list-group-item border-dark p-4">
+                  <h5 class="fw-bold mb-1">Inovasi Pembelajaran</h5>
+                  <p class="mb-0 text-dark">
+                    Merancang inovasi pembelajaran
+                    <strong>Coding Tanpa Takut Salah (Coding TTS)</strong>
+                    melalui tahapan Tenang, Telusuri, Solusikan, dan refleksi.
+                  </p>
+                </li>
+                <li class="list-group-item border-dark p-4 bg-light">
+                  <h5 class="fw-bold mb-1">Komitmen Profesional</h5>
+                  <p class="mb-0 text-dark">
+                    Menerapkan pembelajaran berpusat pada siswa, memanfaatkan
+                    teknologi/AI secara bijak, serta konsisten melakukan
+                    refleksi.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div id="slide-3" class="content-section">
+              <h2
+                class="section-title fw-bold"
+                style="box-shadow: 6px 6px 0 var(--accent-blue)"
+              >
+                Perubahan Diri & Komitmen ke Depan
+              </h2>
+              <p class="text-justify text-dark mb-4">
+                Evolusi prinsip mendidik yang merubah orientasi kerja
+                profesional saya di ruang kelas:
+              </p>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="brutal-card">
+                    <span class="badge bg-dark rounded-0 mb-2"
+                      >TRANSFORMASI 1</span
+                    >
+                    <h5 class="fw-bold">Dari Mengajar Menjadi Membimbing</h5>
+                    <p class="text-muted mb-0">
+                      Tidak hanya menyampaikan materi, tetapi mendampingi secara
+                      aktif proses belajar siswa.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="brutal-card">
+                    <span class="badge bg-dark rounded-0 mb-2"
+                      >TRANSFORMASI 2</span
+                    >
+                    <h5 class="fw-bold">Dari Hasil Menjadi Proses</h5>
+                    <p class="text-muted mb-0">
+                      Lebih menghargai usaha, ketekunan, dan proses belajar
+                      berharga dari sebuah kesalahan.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="brutal-card">
+                    <span class="badge bg-dark rounded-0 mb-2"
+                      >TRANSFORMASI 3</span
+                    >
+                    <h5 class="fw-bold">Pembelajaran Holistik</h5>
+                    <p class="text-muted mb-0">
+                      Mengintegrasikan pengetahuan teknis, keterampilan,
+                      penguatan karakter, dan aspek sosial-emosional.
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="brutal-card">
+                    <span class="badge bg-dark rounded-0 mb-2"
+                      >TRANSFORMASI 4</span
+                    >
+                    <h5 class="fw-bold">Guru Reflektif</h5>
+                    <p class="text-muted mb-0">
+                      Terbuka terhadap masukan konstruktif dan rutin melakukan
+                      evaluasi demi memperbaiki kualitas pembelajaran.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="mt-4 p-4 border border-dark border-3 bg-white brutal-shadow"
+              >
+                <h5 class="fw-bold text-success mb-2">Visi ke Depan</h5>
+                <p class="mb-0 text-dark">
+                  Menjadi guru Informatika profesional yang berdedikasi membantu
+                  siswa tumbuh menjadi pribadi mandiri, tangguh, kritis, dan
+                  bertanggung jawab.
+                </p>
+              </div>
+            </div>
+
+            <!-- PENUTUP -->
+            <div id="penutup" class="content-section border-bottom-0 pb-0">
+              <div class="quote-box">
+                <h4 class="fw-bold mb-3">Refleksi Akhir:</h4>
+                <p class="fs-5 fst-italic mb-0 text-dark">
+                  “PPG mengubah cara pandang saya tentang profesi guru. Saya
+                  belajar bahwa keberhasilan guru bukan hanya tentang materi
+                  yang disampaikan, tetapi juga tentang bagaimana mendampingi
+                  siswa agar mampu belajar, menghadapi kesulitan, dan berkembang
+                  menjadi pribadi yang mandiri serta tangguh.”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (Dinamis di-render oleh script.js) -->
+    <footer class="footer mt-5"></footer>
+
+    <!-- Bootstrap Bundle & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Memanggil Script JS Utama Anda -->
+    <script src="/js/script.js"></script>
+  </body>
+</html>
