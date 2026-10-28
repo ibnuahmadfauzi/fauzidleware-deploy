@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fauzidleware | Karya Inovasi</title>
+    <title>Fauzidleware | Karya Inovasi - Coding TTS</title>
 
     <!-- Bootstrap CSS -->
     <link
@@ -16,128 +16,424 @@
       rel="stylesheet"
     />
 
-    <!-- Memanggil Global CSS milik Anda -->
+    <!-- CSS Utama Anda -->
     <link rel="stylesheet" href="/css/style.css" />
 
     <style>
-      /* --- STYLES KHUSUS COMING SOON --- */
-      .coming-soon-wrapper {
-        min-height: calc(
-          100vh - 250px
-        ); /* Memastikan konten mengisi tinggi layar minus navbar/footer */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 80px 20px;
-        /* Motif Hazard Stripes khas Brutalism */
-        background: repeating-linear-gradient(
-          -45deg,
-          var(--accent-yellow),
-          var(--accent-yellow) 20px,
-          #111 20px,
-          #111 40px
-        );
+      /* STYLING KHUSUS KARYA INOVASI */
+      .page-header {
+        padding: 80px 0 60px;
+        background-color: var(
+          --accent-yellow
+        ); /* Menggunakan variabel warna Anda */
+        border-bottom: var(--border-thick);
+        background-image:
+          radial-gradient(#111 15%, transparent 16%),
+          radial-gradient(#111 15%, transparent 16%);
+        background-size: 40px 40px;
+        background-position:
+          0 0,
+          20px 20px;
       }
 
-      .cs-card {
+      .header-box {
         background-color: #fff;
+        padding: 2rem;
+        display: inline-block;
+        transform: rotate(-1deg);
+        box-shadow: 10px 10px 0 #111;
         border: var(--border-thick);
-        padding: 4rem;
-        text-align: center;
-        box-shadow: 15px 15px 0 #111;
-        max-width: 800px;
-        width: 100%;
-        position: relative;
       }
 
-      .cs-stamp {
-        position: absolute;
-        top: -20px;
-        left: -20px;
-        background-color: var(--accent-green);
+      /* Sticky Sidebar */
+      .sidebar-nav {
+        position: sticky;
+        top: 100px;
+      }
+
+      .nav-pills .nav-link {
         color: #111;
-        font-size: 1.5rem;
-        font-weight: 700;
-        padding: 10px 20px;
-        border: 3px solid #111;
-        transform: rotate(-10deg);
+        font-weight: bold;
+        border: 2px solid transparent;
+        border-radius: 0;
+        margin-bottom: 10px;
+        transition: all 0.2s;
+      }
+
+      .nav-pills .nav-link:hover {
+        background-color: #f0f0f0;
+        border: 2px solid #111;
+        transform: translate(-2px, -2px);
         box-shadow: 4px 4px 0 #111;
       }
 
-      .cs-title {
-        font-size: 4rem;
-        font-weight: 700;
-        line-height: 1.1;
-        text-transform: uppercase;
-        margin-bottom: 2rem;
-        border-bottom: 4px solid #111;
-        padding-bottom: 1rem;
-        display: inline-block;
-      }
-
-      .cs-desc {
-        font-size: 1.25rem;
-        margin-bottom: 2rem;
-        background-color: var(--bg-color); /* Salmon */
-        padding: 1rem;
-        border: 2px solid #111;
-      }
-
-      .btn-back {
-        display: inline-block;
-        font-weight: 700;
-        font-size: 1.2rem;
-        text-transform: uppercase;
-        padding: 1rem 2rem;
+      .nav-pills .nav-link.active {
         background-color: var(--accent-blue);
         color: #111;
-        border: 3px solid #111;
-        box-shadow: 6px 6px 0px #111;
-        text-decoration: none;
-        transition: all 0.2s;
+        border: 2px solid #111;
+        box-shadow: 4px 4px 0 #111;
+        transform: translate(-2px, -2px);
       }
-      .btn-back:hover {
-        transform: translate(3px, 3px);
-        box-shadow: 3px 3px 0px #111;
+
+      /* Konten Paragraf */
+      .content-section {
+        padding-top: 40px;
+        margin-bottom: 60px;
+        border-bottom: 4px solid #111;
+        padding-bottom: 60px;
+      }
+
+      .content-section:last-child {
+        border-bottom: none;
+      }
+
+      .section-title {
+        background-color: #111;
+        color: #fff;
+        display: inline-block;
+        padding: 10px 20px;
+        margin-bottom: 30px;
+        box-shadow: 6px 6px 0 var(--accent-green);
+      }
+
+      .text-justify {
+        text-align: justify;
+        line-height: 1.8;
+        font-size: 1.1rem;
+      }
+
+      /* Card TTS */
+      .tts-card {
+        border: var(--border-thick);
+        padding: 20px;
+        height: 100%;
+        box-shadow: 6px 6px 0 #111;
         background-color: #fff;
       }
     </style>
   </head>
-  <body>
-    <!-- NAVBAR -->
+  <body
+    data-bs-spy="scroll"
+    data-bs-target="#inovasi-nav"
+    data-bs-offset="120"
+    tabindex="0"
+  >
+    <!-- NAVBAR (Dinamis via script.js) -->
     <nav class="navbar navbar-expand-lg sticky-top"></nav>
 
-    <!-- COMING SOON CONTENT -->
-    <div class="coming-soon-wrapper">
-      <div class="cs-card">
-        <div class="cs-stamp">STATUS: TAHAP DESAIN ⚙️</div>
-
-        <h1 class="cs-title">Karya Inovasi</h1>
-
-        <p class="cs-desc fw-bold text-dark">
-          Dokumentasi untuk inovasi pembelajaran dan pengembangan aplikasi
-          pendukung pendidikan saat ini sedang dalam proses pengerjaan.
-        </p>
-
-        <h2
-          class="display-5 fw-bold mb-4 bg-white d-inline-block px-3 py-1 border border-dark"
-        >
-          COMING SOON
-        </h2>
-        <br />
-
-        <a href="index.html" class="btn-back mt-3">&larr; Kembali ke Beranda</a>
+    <!-- HEADER -->
+    <header class="page-header text-center">
+      <div class="container">
+        <div class="header-box">
+          <h4 class="fw-bold mb-2 text-danger">KARYA INOVASI PEMBELAJARAN</h4>
+          <h1 class="display-4 fw-bold mb-0">Coding TTS</h1>
+          <p
+            class="fs-4 mt-3 mb-0 fw-semibold bg-dark text-white d-inline-block px-3 py-1"
+          >
+            (Tanpat Takut Salah)
+          </p>
+        </div>
       </div>
-    </div>
+    </header>
 
-    <!-- FOOTER -->
-    <footer class="footer"></footer>
+    <!-- MAIN CONTENT -->
+    <section class="py-5 bg-white">
+      <div class="container">
+        <div class="row g-5">
+          <!-- KIRI: STICKY SIDEBAR NAVIGATION -->
+          <div class="col-lg-3 d-none d-lg-block">
+            <div class="sidebar-nav bg-white p-4 brutal-border brutal-shadow">
+              <h5 class="fw-bold mb-4 border-bottom border-dark pb-2">
+                Daftar Isi
+              </h5>
+              <nav id="inovasi-nav" class="nav nav-pills flex-column">
+                <a class="nav-link" href="#latar-belakang">1. Latar Belakang</a>
+                <a class="nav-link" href="#kebutuhan-siswa"
+                  >2. Kebutuhan Siswa</a
+                >
+                <a class="nav-link" href="#konsep-inovasi"
+                  >3. Konsep Inovasi (TTS)</a
+                >
+                <a class="nav-link" href="#tujuan-manfaat"
+                  >4. Tujuan & Manfaat</a
+                >
+                <a class="nav-link" href="#alur-pembelajaran"
+                  >5. Pelaksanaan & Asesmen</a
+                >
+              </nav>
+            </div>
+          </div>
+
+          <!-- KANAN: KONTEN ARTIKEL INOVASI -->
+          <div class="col-lg-9">
+            <!-- BAB 1: LATAR BELAKANG -->
+            <div id="latar-belakang" class="content-section pt-0">
+              <h2 class="section-title fw-bold">1. Latar Belakang Masalah</h2>
+
+              <!-- Dummy Image -->
+              <img
+                src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&q=80"
+                alt="Suasana Kelas SMK"
+                class="img-fluid border border-dark border-3 mb-4 w-100"
+                style="
+                  box-shadow: 8px 8px 0 #111;
+                  max-height: 400px;
+                  object-fit: cover;
+                "
+              />
+
+              <p class="text-justify text-dark">
+                Selama melaksanakan Praktik Pengalaman Lapangan (PPL) di SMKN 1
+                Surabaya, khususnya dalam kegiatan pembelajaran pada program
+                keahlian Rekayasa Perangkat Lunak (RPL), saya mengamati bahwa
+                proses pembelajaran pemrograman tidak hanya membutuhkan
+                penguasaan konsep dan keterampilan menulis kode, tetapi juga
+                kemampuan peserta didik dalam menghadapi kesalahan, mengelola
+                emosi, dan menemukan solusi secara sistematis.
+              </p>
+              <p class="text-justify text-dark">
+                Permasalahan lain yang menjadi perhatian adalah kecenderungan
+                sebagian peserta didik untuk segera mencari jawaban melalui
+                kecerdasan buatan (Artificial Intelligence atau AI) ketika
+                mengalami kesulitan. Pemanfaatan AI sebenarnya dapat membantu,
+                akan tetapi, apabila jawaban AI langsung digunakan tanpa
+                diperiksa dan dipahami, peserta didik berisiko melewatkan proses
+                berpikir yang diperlukan untuk membangun kemampuan debugging
+                secara mandiri.
+              </p>
+              <div
+                class="bg-yellow-brutal p-4 border border-dark border-2 my-4"
+                style="box-shadow: inset 4px 4px 0 rgba(0, 0, 0, 0.05)"
+              >
+                <p class="fst-italic mb-0 fw-semibold text-dark">
+                  "Kondisi tersebut sejalan dengan kajian dalam artikel A
+                  Systematic Literature Review of Debugging Interventions (ACM
+                  Transactions on Computing Education, 2024). Artikel tersebut
+                  menjelaskan bahwa kesulitan debugging berkaitan erat dengan
+                  frustrasi, stres, dan kepercayaan diri peserta didik."
+                </p>
+              </div>
+            </div>
+
+            <!-- BAB 2: KEBUTUHAN SISWA -->
+            <div id="kebutuhan-siswa" class="content-section">
+              <h2 class="section-title fw-bold">
+                2. Identifikasi Kebutuhan Siswa
+              </h2>
+              <p class="text-justify text-dark mb-4">
+                Dalam pembelajaran pemrograman, peserta didik pemula dapat
+                menghadapi beberapa jenis kesulitan ketika melakukan debugging.
+                Kesulitan yang perlu diperhatikan dalam perancangan pembelajaran
+                Coding TTS meliputi:
+              </p>
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <ul
+                    class="list-group list-group-flush border border-dark border-2"
+                    style="box-shadow: 4px 4px 0 #111"
+                  >
+                    <li class="list-group-item border-dark fw-bold bg-warning">
+                      Aspek Teknis & Kognitif
+                    </li>
+                    <li class="list-group-item border-dark">
+                      Kesulitan memahami pesan kesalahan.
+                    </li>
+                    <li class="list-group-item border-dark">
+                      Kesulitan menemukan lokasi penyebab.
+                    </li>
+                    <li class="list-group-item border-dark">
+                      Belum terbiasa menyusun langkah perbaikan sistematis.
+                    </li>
+                  </ul>
+                </div>
+                <div class="col-md-6">
+                  <ul
+                    class="list-group list-group-flush border border-dark border-2"
+                    style="box-shadow: 4px 4px 0 #111"
+                  >
+                    <li
+                      class="list-group-item border-dark fw-bold text-white bg-primary"
+                    >
+                      Aspek Sosial Emosional (PSE)
+                    </li>
+                    <li class="list-group-item border-dark">
+                      Kesulitan mempertahankan ketekunan saat gagal.
+                    </li>
+                    <li class="list-group-item border-dark">
+                      Ketergantungan pada jawaban instan (AI).
+                    </li>
+                    <li class="list-group-item border-dark">
+                      Belum terbiasa melakukan refleksi setelah debugging.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- BAB 3: KONSEP INOVASI -->
+            <div id="konsep-inovasi" class="content-section">
+              <h2
+                class="section-title fw-bold"
+                style="box-shadow: 6px 6px 0 var(--accent-green)"
+              >
+                3. Konsep Inovasi (Tahapan TTS)
+              </h2>
+              <p class="text-justify text-dark mb-5">
+                Coding TTS mengintegrasikan Pembelajaran Sosial dan Emosional
+                (PSE) dengan keterampilan debugging. Gagasan utamanya adalah
+                mengubah kebiasaan dari
+                <strong
+                  >“ketika error, langsung minta AI memberi jawaban”</strong
+                >
+                menjadi
+                <strong
+                  >“ketika error, tenangkan diri, pahami masalah, coba solusi,
+                  lalu gunakan bantuan secara bertanggung jawab.”</strong
+                >
+              </p>
+
+              <div class="row g-4 mb-4">
+                <!-- TENANG -->
+                <div class="col-md-4">
+                  <div
+                    class="tts-card bg-white position-relative"
+                    style="border-top: 15px solid var(--accent-yellow)"
+                  >
+                    <h3 class="fw-bold mb-3">1. Tenang</h3>
+                    <p class="fs-6 text-justify">
+                      Peserta didik mengenali respons emosionalnya, mengambil
+                      jeda yang diperlukan, dan mengembalikan fokus sebelum
+                      menelusuri kesalahan kode.
+                    </p>
+                    <span class="badge bg-dark">PSE: Manajemen Diri</span>
+                  </div>
+                </div>
+                <!-- TELUSURI -->
+                <div class="col-md-4">
+                  <div
+                    class="tts-card bg-white position-relative"
+                    style="border-top: 15px solid var(--accent-blue)"
+                  >
+                    <h3 class="fw-bold mb-3">2. Telusuri</h3>
+                    <p class="fs-6 text-justify">
+                      Peserta didik mencari penyebab kesalahan berdasarkan pesan
+                      konsol, struktur kode, dan menyusun dugaan berbasis bukti
+                      logis.
+                    </p>
+                    <span class="badge bg-dark">Kognitif: Analisis</span>
+                  </div>
+                </div>
+                <!-- SOLUSIKAN -->
+                <div class="col-md-4">
+                  <div
+                    class="tts-card bg-white position-relative"
+                    style="border-top: 15px solid var(--accent-green)"
+                  >
+                    <h3 class="fw-bold mb-3">3. Solusikan</h3>
+                    <p class="fs-6 text-justify">
+                      Menentukan perbaikan, menguji kode, mengevaluasi hasil,
+                      dan memverifikasi saran AI secara kritis dan bertanggung
+                      jawab.
+                    </p>
+                    <span class="badge bg-dark"
+                      >PSE: Pengambilan Keputusan</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- BAB 4: TUJUAN DAN MANFAAT -->
+            <div id="tujuan-manfaat" class="content-section">
+              <h2 class="section-title fw-bold">4. Tujuan dan Manfaat</h2>
+              <p class="text-justify text-dark">
+                Tujuan utama inovasi Coding TTS adalah memfasilitasi peserta
+                didik kelas XI RPL agar mampu melakukan debugging JavaScript
+                secara lebih sistematis sekaligus mengembangkan pengelolaan
+                emosi, ketekunan, kemandirian, penggunaan AI yang bertanggung
+                jawab, dan kemampuan refleksi.
+              </p>
+              <!-- Dummy Image -->
+              <img
+                src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=800&q=80"
+                alt="Ilustrasi Debugging"
+                class="img-fluid border border-dark border-3 mt-3 w-100"
+                style="
+                  box-shadow: 8px 8px 0 #111;
+                  max-height: 300px;
+                  object-fit: cover;
+                "
+              />
+            </div>
+
+            <!-- BAB 5: PELAKSANAAN & ASESMEN -->
+            <div
+              id="alur-pembelajaran"
+              class="content-section border-bottom-0 pb-0"
+            >
+              <h2 class="section-title fw-bold">5. Pelaksanaan & Asesmen</h2>
+              <p class="text-justify text-dark mb-4">
+                Pembelajaran dirancang untuk alokasi waktu
+                <strong>90 Menit</strong> melalui tujuh tahapan: kegiatan awal,
+                demonstrasi masalah, analisis terbimbing, latihan kelompok,
+                pengujian solusi, refleksi, dan penutup. Asesmen dilakukan
+                secara terintegrasi dengan pembobotan yang menghargai proses
+                berpikir, bukan hanya hasil kode akhir.
+              </p>
+
+              <div class="table-responsive brutal-border brutal-shadow">
+                <table
+                  class="table table-bordered table-striped mb-0 text-center align-middle"
+                >
+                  <thead class="table-dark">
+                    <tr>
+                      <th>Komponen Penilaian</th>
+                      <th>Fokus Indikator</th>
+                      <th>Bobot</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="fw-bold">Proses Debugging</td>
+                      <td class="text-start">
+                        Strategi penelusuran, ketekunan, literasi pesan error,
+                        pengujian.
+                      </td>
+                      <td class="fw-bold fs-5 text-primary">40%</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Hasil Kode</td>
+                      <td class="text-start">
+                        Ketepatan perbaikan dan kesesuaian perilaku program
+                        dengan tujuan.
+                      </td>
+                      <td class="fw-bold fs-5 text-success">40%</td>
+                    </tr>
+                    <tr>
+                      <td class="fw-bold">Refleksi Individu</td>
+                      <td class="text-start">
+                        Kemampuan menyadari kesulitan, emosi, dan merencanakan
+                        perbaikan.
+                      </td>
+                      <td class="fw-bold fs-5 text-warning">20%</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER (Dinamis via script.js) -->
+    <footer class="footer mt-5"></footer>
 
     <!-- Bootstrap Bundle & jQuery -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Memanggil Script JS milik Anda -->
+    <!-- Memanggil Script JS milik Anda (Untuk me-render Navbar & Footer) -->
     <script src="/js/script.js"></script>
   </body>
 </html>
