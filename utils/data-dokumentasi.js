@@ -109,6 +109,11 @@ const dataDokumentasi = [
         caption:
           "Ikut kegiatan perlombaan dalam rangka HUT RI- Semester 2 PPG.",
       },
+      {
+        src: "/images/penarikan.jpg",
+        alt: "Penarikan mahasiswa PPL",
+        caption: "Penarikan mahasiswa PPL - Semester 2 PPG.",
+      },
     ],
   },
   {
